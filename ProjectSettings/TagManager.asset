@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Boss
-  - Ground
+  - ground
+  - boss
   layers:
   - Default
   - TransparentFX
