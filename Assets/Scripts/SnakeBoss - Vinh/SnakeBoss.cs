@@ -1,15 +1,18 @@
 using System;
 using System.Collections;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class SnakeBoss : MonoBehaviour
 {
-    [SerializeField] private int hitPoints;
     [SerializeField] private int screenSize;
     [SerializeField] private int bodyDamage;
     
     private int attack4Threshold = 5; // Set a default threshold
     private int attack4Counter = 0;
+    
+    private Health health;
+    private SpriteRenderer spriteRenderer;
 
     private int time = 0;
 
@@ -17,8 +20,10 @@ public class SnakeBoss : MonoBehaviour
 
     private int width, length;
 
-    public void Awake()
+    public void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        health = GetComponent<Health>();
         //time = Time.fixedTime;
     }
 
@@ -28,38 +33,46 @@ public class SnakeBoss : MonoBehaviour
         if (time > 200)
         {
             time = 0;
-            Debug.Log(time);
+            Debug.Log("Current Health: " + health.Value);
             Attack();
         }
     }
 
 private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        
+    }
+
+    public void OnDamage(int damage, DamageType damageType, GameObject attacker)
+    {
+        Debug.Log("Attacked by " + attacker.name + " for " + damage + " damage");
+        
+        
+        UniTask.Void(async () =>
         {
-            TakeDamage(bodyDamage);
+            spriteRenderer.color = Color.red;
+            await UniTask.Delay(TimeSpan.FromSeconds(0.5));
+            spriteRenderer.color = Color.white;
+        });
+
+        if (health.IsDead)
+        {
+            spriteRenderer.color = Color.black;
         }
     }
 
-    public void TakeDamage(int damage)
-    {
-        Debug.Log("you just took " +  damage + " damage");
-    }
 
-    public void LoseHitPoints(int damage)
-    {
-        hitPoints -= damage;
-        if (hitPoints <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
+    public void OnDeath(GameObject attacker)
     {
         Debug.Log("Snake Boss Defeated!");
+        Debug.Log("Killed by " + attacker.name);
+        Debug.Log("spriteRenderer: " + spriteRenderer == null);
+        
+        //if (spriteRenderer == null) return;
+        
+        spriteRenderer.color = Color.black;
         // Replace with scene transition logic
-        UnityEngine.SceneManagement.SceneManager.LoadScene("NextScene"); 
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("NextScene"); 
     }
 
     private int CheckAttack()
@@ -127,6 +140,7 @@ private void OnCollisionEnter2D(Collision2D collision)
     private void Attack1()
     {
         Debug.Log("Snake Boss uses Attack 1!");
+        
         // Implement attack logic here
     }
 

@@ -7,6 +7,7 @@ public class tempmovement : MonoBehaviour
     private Rigidbody2D rb;
     public Transform objectTransform;
     private bool isGrounded;
+    private int damage = 5;
 
     void Start()
     {
@@ -33,12 +34,10 @@ public class tempmovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Boss"))
         {
-            rb.linearVelocity = new Vector3(5, 5,5);
-            Vector2 knockbackDirection = collision.transform.position - transform.position;
-            knockbackDirection.Normalize();
-
-            // Apply force to the collided object
-            rb.AddForce(knockbackDirection * 5, ForceMode2D.Impulse);
+            if (collision.gameObject.TryGetComponent<Health>(out var health))
+            {
+                health.ApplyDamage(damage, DamageType.PlayerKick, collision.gameObject);
+            }
         }
     }
 
