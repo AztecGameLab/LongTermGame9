@@ -52,7 +52,15 @@ private void OnCollisionEnter2D(Collision2D collision)
         {
             spriteRenderer.color = Color.red;
             await UniTask.Delay(TimeSpan.FromSeconds(0.5));
+
+            if (health.IsDead)
+            {
+                spriteRenderer.color = Color.black;
+            }
+            else
+            {
             spriteRenderer.color = Color.white;
+            }
         });
 
         if (health.IsDead)

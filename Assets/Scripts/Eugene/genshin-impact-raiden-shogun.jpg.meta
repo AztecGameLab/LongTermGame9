@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      genshin-impact-raiden-shogun_0: 8651885317601924021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

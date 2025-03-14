@@ -53,6 +53,7 @@ public class PlayerMoveTest : MonoBehaviour
             canJump = true;
         }
         
+        
     }
 
     public void funcKnock() {
