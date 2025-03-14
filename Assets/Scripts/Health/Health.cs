@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int healthValue = 5;
-
+    
     public int Value => healthValue;
     public bool IsDead => healthValue <= 0;
 
@@ -18,11 +18,11 @@ public class Health : MonoBehaviour
     
     public UnityEvent<GameObject> onDeath;
 
-    public void ApplyDamage(int damage, DamageType damageType, GameObject attacker)
+    public virtual void ApplyDamage(int damage, DamageType damageType, GameObject attacker)
     {
         if (IsDead) return;
         
-        if (!vulnerableDamageTypes.HasFlag(damageType))
+        if (!IsVulnerable(damageType))
         {
             damage = 0;
         }
@@ -38,9 +38,14 @@ public class Health : MonoBehaviour
         onDamage.Invoke(damage, damageType, attacker);
     }
 
-    public void AddHealth(int amount)
+    public virtual void AddHealth(int amount)
     {
         healthValue += amount;
+    }
+
+    public bool IsVulnerable(DamageType damageType)
+    {
+        return vulnerableDamageTypes.HasFlag(damageType);
     }
     
 }
