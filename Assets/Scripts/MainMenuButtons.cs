@@ -4,12 +4,14 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using TriInspector;
+using UnityEngine.Audio;
 
 public class MainMenuButtons: MonoBehaviour
 {
     [SerializeField] [Scene] private string _loadGame = "MainGame";
     [SerializeField] private Image _sceneFade = null;
     [SerializeField] private float _fadeSpeed = 1f;
+    [SerializeField] private AudioSource _menuMusic = null;
     protected void Start()
     {
         _sceneFade.enabled = false;
@@ -18,6 +20,7 @@ public class MainMenuButtons: MonoBehaviour
     public void LoadGame()
     {
         _sceneFade.enabled = true;
+        _menuMusic.enabled = false;
         StartCoroutine(Fade());
         Invoke("Load", _fadeSpeed);
     }
