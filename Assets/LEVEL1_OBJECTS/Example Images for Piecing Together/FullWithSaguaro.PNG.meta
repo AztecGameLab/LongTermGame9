@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FullWithSaguaro_0: -2310893718192715205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

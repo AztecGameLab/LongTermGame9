@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SplitSilh4_0: 6740997261953520815
+      SplitSilh4_1: 3777403341348224630
+      SplitSilh4_2: 5608943010264182618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
