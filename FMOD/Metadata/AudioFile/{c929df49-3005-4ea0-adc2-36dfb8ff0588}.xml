@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{adbd5224-3e53-408c-824d-16c7f5dbf783}">
+	<object class="AudioFile" id="{c929df49-3005-4ea0-adc2-36dfb8ff0588}">
 		<property name="assetPath">
-			<value>Ambience/DesertAmbienceDry.wav</value>
+			<value>Daniel_s Theme for Main Menu.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>43</value>
+			<value>90.024000000000001</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{fa68dafb-ccd3-4cd4-9635-5e71dc4e3e97}</destination>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{597ce094-4eaf-4b41-9efd-5650570f2e00}">
 		<property name="assetPath">
-			<value>Saguaro Level Theme V4.wav</value>
+			<value>Music/Saguaro Level Theme V4.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
