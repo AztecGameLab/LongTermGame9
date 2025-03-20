@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SaguaroMenu_0: 4188144407280940600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
