@@ -55,13 +55,13 @@ public class PlayerMovementControl : MonoBehaviour
     public Vector2 groundCheckBoxSize = Vector2.one;
     public float groundCheckVerticalOffset;
     public LayerMask groundLayer;
-    private float currentGroundAngle = 0f;
+    private float currentGroundAngle;
     private Vector2 currentGroundNormal = Vector2.zero;
 
     private Rigidbody2D body;
 
-    private bool hasDoubleJump = false;
-
+    private bool hasDoubleJump;
+    
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -119,7 +119,7 @@ public class PlayerMovementControl : MonoBehaviour
     {
         Gizmos.DrawWireCube(transform.position - transform.up * groundCheckVerticalOffset, groundCheckBoxSize);
     }
-
+    
     private void Update()
     {
         if (!hasDoubleJump && IsGrounded())
@@ -127,7 +127,7 @@ public class PlayerMovementControl : MonoBehaviour
             hasDoubleJump = true;
         }
     }
-
+    
     private void FixedUpdate()
     {
         if (IsGrounded())
