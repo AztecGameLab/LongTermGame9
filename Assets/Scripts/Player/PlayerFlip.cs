@@ -6,6 +6,7 @@ public class PlayerFlip : MonoBehaviour
     private Rigidbody2D body;
 
     public bool startsFacingRight = true;
+    public float flipDeadzone = 0.1f;
     
     private bool isFacingRight = true;
     public Vector2 ForwardVector2 => isFacingRight ? Vector2.right : Vector2.left;
@@ -27,10 +28,10 @@ public class PlayerFlip : MonoBehaviour
     {
         if (startsFacingRight)
         {
-            return body.linearVelocityX > 0 && !isFacingRight || body.linearVelocityX < 0 && isFacingRight;
+            return body.linearVelocityX > flipDeadzone && !isFacingRight || body.linearVelocityX < flipDeadzone && isFacingRight;
         }
         
-        return body.linearVelocityX > 0 && isFacingRight || body.linearVelocityX < 0 && !isFacingRight;
+        return body.linearVelocityX > flipDeadzone && isFacingRight || body.linearVelocityX < flipDeadzone && !isFacingRight;
     }
     
     // Update is called once per frame
