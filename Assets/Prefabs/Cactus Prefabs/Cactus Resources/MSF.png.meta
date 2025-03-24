@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d82e42fa1d82f4296ba28c1b8e9448dc
+guid: dc7cf481828644234ba6d3f6f0dc561d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7830378044817023046
-    second: MByellow_0
+      213: -5666570277175553133
+    second: MSF_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MByellow_0
+      name: MSF_0
       rect:
         serializedVersion: 2
-        x: 106
-        y: 119
-        width: 307
-        height: 215
+        x: 203
+        y: 92
+        width: 128
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abfd9a5c7a8e45390800000000000000
-      internalID: -7830378044817023046
+      spriteID: 3931a2e0b5c4c51b0800000000000000
+      internalID: -5666570277175553133
       vertices: []
       indices: 
       edges: []

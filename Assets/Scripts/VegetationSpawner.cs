@@ -15,7 +15,7 @@ public class VegetationSpawner : MonoBehaviour
     {
         if (enabled == true)
         {
-            Instantiate(itemDrop);
+            Instantiate(itemDrop, transform.position, new Quaternion());
             enabled = false;
         }
     }
