@@ -12,6 +12,7 @@ public class MainMenuButtons: MonoBehaviour
     [SerializeField] private Image _sceneFade = null;
     [SerializeField] private float _fadeSpeed = 1f;
     [SerializeField] private AudioSource _menuMusic = null;
+    [SerializeField] private AudioSource _buttonMusic = null;
     protected void Start()
     {
         _sceneFade.enabled = false;
@@ -21,6 +22,7 @@ public class MainMenuButtons: MonoBehaviour
     {
         _sceneFade.enabled = true;
         _menuMusic.enabled = false;
+        _buttonMusic.Play();
         StartCoroutine(Fade());
         Invoke("Load", _fadeSpeed);
     }
