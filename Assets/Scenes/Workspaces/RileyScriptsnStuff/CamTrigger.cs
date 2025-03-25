@@ -34,4 +34,12 @@ public class CamTrigger : MonoBehaviour
             mainCam.setCamParameters(passableParams);
         }
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player")) //(A)
+        {
+            mainCam.resetCamParameters();
+        }
+    }
 }

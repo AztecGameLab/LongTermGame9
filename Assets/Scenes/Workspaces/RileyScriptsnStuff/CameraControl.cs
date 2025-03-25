@@ -27,6 +27,8 @@ public class CameraControl : MonoBehaviour
 
     public float startingSpeed = 5.0f;
 
+    CamParameters defaultTargetPosInfo;
+
     CamParameters targetPosInfo;
 
     //transform, current and target, are stored as Vector3's. x = x position, y = y position, z = size.
@@ -44,6 +46,7 @@ public class CameraControl : MonoBehaviour
         Saguaro = findSaguaro();
         usCamera = GetComponent<Camera>();
 
+        defaultTargetPosInfo = new CamParameters(startingXBehavior, startingYBehavior, startingXPos, startingYPos, startingSize, speed);
         targetPosInfo = new CamParameters(startingXBehavior, startingYBehavior, startingXPos, startingYPos, startingSize, speed);
 
         findTargetPos();
@@ -70,12 +73,6 @@ public class CameraControl : MonoBehaviour
         currentPos = currentPos + (between * Time.deltaTime * speed);
 
         setTransform2DAndSize(currentPos);
-    }
-
-    float axisUpdate(float current, float target)
-    {
-        //it's the same for each axis:
-        return target;
     }
 
     void setTransform2DAndSize(Vector3 newTrans)
@@ -120,9 +117,26 @@ public class CameraControl : MonoBehaviour
         return GameObject.FindGameObjectsWithTag("Player")[0]; //(A)
     }
 
+
     public void setCamParameters(CamParameters newParams)
     {
-        targetPosInfo = newParams;
+        targetPosInfo = new CamParameters(newParams.xBehavior,
+                                          newParams.yBehavior,
+                                          newParams.xPos,
+                                          newParams.yPos,
+                                          newParams.size,
+                                          newParams.speed);
         speed = newParams.speed;
+    }
+
+    public void resetCamParameters()
+    {
+        targetPosInfo = new CamParameters(startingXBehavior,
+                                          startingYBehavior,
+                                          startingXPos,
+                                          startingYPos,
+                                          startingSize,
+                                          startingSpeed);
+        speed = startingSpeed;
     }
 }
