@@ -45,6 +45,14 @@ public class PlayerMovementControl : MonoBehaviour
 
     private bool hasDoubleJump;
     private bool HasInput => !Mathf.Approximately(walkInput, 0.0f);
+
+    private bool wasGrounded;
+    
+    private bool IsGrounded()
+    {
+        return Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckVerticalOffset,
+            groundLayer);
+    }
     
     private void Start()
     {
@@ -54,6 +62,65 @@ public class PlayerMovementControl : MonoBehaviour
         if (body.sharedMaterial == null)
         {
             body.sharedMaterial = new PhysicsMaterial2D();
+        }
+    }
+    
+    private void FixedUpdate()
+    {
+        if (IsGrounded())
+        {
+            TrySetFriction(groundFriction);
+            GroundedBehavior();
+        }
+        else
+        {
+            TrySetFriction(0.0f);
+            AirBehavior();
+        }
+    }
+    
+    private void Update()
+    {
+        if (!hasDoubleJump && IsGrounded())
+        {
+            hasDoubleJump = true;
+        }
+        
+        if (animator)
+        {
+            UpdateAnimations();
+        }
+    }
+    
+    private void TrySetFriction(float friction)
+    {
+        if (Mathf.Approximately(body.sharedMaterial.friction, friction)) return;
+        
+        var material = body.sharedMaterial;
+        material.friction = friction;
+        body.sharedMaterial = material;
+    }
+
+    private void UpdateAnimations()
+    {
+        if (animator.GetBool(Moving) != HasInput)
+        {
+            animator.SetBool(Moving, HasInput);
+        }
+
+        if (animator.GetBool(Grounded) != IsGrounded())
+        {
+            animator.SetBool(Grounded, IsGrounded());
+        }
+
+        if (!Mathf.Approximately(animator.GetFloat(VerticalSpeed), body.linearVelocityY))
+        {
+            animator.SetFloat(VerticalSpeed, body.linearVelocityY);
+        }
+
+        if (animator.GetBool(DoubleJumping) != !hasDoubleJump)
+        {
+            animator.SetBool(DoubleJumping, !hasDoubleJump);
         }
     }
 
@@ -93,71 +160,9 @@ public class PlayerMovementControl : MonoBehaviour
         currentGroundNormal.y = Mathf.Cos(currentGroundAngle * Mathf.Deg2Rad);
     }
 
-    private bool IsGrounded()
-    {
-        return Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckVerticalOffset,
-            groundLayer);
-    }
-
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position - transform.up * groundCheckVerticalOffset, groundCheckBoxSize);
-    }
-    
-    private void Update()
-    {
-        if (!hasDoubleJump && IsGrounded())
-        {
-            hasDoubleJump = true;
-        }
-        
-        if (animator)
-        {
-            if (animator.GetBool(Moving) != HasInput)
-            {
-                animator.SetBool(Moving, HasInput);
-            }
-
-            if (animator.GetBool(Grounded) != IsGrounded())
-            {
-                animator.SetBool(Grounded, IsGrounded());
-            }
-
-            if (!Mathf.Approximately(animator.GetFloat(VerticalSpeed), body.linearVelocityY))
-            {
-                animator.SetFloat(VerticalSpeed, body.linearVelocityY);
-            }
-
-            if (animator.GetBool(DoubleJumping) != !hasDoubleJump)
-            {
-                animator.SetBool(DoubleJumping, !hasDoubleJump);
-            }
-            
-        }
-    }
-    
-    private void FixedUpdate()
-    {
-        if (IsGrounded())
-        {
-            if (!Mathf.Approximately(body.sharedMaterial.friction, groundFriction))
-            {
-                var material = body.sharedMaterial;
-                material.friction = groundFriction;
-                body.sharedMaterial = material;
-            }
-            GroundedBehavior();
-        }
-        else
-        {
-            if (!Mathf.Approximately(body.sharedMaterial.friction, 0.0f))
-            {
-                var material = body.sharedMaterial;
-                material.friction = 0.0f;
-                body.sharedMaterial = material;
-            }
-            AirBehavior();
-        }
     }
 
     //standing still or walking around. Includes slopes.
@@ -235,6 +240,8 @@ public class PlayerMovementControl : MonoBehaviour
         Vector2 walkForceVector = new Vector2(deltaV, 0);
 
         body.AddForce(walkForceVector);
+        
+        currentGroundNormal = Vector2.zero;
     }
 
     //TODO

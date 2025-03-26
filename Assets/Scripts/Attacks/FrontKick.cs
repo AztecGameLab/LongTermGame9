@@ -44,7 +44,6 @@ public class FrontKick : MonoBehaviour
     //check if the hitbox collides with an enemy
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.LogWarning("Trigger has been entered.");
         //Apply damage
         if (collision.TryGetComponent<Health>(out var health))
         {
