@@ -1,25 +1,18 @@
-using System;
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
-public class playerKickAttack : MonoBehaviour
+public class FrontKick : MonoBehaviour
 {
     //Fields for the playerkick attack
     public int enemyDamage = 3;
     public float cooldownTime = 2f;
-    public bool isAttack = false;
-    private float currentCooldownTime = 0f;
+    public bool isAttack;
+    private float currentCooldownTime;
 
     ///  public Collider hitBox;
-    public HashSet<Health> enemies = new HashSet<Health>();
-
-
-    private void Start()
-    {
-        //  hitBox.coll
-    }
+    private readonly HashSet<Health> enemies = new();
 
     public void Update()
     {
@@ -34,18 +27,17 @@ public class playerKickAttack : MonoBehaviour
         }
     }
 
-    public void dealDamage()
+    public void DealDamage(InputAction.CallbackContext context)
     {
-        if (isAttack == false)
+        if (!context.performed || isAttack) return;
+        
+        isAttack = true;
+        currentCooldownTime = cooldownTime;
+        
+        foreach (var health in enemies)
         {
-            isAttack = true;
-            foreach (Health health in enemies)
-            {
-                Debug.LogWarning("Hit");
-                health.ApplyDamage(enemyDamage, DamageType.PlayerKick, gameObject);
-            }
-
-            currentCooldownTime = cooldownTime;
+            // Debug.LogWarning("Hit");
+            health.ApplyDamage(enemyDamage, DamageType.PlayerKick, gameObject);
         }
     }
 
@@ -54,7 +46,7 @@ public class playerKickAttack : MonoBehaviour
     {
         Debug.LogWarning("Trigger has been entered.");
         //Apply damage
-        if (collision.TryGetComponent<Health>(out Health health))
+        if (collision.TryGetComponent<Health>(out var health))
         {
             enemies.Add(health);
         }
@@ -63,7 +55,7 @@ public class playerKickAttack : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<Health>(out Health health))
+        if (collision.TryGetComponent<Health>(out var health))
         {
             enemies.Remove(health);
         }
