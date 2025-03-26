@@ -65,7 +65,7 @@ public class PlayerMovementControl : MonoBehaviour
 
     private bool wasGrounded;
     
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckVerticalOffset,
             groundLayer);
