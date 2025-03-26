@@ -46,6 +46,23 @@ public class PlayerMovementControl : MonoBehaviour
     private bool hasDoubleJump;
     private bool HasInput => !Mathf.Approximately(walkInput, 0.0f);
 
+    private bool allowMovement = true;
+
+    public bool AllowMovement
+    {
+        get => allowMovement;
+        set
+        {
+            allowMovement = value;
+
+            if (!allowMovement)
+            {
+                walkInput = 0;
+                CheckJumpCut();
+            }
+        }
+    }
+
     private bool wasGrounded;
     
     private bool IsGrounded()
@@ -244,41 +261,47 @@ public class PlayerMovementControl : MonoBehaviour
         currentGroundNormal = Vector2.zero;
     }
 
-    //TODO
-    //jump should be allowed when grounded or a double jump is available
-    private bool CheckIfJumpAllowed()
+    private void CheckIfJumpAllowed()
     {
-        return IsGrounded() || hasDoubleJump;
+        if (IsGrounded())
+        {
+            JumpBehavior();
+        } 
+        else if (hasDoubleJump)
+        {
+            hasDoubleJump = false;
+            JumpBehavior();
+        }
     }
 
-    //TODO
-    //jump cut should be allowed if a jump has been performed and we are in the air without a jump cut having already been performed
-    private bool CheckIfJumpCutAllowed()
+    private void CheckJumpCut()
     {
-        return !IsGrounded();
+        if (!IsGrounded())
+        {
+            JumpCut();
+        }
     }
 
     //input signals
     public void walk(InputAction.CallbackContext context)
     {
+        if (!AllowMovement) return;
+        
         walkInput = context.ReadValue<float>();
     }
 
     public void jump(InputAction.CallbackContext context)
     {
-        if (context.performed && CheckIfJumpAllowed())
+        if (!AllowMovement) return;
+        
+        if (context.performed)
         {
-            if (!IsGrounded()) // necessarily means they're using a double jump
-            {
-                hasDoubleJump = false;
-            }
-            
-            JumpBehavior();
+            CheckIfJumpAllowed();
         }
 
-        if (context.canceled && CheckIfJumpCutAllowed())
+        if (context.canceled)
         {
-            JumpCut();
+            CheckJumpCut();
         }
     }
 }
