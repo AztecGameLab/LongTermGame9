@@ -4,8 +4,8 @@ public class CamTrigger : MonoBehaviour
 {
 
     
-    public CamBehaviorType CameraXBehavior = CamBehaviorType.followSaguaro;
-    public CamBehaviorType CameraYBehavior = CamBehaviorType.followSaguaro;
+    public CamBehaviorType CameraXBehavior = CamBehaviorType.FollowSaguaro;
+    public CamBehaviorType CameraYBehavior = CamBehaviorType.FollowSaguaro;
 
     public float CameraXCoord = 0.0f;
     public float CameraYCoord = 0.0f;
@@ -31,7 +31,7 @@ public class CamTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) //(A)
         {
-            mainCam.setCamParameters(passableParams);
+            mainCam.SetCamParameters(passableParams);
         }
     }
 
@@ -39,7 +39,7 @@ public class CamTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) //(A)
         {
-            mainCam.resetCamParameters();
+            mainCam.ResetCamParameters();
         }
     }
 }

@@ -12,8 +12,8 @@ public class CamParameters
 
     public float speed;
 
-    public CamParameters(CamBehaviorType xBe= CamBehaviorType.followSaguaro,
-                         CamBehaviorType yBe = CamBehaviorType.followSaguaro,
+    public CamParameters(CamBehaviorType xBe= CamBehaviorType.FollowSaguaro,
+                         CamBehaviorType yBe = CamBehaviorType.FollowSaguaro,
                          float xP= -99.9f,
                          float yP= -99.9f,
                          float si= -99.9f,

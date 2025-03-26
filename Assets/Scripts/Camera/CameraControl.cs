@@ -14,42 +14,42 @@ public class CameraControl : MonoBehaviour
 
 
     //knowing saguaro's position is important for following him
-    GameObject Saguaro;
-    Camera usCamera;
+    private GameObject saguaro;
+    private Camera usCamera;
 
-    public CamBehaviorType startingXBehavior = CamBehaviorType.followSaguaro;
-    public CamBehaviorType startingYBehavior = CamBehaviorType.followSaguaro;
+    public CamBehaviorType startingXBehavior = CamBehaviorType.FollowSaguaro;
+    public CamBehaviorType startingYBehavior = CamBehaviorType.FollowSaguaro;
 
-    public float startingXPos = 0.0f;
-    public float startingYPos = 0.0f;
+    public float startingXPos;
+    public float startingYPos;
 
     public float startingSize = 5.0f;
 
     public float startingSpeed = 5.0f;
 
-    CamParameters defaultTargetPosInfo;
+    private CamParameters defaultTargetPosInfo;
 
-    CamParameters targetPosInfo;
+    private CamParameters targetPosInfo;
 
     //transform, current and target, are stored as Vector3's. x = x position, y = y position, z = size.
-    Vector3 currentPos;
+    private Vector3 currentPos;
 
-    Vector3 temp3D;
+    private Vector3 temp3D;
 
-    Vector3 targetPos;
+    private Vector3 targetPos;
 
     private float speed;
 
 
-    void Start()
+    private void Start()
     {
-        Saguaro = findSaguaro();
+        saguaro = FindSaguaro();
         usCamera = GetComponent<Camera>();
 
         defaultTargetPosInfo = new CamParameters(startingXBehavior, startingYBehavior, startingXPos, startingYPos, startingSize, speed);
         targetPosInfo = new CamParameters(startingXBehavior, startingYBehavior, startingXPos, startingYPos, startingSize, speed);
 
-        findTargetPos();
+        FindTargetPos();
         currentPos.x = targetPos.x;
         currentPos.y = targetPos.y;
         currentPos.z = targetPos.z;
@@ -61,21 +61,21 @@ public class CameraControl : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         //1. set desired position based on current targetPosInfo
-        findTargetPos();
+        FindTargetPos();
 
 
 
         //2. move camera towards desired position
-        Vector3 between = targetPos - currentPos;
-        currentPos = currentPos + (between * Time.deltaTime * speed);
+        var between = targetPos - currentPos;
+        currentPos += between * (Time.deltaTime * speed);
 
-        setTransform2DAndSize(currentPos);
+        SetTransform2DAndSize(currentPos);
     }
 
-    void setTransform2DAndSize(Vector3 newTrans)
+    private void SetTransform2DAndSize(Vector3 newTrans)
     {
         //temp3D.z is 'wherever the camera starts'
         temp3D.x = newTrans.x;
@@ -86,20 +86,20 @@ public class CameraControl : MonoBehaviour
         usCamera.orthographicSize = newTrans.z;
     }
 
-    void findTargetPos()
+    private void FindTargetPos()
     {
-        if (targetPosInfo.xBehavior == CamBehaviorType.followSaguaro)
+        if (targetPosInfo.xBehavior == CamBehaviorType.FollowSaguaro)
         {
-            targetPos.x = Saguaro.transform.position.x;
+            targetPos.x = saguaro.transform.position.x;
         }
         else
         {
             targetPos.x = targetPosInfo.xPos;
         }
 
-        if (targetPosInfo.yBehavior == CamBehaviorType.followSaguaro)
+        if (targetPosInfo.yBehavior == CamBehaviorType.FollowSaguaro)
         {
-            targetPos.y = Saguaro.transform.position.y;
+            targetPos.y = saguaro.transform.position.y;
         }
         else
         {
@@ -111,14 +111,14 @@ public class CameraControl : MonoBehaviour
 
                                         //NOTE FOR THOSE WHOSE RESPONSIBILITY IT IS TO PUT ALL OF THIS TOGETHER:
     //apologies, I'm not sure how we're identifying Saguaro. It's the same in CamTrigger, if (A) is wrong, replace it with the correct identification method.
-    GameObject findSaguaro()
+    private static GameObject FindSaguaro()
     {
         
         return GameObject.FindGameObjectsWithTag("Player")[0]; //(A)
     }
 
 
-    public void setCamParameters(CamParameters newParams)
+    public void SetCamParameters(CamParameters newParams)
     {
         targetPosInfo = new CamParameters(newParams.xBehavior,
                                           newParams.yBehavior,
@@ -129,7 +129,7 @@ public class CameraControl : MonoBehaviour
         speed = newParams.speed;
     }
 
-    public void resetCamParameters()
+    public void ResetCamParameters()
     {
         targetPosInfo = new CamParameters(startingXBehavior,
                                           startingYBehavior,
