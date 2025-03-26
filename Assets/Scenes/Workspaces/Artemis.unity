@@ -1061,8 +1061,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5965582228842123113, guid: a55e661c7a8dcc64cb691a51f910b6cc, type: 3}
+      propertyPath: CameraSize
+      value: 12.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965582228842123113, guid: a55e661c7a8dcc64cb691a51f910b6cc, type: 3}
       propertyPath: CameraXCoord
-      value: 13.9
+      value: 18.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965582228842123113, guid: a55e661c7a8dcc64cb691a51f910b6cc, type: 3}
+      propertyPath: CameraYCoord
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 5965582228842123113, guid: a55e661c7a8dcc64cb691a51f910b6cc, type: 3}
       propertyPath: CameraXBehavior

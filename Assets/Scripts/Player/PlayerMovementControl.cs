@@ -177,7 +177,7 @@ public class PlayerMovementControl : MonoBehaviour
         currentGroundNormal.y = Mathf.Cos(currentGroundAngle * Mathf.Deg2Rad);
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireCube(transform.position - transform.up * groundCheckVerticalOffset, groundCheckBoxSize);
     }

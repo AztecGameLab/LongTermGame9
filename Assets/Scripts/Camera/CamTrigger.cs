@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CamTrigger : MonoBehaviour
@@ -42,4 +43,12 @@ public class CamTrigger : MonoBehaviour
             mainCam.ResetCamParameters();
         }
     }
+
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(new Vector3(CameraXCoord, CameraYCoord), new Vector3(CameraSize * 2 * (16f / 9f), CameraSize * 2));        
+    }
+    
 }
