@@ -28,10 +28,10 @@ public class PlayerFlip : MonoBehaviour
     {
         if (startsFacingRight)
         {
-            return body.linearVelocityX > flipDeadzone && !isFacingRight || body.linearVelocityX < flipDeadzone && isFacingRight;
+            return body.linearVelocityX > flipDeadzone && !isFacingRight || body.linearVelocityX < -flipDeadzone && isFacingRight;
         }
         
-        return body.linearVelocityX > flipDeadzone && isFacingRight || body.linearVelocityX < flipDeadzone && !isFacingRight;
+        return body.linearVelocityX > flipDeadzone && isFacingRight || body.linearVelocityX < -flipDeadzone && !isFacingRight;
     }
     
     // Update is called once per frame

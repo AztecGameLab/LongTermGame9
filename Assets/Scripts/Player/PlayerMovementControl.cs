@@ -4,33 +4,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementControl : MonoBehaviour
 {
+    private static readonly int Moving = Animator.StringToHash("Moving");
+    private static readonly int VerticalSpeed = Animator.StringToHash("VerticalSpeed");
+    private static readonly int Grounded = Animator.StringToHash("Grounded");
+    private static readonly int DoubleJumping = Animator.StringToHash("DoubleJumping");
+    
     /*
      * movement control behaviour
-     *
-     */
-
-    /*
-     * TO DO LIST:
-     *
-     * onGround boolean has inconsistent behavior. What should the conditions be for being on the ground or not?
-     * currently it's set true when OnCollisionStay finds an appropriate ground collider
-     * and set false when we jump.
-     * (possibly: set it true/false by sending a raycast down like 0.2 units and checking for ground beneath us.)
-     * >>> I modified the ground check to use a boxcast, inspired by a tutorial I found (here)[https://www.youtube.com/watch?v=P_6W-36QfLA]
-     * >>> I did however keep the OnCollisionStay2D method for tracking the normals of the ground for movement purposes on the slopes.
-     *
-     * Jumping adds a weird tiny sideways velocity. I have no idea why but it feels bad. maybe forcibly set velocity.x to 0 after a jump?
-     *                                                                                    ^feels like a bandaid fix
-     * >>> I believe the jump weirdness was mostly a result of the onGround check being inconsistent, along with
-     * >>> the movements being based on the magnitude of the velocity (i.e. would take the jump's upwards momentum as directional movement).
-     *
-     * how do I plan to deal with rotation on the ground? want to prevent tipping and make it not feel so weird and boxy. (reduce rotational damping?)
-     * >>> I just locked the rotation in the rigidbody component, since we don't want it to rotate (it might look weird on slopes but that's alright for now)
-     *
-     * add in-air movement. Should probably be similarly snappy to on-ground movement. Maybe the same?
-     *                                        (in which case I should separate it into a different method and use it in both)
-     * >>> I kept it very similar, mostly just removed the bits that had it reacting to the ground.
-     *
      *
      */
 
@@ -58,9 +38,13 @@ public class PlayerMovementControl : MonoBehaviour
     private float currentGroundAngle;
     private Vector2 currentGroundNormal = Vector2.zero;
 
+    [Header("Animation")]
+    public Animator animator;
+    
     private Rigidbody2D body;
 
     private bool hasDoubleJump;
+    private bool HasInput => !Mathf.Approximately(walkInput, 0.0f);
     
     private void Start()
     {
@@ -125,6 +109,30 @@ public class PlayerMovementControl : MonoBehaviour
         if (!hasDoubleJump && IsGrounded())
         {
             hasDoubleJump = true;
+        }
+        
+        if (animator)
+        {
+            if (animator.GetBool(Moving) != HasInput)
+            {
+                animator.SetBool(Moving, HasInput);
+            }
+
+            if (animator.GetBool(Grounded) != IsGrounded())
+            {
+                animator.SetBool(Grounded, IsGrounded());
+            }
+
+            if (!Mathf.Approximately(animator.GetFloat(VerticalSpeed), body.linearVelocityY))
+            {
+                animator.SetFloat(VerticalSpeed, body.linearVelocityY);
+            }
+
+            if (animator.GetBool(DoubleJumping) != !hasDoubleJump)
+            {
+                animator.SetBool(DoubleJumping, !hasDoubleJump);
+            }
+            
         }
     }
     
@@ -257,7 +265,7 @@ public class PlayerMovementControl : MonoBehaviour
             {
                 hasDoubleJump = false;
             }
-
+            
             JumpBehavior();
         }
 
