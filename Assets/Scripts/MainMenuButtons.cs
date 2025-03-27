@@ -2,17 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
 using TriInspector;
-using UnityEngine.Audio;
 
 public class MainMenuButtons: MonoBehaviour
 {
     [SerializeField] [Scene] private string _loadGame = "MainGame";
-    [SerializeField] private Image _sceneFade = null;
+    [SerializeField] private Image _sceneFade;
     [SerializeField] private float _fadeSpeed = 1f;
-    [SerializeField] private AudioSource _menuMusic = null;
-    [SerializeField] private AudioSource _buttonMusic = null;
+    [SerializeField] private AudioSource _menuMusic;
+    [SerializeField] private AudioSource _buttonMusic;
     protected void Start()
     {
         _sceneFade.enabled = false;
