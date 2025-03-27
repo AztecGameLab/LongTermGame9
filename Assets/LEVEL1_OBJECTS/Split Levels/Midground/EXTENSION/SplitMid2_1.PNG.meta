@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 72de094163572c34590539e2ad7bc898
+guid: bab71de6597aefc4c8fead8931075850
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6117397494614364885
-    second: Layer 1 Sky (WITH FILTER, USE IF FILTER LAYER DOESN_T WORK PROPERLY)_0
+      213: 1501955362206182881
+    second: SplitMid2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Layer 1 Sky (WITH FILTER, USE IF FILTER LAYER DOESN_T WORK PROPERLY)_0
+      name: SplitMid2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3840
-        height: 1080
+        width: 964
+        height: 402
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d29a582c9c55e450800000000000000
-      internalID: 6117397494614364885
+      spriteID: 1edeac8b17408d410800000000000000
+      internalID: 1501955362206182881
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7a0a96937404ad847add784800cfa5ad
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Layer 1 Sky (WITH FILTER, USE IF FILTER LAYER DOESN_T WORK PROPERLY)_0: 6117397494614364885
+      SplitMid2_0: 1501955362206182881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
