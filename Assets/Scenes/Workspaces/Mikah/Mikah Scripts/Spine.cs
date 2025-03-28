@@ -43,8 +43,7 @@ public class Spine : MonoBehaviour
         if (other.TryGetComponent<Health>(out var health))
         {
             health.ApplyDamage(damage, DamageType.PlayerThrow, gameObject);
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
     }
 }

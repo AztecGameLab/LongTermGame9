@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerThrow : MonoBehaviour
 {
+    private static readonly int ThrowSpine = Animator.StringToHash("ThrowSpine");
+
     [Header("Throwing")]
     public Transform throwPoint;
     public GameObject spinePrefab;
@@ -11,14 +13,15 @@ public class PlayerThrow : MonoBehaviour
     public float timeBtwShots = 1f;
     private float timeOfLastShot;
     private AmmoManager ammoManager;
-    private Animator anim;
+    
+    [Header("Animation")]
+    [SerializeField] private Animator anim;
 
     private PlayerMovementControl movementControl;
     private PlayerFlip playerFlip;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         ammoManager = FindFirstObjectByType<AmmoManager>();
         if (ammoManager == null)
         {
@@ -62,7 +65,7 @@ public class PlayerThrow : MonoBehaviour
         {
             int currentAmmo = ammoManager.GetAmmo();
 
-            if (currentAmmo > 0 && Time.time - timeOfLastShot >= timeBtwShots)
+            if (currentAmmo > 0 && (timeOfLastShot == 0.0 || Time.time - timeOfLastShot >= timeBtwShots))
             {
                 ammoManager.TryUseAmmo(1);
 
@@ -70,7 +73,7 @@ public class PlayerThrow : MonoBehaviour
                 
                 if (anim != null)
                 {
-                    anim.SetTrigger("Throw");
+                    anim.SetTrigger(ThrowSpine);
                 }
 
                 int direction = playerFlip != null && playerFlip.ForwardVector2.x < 0 ? -1 : 1;
