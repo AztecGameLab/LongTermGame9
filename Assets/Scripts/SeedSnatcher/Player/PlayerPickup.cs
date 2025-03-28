@@ -1,3 +1,4 @@
+using CactusBushes;
 using UnityEngine;
 
 public class PlayerPickup : MonoBehaviour
@@ -7,16 +8,10 @@ public class PlayerPickup : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.TryGetComponent<CactusSpine>(out var spine))
+        if (other.gameObject.TryGetComponent<DroppableItem>(out var itemPickup))
         {
-            ammoManager.IncreaseAmmo(1);
-            Destroy(spine.gameObject);
-        }
-
-        if (other.gameObject.TryGetComponent<BushSeed>(out var seed))
-        {
-            health.AddHealth(1);
-            Destroy(seed.gameObject);
+            itemPickup.OnCollect(health, ammoManager);
+            Destroy(itemPickup.gameObject);
         }
     }
 }

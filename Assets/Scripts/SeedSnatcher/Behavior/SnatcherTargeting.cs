@@ -1,15 +1,23 @@
+using SeedSnatcher.Target;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace SeedSnatcher
+namespace SeedSnatcher.Behavior
 {
     public class SnatcherTargeting : MonoBehaviour
     {
-        [SerializeField] private GameObject target;
-        [SerializeField] private string targetTag = "ExpiredSeed";
+        [SerializeField] private SnatchableTarget target;
         [SerializeField] private bool doFindTarget = true;
+        public float maximumRange = 100f;
+        
+        private SnatcherTargetManager seedManager;
 
-        private void SetTarget(GameObject newTarget)
+        private void Start()
+        {
+            seedManager = FindFirstObjectByType<SnatcherTargetManager>().GetInstance();
+        }
+
+        private void SetTarget(SnatchableTarget newTarget)
         {
             target = newTarget;
         }
@@ -22,11 +30,10 @@ namespace SeedSnatcher
                 return;
             }
             
-            // TODO: find a better way to do this (maybe with events?)
-            var possibleTarget = GameObject.FindWithTag(targetTag);
-            // TODO: check whether already targeted by another snatcher
-            if (!possibleTarget.IsUnityNull())
-            {
+            var thisPosition = transform.position;
+            var possibleTarget = seedManager.GetNearestSeed(thisPosition, maximumRange);
+            if (!possibleTarget.IsUnityNull()) {
+                possibleTarget.isBeingTargeted = true;
                 SetTarget(possibleTarget);
             }
         }
@@ -37,15 +44,14 @@ namespace SeedSnatcher
         }
 
         public void DestroyTarget()
-        {
-            Destroy(target);
+        {         
+            target.Destroy();
+            target = null;
         }
 
         public Vector3 GetTargetPosition()
         {
             return target.transform.position;
         }
-
-        
     }
 }

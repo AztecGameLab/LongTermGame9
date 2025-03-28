@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using Unity.Mathematics.Geometry;
-using Unity.VisualScripting;
+using SeedSnatcher.Utils;
 using UnityEngine;
 
-namespace SeedSnatcher.Movement
+namespace SeedSnatcher.Behavior.Movement
 {
     public class SnatcherDive : SnatcherMovement
     {
@@ -12,13 +11,15 @@ namespace SeedSnatcher.Movement
         /** the actual points along the curve */
         private List<Vector3> path;
         /** the position in the dive */
-        [SerializeField] private int diveStep;
+        private int diveStep;
         /**
          * Whether a stage has just changed.
          * Can't use diveStep == 0 since we can't be sure
          * when the bird reaches diveStep 1.
          */
         private bool isNewStage = true;
+
+        private float acceleratedSpeed;
         
         /**
          * Dives have three stages: start, bottom, and end.
@@ -29,29 +30,25 @@ namespace SeedSnatcher.Movement
          */
         private int diveStage;
 
-        [SerializeField] private List<Sprite> diveAnimation;
-        [SerializeField] private Animator animator;
-        [SerializeField] private SpriteRenderer renderer;
-        
         /**
          * Computes appropriate control points for the
          * dive's Bézier curve.
          */
         private void SetupControlPoints()
         {
-            var midpointTop = (startPosition + endPosition) / 2;
-            midpointTop.y = startPosition.y;
+            var midpointTop = (StartPosition + EndPosition) / 2;
+            midpointTop.y = StartPosition.y;
             var midpointBottom = midpointTop;
-            midpointBottom.y = endPosition.y;
+            midpointBottom.y = EndPosition.y;
             var midpointMidpoint = (midpointBottom + midpointTop) / 2;
 
             controlPoints = new List<Vector3>()
             {
-                startPosition,
+                StartPosition,
                 midpointTop,
                 midpointMidpoint,
                 midpointBottom,
-                endPosition
+                EndPosition
             };
         }
         
@@ -83,10 +80,10 @@ namespace SeedSnatcher.Movement
          */
         private void CalculateReverseDive()
         {
-            var newEndPosition = startPosition;
-            startPosition = endPosition;
-            newEndPosition.x = 2 * endPosition.x - newEndPosition.x;
-            endPosition = newEndPosition;
+            var newEndPosition = StartPosition;
+            StartPosition = EndPosition;
+            newEndPosition.x = 2 * EndPosition.x - newEndPosition.x;
+            EndPosition = newEndPosition;
         }
 
         /**
@@ -106,17 +103,19 @@ namespace SeedSnatcher.Movement
         private void ExitDive()
         {
             GetSnatcherController().SetState(SnatcherState.Idle);
-            animator.enabled = true;
         }
 
         public override void Init()
         {
+            StopAnimation();
+            SetSprite();
             // reset values to defaults in case this was previously used
             diveStage = 0;
             diveStep = 0;
             controlPoints = null;
             path = null;
-            animator.enabled = false;
+            isNewStage = true;
+            acceleratedSpeed = speed;
         }
 
         public override void Loop()
@@ -136,9 +135,9 @@ namespace SeedSnatcher.Movement
                     case 0:
                         var thisPosition = transform.position;
                         var targetPosition = GetSnatcherTargeting().GetTargetPosition();
-                        (startPosition, endPosition) = (thisPosition, targetPosition);
+                        (StartPosition, EndPosition) = (thisPosition, targetPosition);
                         SetupDive();
-                        Debug.DrawLine(startPosition, endPosition, Color.green, 90);
+                        Debug.DrawLine(StartPosition, EndPosition, Color.green, 90);
                         break;
                     case 1:
                         GetSnatcherTargeting().DestroyTarget();
@@ -155,48 +154,27 @@ namespace SeedSnatcher.Movement
             
             // Move to next point in curve
             var nextPosition = path[diveStep];
-            transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, nextPosition, acceleratedSpeed * Time.deltaTime);
             if (HasReachedPosition(nextPosition))
             {
                 diveStep++;
-            }
-
-            switch (diveStage)
-            {
-                case 0 when Mathf.Approximately(diveStep, 0):
-                    renderer.sprite = diveAnimation[0];
-                    break;
-                case 0 when Mathf.Approximately(diveStep, path.Count * 0.2f):
-                    renderer.sprite = diveAnimation[1];
-                    break;
-                case 0 when Mathf.Approximately(diveStep, path.Count * 0.35f):
-                    renderer.sprite = diveAnimation[2];
-                    break;
-                case 0 when Mathf.Approximately(diveStep, path.Count * 0.5f):
-                    renderer.sprite = diveAnimation[3];
-                    break;
-                case 0 when Mathf.Approximately(diveStep, path.Count * 0.65f):
-                    renderer.sprite = diveAnimation[4];
-                    break;
-                case 0:
+                if (diveStage < 1)
                 {
-                    if(Mathf.Approximately(diveStep, path.Count * 0.8f))
-                    {
-                        renderer.sprite = diveAnimation[5];
-                    }
-
-                    break;
+                    acceleratedSpeed = Mathf.Max(speed, 5.0f * (diveStep + 1) / path.Count + 0.2f);
                 }
-                case 1 when Mathf.Approximately(diveStep, path.Count * 0.2f):
-                    renderer.sprite = diveAnimation[6];
-                    break;
-                case 1 when Mathf.Approximately(diveStep, path.Count * 0.5f):
-                    renderer.sprite = diveAnimation[7];
-                    break;
-                case 1 when Mathf.Approximately(diveStep, path.Count * 0.8f):
-                    renderer.sprite = diveAnimation[8];
-                    break;
+                else
+                {
+                    acceleratedSpeed = Mathf.Max(speed, 5.0f * (path.Count - diveStep) / path.Count + 0.2f);
+                }
             }
+            // Orient bird to next point
+            // float xComp = nextPosition.x - StartPosition.x;
+            // float yComp = nextPosition.y - StartPosition.y;
+            // float angle = Mathf.Atan2(yComp, xComp) * Mathf.Rad2Deg;
+            Vector2 target = nextPosition - StartPosition;
+            float angle = Vector2.SignedAngle(IsFacingLeft() ? Vector2.left : Vector2.right, target);
+            transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
+            
             
             // Move to next stage when end of curve reached
             if (diveStep < path.Count) return;

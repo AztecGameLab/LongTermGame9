@@ -123,9 +123,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8425023927841183865}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+        m_TargetAssemblyTypeName: VegetationSpawner, Assembly-CSharp
+        m_MethodName: TriggerItemDrop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -134,6 +134,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8425023927841183865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDrop: {fileID: 6755101325085091312, guid: 53be60519112b4674b21dfe7cec2a33e, type: 3}
+  dropAmount: 3
 --- !u!70 &76263425622468594
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

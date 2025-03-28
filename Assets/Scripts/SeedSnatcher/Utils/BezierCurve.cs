@@ -3,7 +3,7 @@ using UnityEngine;
 
 // for creating the dive arc when hunting for a seed
 // code based on https://github.com/shamim-akhtar/bezier-curve
-namespace SeedSnatcher
+namespace SeedSnatcher.Utils
 {
     public static class BezierCurve
     {

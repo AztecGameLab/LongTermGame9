@@ -29,6 +29,18 @@ PrefabInstance:
       value: CactusSm
       objectReference: {fileID: 0}
     - target: {fileID: 866851675437874085, guid: 8dafcf88c7e524a8481d3593f96eda46, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 866851675437874085, guid: 8dafcf88c7e524a8481d3593f96eda46, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerItemDrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 866851675437874085, guid: 8dafcf88c7e524a8481d3593f96eda46, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: VegetationSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 866851675437874085, guid: 8dafcf88c7e524a8481d3593f96eda46, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: -2661237713463605235, guid: ae2fa3ebe0ffd4faf984ba2d437d1adf, type: 3}

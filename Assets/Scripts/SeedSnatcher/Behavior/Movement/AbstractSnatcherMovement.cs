@@ -1,23 +1,44 @@
 using UnityEngine;
 
-namespace SeedSnatcher.Movement
+namespace SeedSnatcher.Behavior.Movement
 {
     public abstract class SnatcherMovement : MonoBehaviour
     {
         // Snatcher Movement vars
-        [SerializeField] protected Vector3 startPosition;
-        [SerializeField] protected Vector3 endPosition;
+        protected Vector3 StartPosition;
+        protected Vector3 EndPosition;
         [SerializeField] protected float speed = 1.0f;
         // make sure the endPosition is way larger than this
         [SerializeField] protected float positionTolerance = 0.5f;
         
         private SnatcherTargeting snatcherTargeting;
         private SnatcherController snatcherController;
+        private SpriteRenderer spriteRenderer;
+        private Animator animator;
 
+        [SerializeField] private Sprite sprite;
+        
         private void Start()
         {
             snatcherTargeting = GetComponentInParent<SnatcherTargeting>();
             snatcherController = GetComponentInParent<SnatcherController>();
+            spriteRenderer = GetComponentInParent<SpriteRenderer>();
+            animator = GetComponentInParent<Animator>();
+        }
+
+        protected void StopAnimation()
+        {
+            animator.enabled = false;
+        }
+        
+        protected void StartAnimation()
+        {
+            animator.enabled = true;
+        }
+        
+        protected void SetSprite()
+        {
+            spriteRenderer.sprite = sprite;
         }
 
         protected SnatcherTargeting GetSnatcherTargeting()
@@ -41,7 +62,7 @@ namespace SeedSnatcher.Movement
             transform.localScale = new Vector3(flippedX, localScale.y, localScale.z);
         }
         
-        private bool IsFacingLeft()
+        protected bool IsFacingLeft()
         {
             var localScale = transform.localScale;
             return localScale.x < 0;
@@ -55,14 +76,14 @@ namespace SeedSnatcher.Movement
             // if its already in the correct facing
             if (IsFacingLeft())
             {
-                if (thisPosition.x < endPosition.x)
+                if (thisPosition.x < EndPosition.x)
                 {
                     FlipSprite();
                 }
             }
             else
             {
-                if (thisPosition.x > endPosition.x)
+                if (thisPosition.x > EndPosition.x)
                 {
                     FlipSprite();
                 }
@@ -77,7 +98,7 @@ namespace SeedSnatcher.Movement
         
         protected bool HasReachedEnd()
         {
-            return HasReachedPosition(endPosition);
+            return HasReachedPosition(EndPosition);
         }
         
         public abstract void Init();
