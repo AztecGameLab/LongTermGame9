@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2641856354376723227}
   - component: {fileID: 1183373792343013582}
   - component: {fileID: 3120151957644055725}
+  - component: {fileID: 8511121694122722234}
   m_Layer: 0
   m_Name: Cactus Spine
   m_TagString: Untagged
@@ -159,3 +160,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8511121694122722234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755101325085091312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90fb47ceeed58e4fb0e306bef1a2961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

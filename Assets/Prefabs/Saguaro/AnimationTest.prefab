@@ -210,7 +210,8 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1351494427374706384, guid: 02ca07625751124479555c7e289500fe, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5555969285793694952, guid: 02ca07625751124479555c7e289500fe, type: 3}

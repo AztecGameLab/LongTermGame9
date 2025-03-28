@@ -222,6 +222,34 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3424541097415123224, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424541097415123224, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424541097415123224, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2110925316}
+    - target: {fileID: 3424541097415123224, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424541097415123224, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetHearts
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424541097415123224, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: playerHealth, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424541097415123224, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4257396540123084084, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -65.54
@@ -261,6 +289,34 @@ PrefabInstance:
     - target: {fileID: 4257396540123084084, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695414606858514721, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695414606858514721, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695414606858514721, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2110925315}
+    - target: {fileID: 5695414606858514721, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695414606858514721, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSpines
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695414606858514721, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: spineammoUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695414606858514721, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8240657110391075401, guid: 320aaa108660c8f4f8e28e473ce755a5, type: 3}
       propertyPath: m_Name
@@ -4406,6 +4462,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &719223947
 BoxCollider2D:
   m_ObjectHideFlags: 0

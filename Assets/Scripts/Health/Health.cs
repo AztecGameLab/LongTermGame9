@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,6 +18,13 @@ public class Health : MonoBehaviour
     public UnityEvent<int, DamageType, GameObject> onDamage;
     
     public UnityEvent<GameObject> onDeath;
+    
+    public UnityEvent<int> onHealthChanged;
+
+    private void Start()
+    {
+        onHealthChanged.Invoke(healthValue);
+    }
 
     public virtual void ApplyDamage(int damage, DamageType damageType, GameObject attacker)
     {
@@ -35,12 +43,14 @@ public class Health : MonoBehaviour
             onDeath.Invoke(attacker);
         }
         
+        onHealthChanged.Invoke(healthValue);
         onDamage.Invoke(damage, damageType, attacker);
     }
 
     public virtual void AddHealth(int amount)
     {
         healthValue += amount;
+        onHealthChanged.Invoke(healthValue);
     }
 
     public bool IsVulnerable(DamageType damageType)

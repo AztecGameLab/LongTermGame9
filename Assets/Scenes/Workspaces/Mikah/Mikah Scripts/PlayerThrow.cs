@@ -48,11 +48,11 @@ public class PlayerThrow : MonoBehaviour
             float direction = playerFlip.ForwardVector2.x;
 
             // Offset the throw point in front of the player
-            throwPoint.localPosition = new Vector3(
-                Mathf.Abs(throwPoint.localPosition.x) * Mathf.Sign(direction),
-                throwPoint.localPosition.y,
-                throwPoint.localPosition.z
-            );
+            // throwPoint.localPosition = new Vector3(
+            //     Mathf.Abs(throwPoint.localPosition.x) * Mathf.Sign(direction),
+            //     throwPoint.localPosition.y,
+            //     throwPoint.localPosition.z
+            // );
 
             // Flip throw point's rotation so the projectile launches the right way
             throwPoint.localEulerAngles = direction > 0 ? Vector3.zero : new Vector3(0, 180, 0);

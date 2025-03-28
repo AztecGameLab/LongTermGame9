@@ -40,10 +40,10 @@ public class Spine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<Health>(out var health))
-        {
-            health.ApplyDamage(damage, DamageType.PlayerThrow, gameObject);
-            Destroy(gameObject);
-        }
+        if (!other.TryGetComponent<Health>(out var health)) return;
+        if (!health.IsVulnerable(DamageType.PlayerThrow)) return;
+            
+        health.ApplyDamage(damage, DamageType.PlayerThrow, gameObject);
+        Destroy(gameObject);
     }
 }
