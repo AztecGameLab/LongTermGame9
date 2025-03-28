@@ -5,26 +5,46 @@ public class Spine : MonoBehaviour
     public int damage = 1;
     public float speed = 20f;
     public Rigidbody2D rb;
+
+    private int direction = 1;
+
+    public void SetDirection(int dir)
+    {
+        direction = dir;
+        Debug.Log("Projectile received direction: " + direction);
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameObject saguaroTemp =GameObject.Find("Saguaro");
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), saguaroTemp.GetComponent<Collider2D>());
-        rb.linearVelocity = Vector2.right * PlayerMovement.moveDirection * speed;  // Ensure the spine is moving
+
+        // Ignore all collisions with player (and its children)
+        GameObject player = GameObject.Find("Saguaro");
+        if (player != null)
+        {
+            Collider2D[] playerColliders = player.GetComponentsInChildren<Collider2D>();
+            Collider2D[] spineColliders = GetComponentsInChildren<Collider2D>();
+
+            foreach (var playerCol in playerColliders)
+            {
+                foreach (var spineCol in spineColliders)
+                {
+                    Physics2D.IgnoreCollision(spineCol, playerCol);
+                }
+            }
+        }
+
+        // Use transform.right (respects rotation of throwPoint)
+        rb.linearVelocity = transform.right * direction * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        // Check if the collider has a Health component
         if (other.TryGetComponent<Health>(out var health))
         {
-            // Apply damage to the enemy
             health.ApplyDamage(damage, DamageType.PlayerThrow, gameObject);
         }
 
-        // Destroy the spine projectile after it has collided
         Destroy(gameObject);
     }
 }
-
