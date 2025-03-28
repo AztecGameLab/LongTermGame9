@@ -31,7 +31,7 @@ namespace SeedSnatcher.Movement
         }
         
         // for flipping the bird (not *that* kind) when it's looping back
-        protected void FlipSprite()
+        private void FlipSprite()
         {
             // I'm using two separate objects to represent the bird
             // and I don't want to bother manually flipping both sprites.
@@ -40,13 +40,46 @@ namespace SeedSnatcher.Movement
             var flippedX = -localScale.x;
             transform.localScale = new Vector3(flippedX, localScale.y, localScale.z);
         }
-
-        protected bool IsFacingLeft()
+        
+        private bool IsFacingLeft()
         {
             var localScale = transform.localScale;
             return localScale.x > 0;
         }
+        
+        protected void DetermineFacingDirection()
+        {
+            var thisPosition = transform.position;
+            
+            // important that we don't bother flipping
+            // if its already in the correct facing
+            if (IsFacingLeft())
+            {
+                if (thisPosition.x < endPosition.x)
+                {
+                    FlipSprite();
+                }
+            }
+            else
+            {
+                if (thisPosition.x > endPosition.x)
+                {
+                    FlipSprite();
+                }
+            }
+        }
 
+        protected bool HasReachedPosition(Vector3 position)
+        {
+            var currentPosition = transform.position;
+            return Vector3.Distance(currentPosition, position) < positionTolerance;
+        }
+        
+        protected bool HasReachedEnd()
+        {
+            return HasReachedPosition(endPosition);
+        }
+        
         public abstract void Init();
         public abstract void Loop();
         

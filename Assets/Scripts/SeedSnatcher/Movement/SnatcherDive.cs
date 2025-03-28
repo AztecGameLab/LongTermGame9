@@ -1,40 +1,59 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace SeedSnatcher.Movement
 {
     public class SnatcherDive : SnatcherMovement
     {
-        // Dive vars
-        [SerializeField] private int diveStage;
+        /** for creating the Bézier curve */
         private List<Vector3> controlPoints;
+        /** the actual points along the curve */
         private List<Vector3> path;
-        [SerializeField] private int diveCount;
+        /** the position in the dive */
+        [SerializeField] private int diveStep;
+        /**
+         * Whether a stage has just changed.
+         * Can't use diveStep == 0 since we can't be sure
+         * when the bird reaches diveStep 1.
+         */
+        private bool isNewStage = true;
+        
+        /**
+         * Dives have three stages: start, bottom, and end.
+         * The start stage creates the curve down to the bottom
+         * position. The bottom stage creates the curve to the
+         * end position (on top of handling the target). The end
+         * stage switches back to the idle mode.
+         */
+        private int diveStage;
 
-        // creates the curve which the bird should dive
-        // more control points may increase the dive steepness
-        private void SetupDiveCurve()
+        /**
+         * Computes appropriate control points for the
+         * dive's Bézier curve.
+         */
+        private void SetupControlPoints()
         {
             var midpointTop = (startPosition + endPosition) / 2;
             midpointTop.y = startPosition.y;
             var midpointBottom = midpointTop;
             midpointBottom.y = endPosition.y;
             var midpointMidpoint = (midpointBottom + midpointTop) / 2;
-            //var midpointTopMidpoint = (midpointMidpoint + midpointTop) / 2;
-            //var midpointBottomMidpoint = (midpointMidpoint + midpointBottom) / 2;
 
             controlPoints = new List<Vector3>()
             {
                 startPosition,
                 midpointTop,
-                //midpointTopMidpoint,
                 midpointMidpoint,
-                //midpointBottomMidpoint,
                 midpointBottom,
                 endPosition
             };
         }
-
+        
+        /**
+         * Generates a Bézier curve that the bird should fly along,
+         * using `controlPoints` for De Casteljau's algorithm.
+         */
         private void GeneratePath(int precision = 100)
         {
             path = new List<Vector3>();
@@ -49,78 +68,97 @@ namespace SeedSnatcher.Movement
                 }
             }
         }
-
-        private void ReverseDiveCurve()
+        
+        /**
+         * Generates the curve back up from the bottom.
+         * The end point will be the same Y position as
+         * the original start point. Its X position will
+         * be the distance from the original target position,
+         * times two.
+         */
+        private void CalculateReverseDive()
         {
-            var originalStart = startPosition;
+            var newEndPosition = startPosition;
             startPosition = endPosition;
-            originalStart.x = 2 * endPosition.x - originalStart.x;
-            endPosition = originalStart;
-            SetupDiveCurve();
+            newEndPosition.x = 2 * endPosition.x - newEndPosition.x;
+            endPosition = newEndPosition;
         }
 
-        private void Dive()
+        /**
+         * Wrapper function for all the helper
+         * functions to set up the curve.
+         *
+         * Kinda useless. Maybe I should just
+         * make the actual functions do more.
+         */
+        private void SetupDive()
         {
-            var targetPosition = path[diveStage];
-            var currentPosition = transform.position;
-            if (Vector3.Distance(currentPosition, targetPosition) < positionTolerance) ++diveStage;
-            transform.position = Vector3.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
-
-            if (diveStage < path.Count - 1)
-            {
-                return;
-            }
-
-            ++diveCount;
-            diveStage = 0;
-            ReverseDiveCurve();
+            SetupControlPoints();
             GeneratePath();
-            Debug.DrawLine(startPosition, endPosition, Color.green, 90);
+            DetermineFacingDirection();
         }
 
-        private void ReturnToIdleState()
+        private void ExitDive()
         {
             GetSnatcherController().SetState(SnatcherState.Idle);
         }
 
         public override void Init()
         {
-            Init(transform.position, GetSnatcherTargeting().GetTargetPosition());
-        }
-
-        public void Init(Vector3 startPos, Vector3 endPos)
-        {
-            if (endPos.x > startPos.x && IsFacingLeft())
-            {
-                FlipSprite();
-            }
-
-            diveCount = 0;
-            startPosition = startPos;
-            endPosition = endPos;
-            SetupDiveCurve();
-            GeneratePath();
-            Debug.DrawLine(startPosition, endPosition, Color.green, 90);
+            // reset values to defaults in case this was previously used
+            diveStage = 0;
+            diveStep = 0;
+            controlPoints = null;
+            path = null;
         }
 
         public override void Loop()
         {
-            // return to idle when initial dive and dive back up are complete
-            if (diveCount > 1)
+            // Cancel when the target disappears (i.e. seed picked up)
+            if (diveStage < 1 && !GetSnatcherTargeting().HasTarget())
             {
-                GetSnatcherTargeting().RemoveTarget(); // ideally, the target should be nullified at the bottom of the dive instead of the end
-                ReturnToIdleState();
-                return;
+                ExitDive();
+            }
+            
+            // Setup for dive stages
+            if (isNewStage)
+            {
+                isNewStage = false;
+                switch (diveStage)
+                {
+                    case 0:
+                        var thisPosition = transform.position;
+                        var targetPosition = GetSnatcherTargeting().GetTargetPosition();
+                        (startPosition, endPosition) = (thisPosition, targetPosition);
+                        SetupDive();
+                        Debug.DrawLine(startPosition, endPosition, Color.green, 90);
+                        break;
+                    case 1:
+                        GetSnatcherTargeting().DestroyTarget();
+                        CalculateReverseDive();
+                        SetupDive();
+                        break;
+                    case 2:
+                        ExitDive();
+                        break;
+                }
             }
 
-            // stop dive prematurely when the target disappears
-            if (diveCount <= 1 && !GetSnatcherTargeting().HasTarget())
+            if (path == null) return;
+            
+            // Move to next point in curve
+            var nextPosition = path[diveStep];
+            transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
+            if (HasReachedPosition(nextPosition))
             {
-                ReturnToIdleState();
-                return;
+                diveStep++;
             }
-
-            Dive();
+            
+            // Move to next stage when end of curve reached
+            if (diveStep < path.Count) return;
+            diveStep = 0;
+            diveStage++;
+            isNewStage = true;
         }
     }
 }

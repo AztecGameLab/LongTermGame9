@@ -22,6 +22,7 @@ namespace SeedSnatcher
                 return;
             }
             
+            // TODO: find a better way to do this (maybe with events?)
             var possibleTarget = GameObject.FindWithTag(targetTag);
             // TODO: check whether already targeted by another snatcher
             if (!possibleTarget.IsUnityNull())
@@ -35,9 +36,9 @@ namespace SeedSnatcher
             return !target.IsUnityNull();
         }
 
-        public void RemoveTarget()
+        public void DestroyTarget()
         {
-            target = null;
+            Destroy(target);
         }
 
         public Vector3 GetTargetPosition()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace SeedSnatcher.Movement
 {
@@ -6,42 +7,36 @@ namespace SeedSnatcher.Movement
     {
         [SerializeField] private Vector3 patrolStartPosition;
         [SerializeField] private Vector3 patrolEndPosition;
-        private bool isReturningToStart;
-        private bool firstInit = true;
-        
-        private bool HasReachedTarget()
-        {
-            var currentPosition = transform.position;
-            return Vector3.Distance(currentPosition, endPosition) < positionTolerance;
-        }
+        // primarily used for tracking next patrol cycle
+        // when the bird starts from a non-patrol state
+        private bool reachedPatrolEnd;
 
-        private void SwapPositions()
+        /**
+         * Upon initialization, have the bird figure out the
+         * nearest patrol point and move there.
+         * 
+         * This is also useful for restarting the idle patrol
+         * after exiting a dive.
+         */
+        private void MoveToPatrolPoint()
         {
-            (startPosition, endPosition) = (endPosition, startPosition);
-        }
-        
-        public override void Init()
-        {
-            if (firstInit)
+            var thisPosition = transform.position;
+            var distanceToPatrolStart = Vector3.Distance(thisPosition, patrolStartPosition);
+            var distanceToPatrolEnd = Vector3.Distance(thisPosition, patrolEndPosition);
+
+            startPosition = transform.position;
+            if (distanceToPatrolStart < distanceToPatrolEnd)
             {
-                patrolStartPosition = patrolStartPosition != Vector3.zero ? patrolStartPosition : transform.position;
-                patrolEndPosition = patrolEndPosition != Vector3.zero ? patrolEndPosition : transform.position;
-                firstInit = false;
+                endPosition = patrolStartPosition;
+                reachedPatrolEnd = false;
             }
-            
-            isReturningToStart = true;
-            Init(transform.position, patrolStartPosition);
-        }
-
-        public void Init(Vector3 startPos, Vector3 endPos)
-        {
-            if (endPos.x > startPos.x && IsFacingLeft())
+            else
             {
-                FlipSprite();
+                endPosition = patrolEndPosition;
+                reachedPatrolEnd = true;
             }
 
-            startPosition = startPos;
-            endPosition = endPos;
+            DetermineFacingDirection();
         }
 
         private void SearchForTarget()
@@ -53,21 +48,32 @@ namespace SeedSnatcher.Movement
                 GetSnatcherController().SetState(SnatcherState.Diving);
             }
         }
+        
+        public override void Init()
+        {
+            MoveToPatrolPoint();
+        }
 
         public override void Loop()
         {
-            if (HasReachedTarget())
+            if (HasReachedEnd())
             {
-                if (isReturningToStart)
+                // assuming we've reached the patrol start, the
+                // bird should return to the end, and vice versa
+                if (!reachedPatrolEnd)
                 {
-                    isReturningToStart = false;
-                    startPosition = patrolStartPosition;
-                    endPosition = patrolEndPosition;
+                    (startPosition, endPosition) = (patrolEndPosition, patrolStartPosition);
+                    reachedPatrolEnd = true;
                 }
-                SwapPositions();
-                FlipSprite();
-            }
+                else
+                {
+                    (startPosition, endPosition) = (patrolStartPosition, patrolEndPosition);
+                    reachedPatrolEnd = false;
+                }
 
+                DetermineFacingDirection();
+            }
+            
             transform.position = Vector3.MoveTowards(transform.position, endPosition, speed * Time.deltaTime);
 
             SearchForTarget();
