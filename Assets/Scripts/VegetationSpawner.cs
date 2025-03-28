@@ -1,9 +1,12 @@
+using Unity.Mathematics.Geometry;
 using UnityEngine;
 
 public class VegetationSpawner : MonoBehaviour
 {
     
     public GameObject itemDrop;
+    public int dropAmount = 3;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,8 +18,11 @@ public class VegetationSpawner : MonoBehaviour
     {
         if (enabled)
         {
-            Instantiate(itemDrop, transform.position, new Quaternion());
-            enabled = false;
+            for (int i = 0; i < dropAmount; i++)
+            {
+                Instantiate(itemDrop, transform.position + new Vector3(Random.value * 0.5f, Random.value * 0.5f), new Quaternion());
+                enabled = false;
+            }
         }
     }
 }
