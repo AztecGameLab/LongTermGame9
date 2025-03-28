@@ -13,7 +13,7 @@ public class VegetationSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enabled == true)
+        if (enabled)
         {
             Instantiate(itemDrop, transform.position, new Quaternion());
             enabled = false;
