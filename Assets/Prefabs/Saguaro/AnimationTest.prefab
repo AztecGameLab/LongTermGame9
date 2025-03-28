@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 49275265456333961}
   - component: {fileID: 8483496085650992844}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: AnimationTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,6 +57,18 @@ PrefabInstance:
     - target: {fileID: 311657410292712341, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: m_Name
       value: AnimationTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 311657410292712341, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 933320221906639891, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3557640281101815962, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4348480067707062553, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: animator
