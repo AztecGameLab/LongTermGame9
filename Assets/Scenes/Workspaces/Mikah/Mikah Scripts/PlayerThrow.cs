@@ -3,26 +3,56 @@ using UnityEngine.InputSystem;
 
 public class PlayerThrow : MonoBehaviour
 {
+    [Header("Throwing")]
     public Transform throwPoint;
     public GameObject spinePrefab;
+
+    [Header("Ammo")]
+    public float timeBtwShots = 1f;
+    private float timeOfLastShot;
+    private AmmoManager ammoManager;
     private Animator anim;
 
-    // Reference to the AmmoManager
-    private AmmoManager ammoManager;
-
-    // Time between shots
-    public float timeBtwShots = 1;  
-    private float timeOfLastShot;
+    private PlayerMovementControl movementControl;
+    private PlayerFlip playerFlip;
 
     void Start()
     {
-        // Get the AmmoManager component attached to the same GameObject or another GameObject
-        ammoManager = FindFirstObjectByType<AmmoManager>();  // This assumes AmmoManager is in the scene
-
-        // If AmmoManager is not found, log a warning
+        anim = GetComponent<Animator>();
+        ammoManager = FindFirstObjectByType<AmmoManager>();
         if (ammoManager == null)
         {
             Debug.LogWarning("AmmoManager not found in the scene.");
+        }
+
+        movementControl = GetComponent<PlayerMovementControl>();
+        if (movementControl == null)
+        {
+            Debug.LogWarning("PlayerMovementControl not found on the GameObject.");
+        }
+
+        playerFlip = GetComponent<PlayerFlip>();
+        if (playerFlip == null)
+        {
+            Debug.LogWarning("PlayerFlip not found on the GameObject.");
+        }
+    }
+
+    void Update()
+    {
+        if (playerFlip != null)
+        {
+            float direction = playerFlip.ForwardVector2.x;
+
+            // Offset the throw point in front of the player
+            throwPoint.localPosition = new Vector3(
+                Mathf.Abs(throwPoint.localPosition.x) * Mathf.Sign(direction),
+                throwPoint.localPosition.y,
+                throwPoint.localPosition.z
+            );
+
+            // Flip throw point's rotation so the projectile launches the right way
+            throwPoint.localEulerAngles = direction > 0 ? Vector3.zero : new Vector3(0, 180, 0);
         }
     }
 
@@ -30,30 +60,66 @@ public class PlayerThrow : MonoBehaviour
     {
         if (context.performed)
         {
-            // Call GetAmmo() to check ammo before shooting
             int currentAmmo = ammoManager.GetAmmo();
 
-            // Only shoot if there is ammo available
             if (currentAmmo > 0 && Time.time - timeOfLastShot >= timeBtwShots)
             {
-                // Decrease ammo (if you have a method for that in AmmoManager)
                 ammoManager.TryUseAmmo(1);
 
-                // Instantiate the spine prefab (or perform the attack)
-                Instantiate(spinePrefab, throwPoint.position, throwPoint.rotation);
+                GameObject spine = Instantiate(spinePrefab, throwPoint.position, throwPoint.rotation);
                 
-                //Play animation for throwing
-                //TODO
-                //anim.SetTrigger("Throw");
-                
-                // Set the time of last shot
+                if (anim != null)
+                {
+                    anim.SetTrigger("Throw");
+                }
+
+                int direction = playerFlip != null && playerFlip.ForwardVector2.x < 0 ? -1 : 1;
+
+                Debug.Log("Throw direction: " + direction);
+
+                // Optionally flip the projectile visually (sprite-wise)
+                if (direction == -1)
+                {
+                    spine.transform.localScale = new Vector3(
+                        -spine.transform.localScale.x,
+                        spine.transform.localScale.y,
+                        spine.transform.localScale.z
+                    );
+                }
+
+                // Set direction on spine
+                Spine spineScript = spine.GetComponent<Spine>();
+                if (spineScript != null)
+                {
+                    spineScript.SetDirection(direction);
+                }
+
+                // Stop player movement if grounded
+                if (movementControl != null)
+                {
+                    Debug.Log("IsGrounded: " + movementControl.IsGrounded());
+
+                    if (movementControl.IsGrounded())
+                    {
+                        movementControl.AllowMovement = false;
+                        Invoke(nameof(EnableMovement), 0.3f);
+                    }
+                }
+
                 timeOfLastShot = Time.time;
-                ammoManager.GetAmmo();
             }
             else
             {
                 Debug.Log("Not enough ammo to throw.");
             }
+        }
+    }
+
+    private void EnableMovement()
+    {
+        if (movementControl != null)
+        {
+            movementControl.AllowMovement = true;
         }
     }
 }
