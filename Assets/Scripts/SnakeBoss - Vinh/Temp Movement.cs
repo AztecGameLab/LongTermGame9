@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -8,7 +7,6 @@ public class tempmovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     private Rigidbody2D rb;
-    public Transform objectTransform;
     private SpriteRenderer spriteRenderer;
     private bool isGrounded;
     private int damage = 5;

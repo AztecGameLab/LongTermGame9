@@ -1,20 +1,18 @@
 using System;
-using System.Collections;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class SnakeBoss : MonoBehaviour
 {
     [SerializeField] private int screenSize;
-    [SerializeField] private int bodyDamage;
     
     private int attack4Threshold = 5; // Set a default threshold
-    private int attack4Counter = 0;
+    private int attack4Counter;
     
     private Health health;
     private SpriteRenderer spriteRenderer;
 
-    private int time = 0;
+    private int time;
 
     [SerializeField] private Transform hitBox;
 
@@ -30,12 +28,11 @@ public class SnakeBoss : MonoBehaviour
     public void FixedUpdate()
     {
         time++;
-        if (time > 200)
-        {
-            time = 0;
-            Debug.Log("Current Health: " + health.Value);
-            Attack();
-        }
+        if (time <= 200) return;
+        time = 0; 
+        Debug.Log("Current Health: " + health.Value);
+        Attack();
+        
     }
 
 private void OnCollisionEnter2D(Collision2D collision)
@@ -52,15 +49,7 @@ private void OnCollisionEnter2D(Collision2D collision)
         {
             spriteRenderer.color = Color.red;
             await UniTask.Delay(TimeSpan.FromSeconds(0.5));
-
-            if (health.IsDead)
-            {
-                spriteRenderer.color = Color.black;
-            }
-            else
-            {
-            spriteRenderer.color = Color.white;
-            }
+            spriteRenderer.color = health.IsDead ? Color.black: Color.white;
         });
 
         if (health.IsDead)
@@ -85,39 +74,20 @@ private void OnCollisionEnter2D(Collision2D collision)
 
     private int CheckAttack()
     {
-        GameObject temp = GameObject.FindGameObjectWithTag("Player");
-        float x;
-        if (temp != null)
+        GameObject tempPlayer = GameObject.FindGameObjectWithTag("Player");
+        float playerPositionX;
+        if (tempPlayer != null)
         {
-            x = temp.transform.position.x;
-            if (x < -(screenSize / 2))
-                return 1;
-            else if (x < 0)
-                return 2;
-            else
-                return 3;
+            playerPositionX = tempPlayer.transform.position.x;
+            if (playerPositionX < -(screenSize / 2)) return 1;
+            if (playerPositionX < 0) return 2;
+            return 3;
         }
-        else
-        {
-            Debug.Log("no player found");
-            return 0;
-        }
+        Debug.Log("no player found");
+        return 0;
+        
     }
-
-    public int GetSnakeBossBodyDamage()
-    {
-        return bodyDamage;
-    }
-
-    /*
-    public bool IsPlayerInRange()
-    {
-        // Assuming you wanted to check if the player is within attack range
-        float distance = Vector3.Distance(saguaro.transform.position, transform.position);
-        return distance < 5f; // Example range
-    }
-    */
-
+    
     public void Attack()
     {
         int temp = CheckAttack();
