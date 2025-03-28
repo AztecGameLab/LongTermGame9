@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Mathematics.Geometry;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -28,6 +29,10 @@ namespace SeedSnatcher.Movement
          */
         private int diveStage;
 
+        [SerializeField] private List<Sprite> diveAnimation;
+        [SerializeField] private Animator animator;
+        [SerializeField] private SpriteRenderer renderer;
+        
         /**
          * Computes appropriate control points for the
          * dive's Bézier curve.
@@ -101,6 +106,7 @@ namespace SeedSnatcher.Movement
         private void ExitDive()
         {
             GetSnatcherController().SetState(SnatcherState.Idle);
+            animator.enabled = true;
         }
 
         public override void Init()
@@ -110,6 +116,7 @@ namespace SeedSnatcher.Movement
             diveStep = 0;
             controlPoints = null;
             path = null;
+            animator.enabled = false;
         }
 
         public override void Loop()
@@ -152,6 +159,43 @@ namespace SeedSnatcher.Movement
             if (HasReachedPosition(nextPosition))
             {
                 diveStep++;
+            }
+
+            switch (diveStage)
+            {
+                case 0 when Mathf.Approximately(diveStep, 0):
+                    renderer.sprite = diveAnimation[0];
+                    break;
+                case 0 when Mathf.Approximately(diveStep, path.Count * 0.2f):
+                    renderer.sprite = diveAnimation[1];
+                    break;
+                case 0 when Mathf.Approximately(diveStep, path.Count * 0.35f):
+                    renderer.sprite = diveAnimation[2];
+                    break;
+                case 0 when Mathf.Approximately(diveStep, path.Count * 0.5f):
+                    renderer.sprite = diveAnimation[3];
+                    break;
+                case 0 when Mathf.Approximately(diveStep, path.Count * 0.65f):
+                    renderer.sprite = diveAnimation[4];
+                    break;
+                case 0:
+                {
+                    if(Mathf.Approximately(diveStep, path.Count * 0.8f))
+                    {
+                        renderer.sprite = diveAnimation[5];
+                    }
+
+                    break;
+                }
+                case 1 when Mathf.Approximately(diveStep, path.Count * 0.2f):
+                    renderer.sprite = diveAnimation[6];
+                    break;
+                case 1 when Mathf.Approximately(diveStep, path.Count * 0.5f):
+                    renderer.sprite = diveAnimation[7];
+                    break;
+                case 1 when Mathf.Approximately(diveStep, path.Count * 0.8f):
+                    renderer.sprite = diveAnimation[8];
+                    break;
             }
             
             // Move to next stage when end of curve reached

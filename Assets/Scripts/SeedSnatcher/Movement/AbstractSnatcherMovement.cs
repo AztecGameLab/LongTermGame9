@@ -44,7 +44,7 @@ namespace SeedSnatcher.Movement
         private bool IsFacingLeft()
         {
             var localScale = transform.localScale;
-            return localScale.x > 0;
+            return localScale.x < 0;
         }
         
         protected void DetermineFacingDirection()
