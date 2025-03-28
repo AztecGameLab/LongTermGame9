@@ -23,7 +23,7 @@ public class AmmoManager : MonoBehaviour
     void Start()
     {
         CurrentAmmo = maxAmmo;
-        Debug.Log("Starting ammo: " + CurrentAmmo);  // Logs the starting ammo
+        // Debug.Log("Starting ammo: " + CurrentAmmo);  // Logs the starting ammo
     }
 
     public bool TryUseAmmo(int amount)
@@ -31,10 +31,10 @@ public class AmmoManager : MonoBehaviour
         if (CurrentAmmo >= amount)
         {
             CurrentAmmo -= amount;
-            Debug.Log("Ammo used. Remaining ammo: " + CurrentAmmo);  // Logs remaining ammo after usage
+            // Debug.Log("Ammo used. Remaining ammo: " + CurrentAmmo);  // Logs remaining ammo after usage
             return true;
         }
-        Debug.Log("Not enough ammo. Remaining ammo: " + CurrentAmmo);  // Logs if ammo is insufficient
+        // Debug.Log("Not enough ammo. Remaining ammo: " + CurrentAmmo);  // Logs if ammo is insufficient
         return false;
     }
 
@@ -42,12 +42,12 @@ public class AmmoManager : MonoBehaviour
     {
         CurrentAmmo += amount;
         if (CurrentAmmo > maxAmmo) CurrentAmmo = maxAmmo;
-        Debug.Log("Ammo increased. Current ammo: " + CurrentAmmo);  // Logs the new ammo count
+        // Debug.Log("Ammo increased. Current ammo: " + CurrentAmmo);  // Logs the new ammo count
     }
 
     public int GetAmmo()
     {
-        Debug.Log("Current ammo: " + CurrentAmmo);  // Logs ammo every time it's checked
+        // Debug.Log("Current ammo: " + CurrentAmmo);  // Logs ammo every time it's checked
         return CurrentAmmo;
     }
 }

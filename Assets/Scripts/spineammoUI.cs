@@ -42,7 +42,7 @@ public class spineammoUI : MonoBehaviour
  
     private void Start() 
     {
-        spineImage.SetActive(false);
-        spineText.enabled = false;
+        spineImage.SetActive(true);
+        spineText.enabled = true;
     }
 }

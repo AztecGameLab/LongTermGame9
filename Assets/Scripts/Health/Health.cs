@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        onHealthChanged.Invoke(healthValue);
+        // onHealthChanged.Invoke(healthValue);
     }
 
     public virtual void ApplyDamage(int damage, DamageType damageType, GameObject attacker)

@@ -14,7 +14,7 @@ public class playerHealth : MonoBehaviour
 
     public void SetHearts(int health)
     {
-        var change = health - hearts.Length;
+        var change = health - (index + 1);
         if (change < 0)
         {
             for (var i = 0; i < -change; i++)
@@ -33,6 +33,7 @@ public class playerHealth : MonoBehaviour
      
     public void addHeart()
     {
+        hearts ??= new GameObject[heartsToShow];
         GameObject heart;
         if (index == -1)
         {
@@ -49,6 +50,7 @@ public class playerHealth : MonoBehaviour
         }
         else
         {
+            Debug.Log(heartImage);
             heart = Instantiate(
                 heartImage, hearts[index].transform.position + new Vector3(rectT.sizeDelta.x, 0), 
                 Quaternion.identity, playerUICanvas.transform);
@@ -60,6 +62,7 @@ public class playerHealth : MonoBehaviour
 
     public void removeHeart()
     {
+        hearts ??= new GameObject[heartsToShow];
         if (index == 0)
         {
             Destroy(hearts[index]);
@@ -110,8 +113,9 @@ public class playerHealth : MonoBehaviour
         heartText.enabled = false;
         hearts = new GameObject[heartsToShow];
         rectT = heartImage.transform.GetComponent<RectTransform>();
-        addHeart();
-        addHeart();
-        addHeart();
+        // addHeart();
+        // addHeart();
+        // addHeart();
+        SetHearts(5);
     }
 }

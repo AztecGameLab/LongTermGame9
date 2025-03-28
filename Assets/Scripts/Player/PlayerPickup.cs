@@ -5,16 +5,18 @@ public class PlayerPickup : MonoBehaviour
     [SerializeField] private AmmoManager ammoManager;
     [SerializeField] private Health health;
     
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.TryGetComponent<CactusSpine>(out var spine))
+        if (other.gameObject.TryGetComponent<CactusSpine>(out var spine))
         {
             ammoManager.IncreaseAmmo(1);
+            Destroy(spine.gameObject);
         }
 
-        if (other.TryGetComponent<BushSeed>(out var seed))
+        if (other.gameObject.TryGetComponent<BushSeed>(out var seed))
         {
             health.AddHealth(1);
+            Destroy(seed.gameObject);
         }
     }
 }
