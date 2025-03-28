@@ -2,6 +2,7 @@
 using UnityEditor;
 using System;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(HealthProxy))]
 public class HealthProxyEditor : Editor
 {
@@ -12,3 +13,4 @@ public class HealthProxyEditor : Editor
         healthProxy.targetHealth = (Health)EditorGUILayout.ObjectField("Target Health", healthProxy.targetHealth, typeof(Health), true);
     }
 }
+#endif
