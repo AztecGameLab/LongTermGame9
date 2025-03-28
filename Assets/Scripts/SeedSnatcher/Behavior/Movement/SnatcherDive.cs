@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using SeedSnatcher.Utils;
 using UnityEngine;
 
-namespace SeedSnatcher.Movement
+namespace SeedSnatcher.Behavior.Movement
 {
     public class SnatcherDive : SnatcherMovement
     {
@@ -10,7 +11,7 @@ namespace SeedSnatcher.Movement
         /** the actual points along the curve */
         private List<Vector3> path;
         /** the position in the dive */
-        [SerializeField] private int diveStep;
+        private int diveStep;
         /**
          * Whether a stage has just changed.
          * Can't use diveStep == 0 since we can't be sure
@@ -33,19 +34,19 @@ namespace SeedSnatcher.Movement
          */
         private void SetupControlPoints()
         {
-            var midpointTop = (startPosition + endPosition) / 2;
-            midpointTop.y = startPosition.y;
+            var midpointTop = (StartPosition + EndPosition) / 2;
+            midpointTop.y = StartPosition.y;
             var midpointBottom = midpointTop;
-            midpointBottom.y = endPosition.y;
+            midpointBottom.y = EndPosition.y;
             var midpointMidpoint = (midpointBottom + midpointTop) / 2;
 
             controlPoints = new List<Vector3>()
             {
-                startPosition,
+                StartPosition,
                 midpointTop,
                 midpointMidpoint,
                 midpointBottom,
-                endPosition
+                EndPosition
             };
         }
         
@@ -77,10 +78,10 @@ namespace SeedSnatcher.Movement
          */
         private void CalculateReverseDive()
         {
-            var newEndPosition = startPosition;
-            startPosition = endPosition;
-            newEndPosition.x = 2 * endPosition.x - newEndPosition.x;
-            endPosition = newEndPosition;
+            var newEndPosition = StartPosition;
+            StartPosition = EndPosition;
+            newEndPosition.x = 2 * EndPosition.x - newEndPosition.x;
+            EndPosition = newEndPosition;
         }
 
         /**
@@ -128,9 +129,9 @@ namespace SeedSnatcher.Movement
                     case 0:
                         var thisPosition = transform.position;
                         var targetPosition = GetSnatcherTargeting().GetTargetPosition();
-                        (startPosition, endPosition) = (thisPosition, targetPosition);
+                        (StartPosition, EndPosition) = (thisPosition, targetPosition);
                         SetupDive();
-                        Debug.DrawLine(startPosition, endPosition, Color.green, 90);
+                        Debug.DrawLine(StartPosition, EndPosition, Color.green, 90);
                         break;
                     case 1:
                         GetSnatcherTargeting().DestroyTarget();

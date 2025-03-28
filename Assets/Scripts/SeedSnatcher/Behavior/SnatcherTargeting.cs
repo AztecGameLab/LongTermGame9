@@ -2,7 +2,7 @@ using SeedSnatcher.Seed;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace SeedSnatcher
+namespace SeedSnatcher.Behavior
 {
     public class SnatcherTargeting : MonoBehaviour
     {

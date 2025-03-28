@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace SeedSnatcher.Movement
+namespace SeedSnatcher.Behavior.Movement
 {
     public abstract class SnatcherMovement : MonoBehaviour
     {
         // Snatcher Movement vars
-        [SerializeField] protected Vector3 startPosition;
-        [SerializeField] protected Vector3 endPosition;
+        protected Vector3 StartPosition;
+        protected Vector3 EndPosition;
         [SerializeField] protected float speed = 1.0f;
         // make sure the endPosition is way larger than this
         [SerializeField] protected float positionTolerance = 0.5f;
@@ -55,14 +55,14 @@ namespace SeedSnatcher.Movement
             // if its already in the correct facing
             if (IsFacingLeft())
             {
-                if (thisPosition.x < endPosition.x)
+                if (thisPosition.x < EndPosition.x)
                 {
                     FlipSprite();
                 }
             }
             else
             {
-                if (thisPosition.x > endPosition.x)
+                if (thisPosition.x > EndPosition.x)
                 {
                     FlipSprite();
                 }
@@ -77,7 +77,7 @@ namespace SeedSnatcher.Movement
         
         protected bool HasReachedEnd()
         {
-            return HasReachedPosition(endPosition);
+            return HasReachedPosition(EndPosition);
         }
         
         public abstract void Init();

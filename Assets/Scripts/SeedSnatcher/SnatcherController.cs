@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using SeedSnatcher.Movement;
+using SeedSnatcher.Behavior.Movement;
 using UnityEngine;
 
 namespace SeedSnatcher
