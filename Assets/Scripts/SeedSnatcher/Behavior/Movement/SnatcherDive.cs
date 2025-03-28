@@ -110,6 +110,7 @@ namespace SeedSnatcher.Behavior.Movement
             diveStep = 0;
             controlPoints = null;
             path = null;
+            isNewStage = true;
         }
 
         public override void Loop()
