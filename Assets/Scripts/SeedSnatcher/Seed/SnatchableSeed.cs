@@ -12,6 +12,7 @@ namespace SeedSnatcher.Seed
         [SerializeField] private bool canExpire = true;
         private float timer;
         public bool isExpired;
+        public bool isBeingTargeted;
 
         private SeedManager seedManager;
 

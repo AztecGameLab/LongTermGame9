@@ -52,6 +52,10 @@ namespace SeedSnatcher.Seed
                 var shortestDistance = float.MaxValue;
                 foreach (var seed in expiredSeeds)
                 {
+                    if (seed.isBeingTargeted)
+                    {
+                        continue;
+                    }
                     var distance = Vector3.Distance(position, seed.transform.position);
                     if (distance < shortestDistance)
                     {

@@ -32,6 +32,7 @@ namespace SeedSnatcher.Behavior
             var thisPosition = transform.position;
             var possibleTarget = seedManager.GetNearestSeed(thisPosition);
             if (!possibleTarget.IsUnityNull()) {
+                possibleTarget.isBeingTargeted = true;
                 SetTarget(possibleTarget);
             }
         }
