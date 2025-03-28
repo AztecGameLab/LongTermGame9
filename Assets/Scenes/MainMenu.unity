@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5031b3ee24eef204c8aca94f866a137e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadGame: Assets/Scenes/MainGame.unity
+  _loadGame: Assets/Scenes/SnakeLevel.unity
   _sceneFade: {fileID: 1343286327}
   _fadeSpeed: 5
   _menuMusic: {fileID: 1937315765}
