@@ -44,7 +44,7 @@ public class PlayerMovementControl : MonoBehaviour
     private Rigidbody2D body;
 
     private bool hasDoubleJump;
-    private bool HasInput => !Mathf.Approximately(walkInput, 0.0f);
+    private bool HasInput => AllowMovement && !Mathf.Approximately(walkInput, 0.0f);
 
     private bool allowMovement = true;
 
@@ -55,11 +55,9 @@ public class PlayerMovementControl : MonoBehaviour
         {
             allowMovement = value;
 
-            if (!allowMovement)
-            {
-                walkInput = 0;
-                CheckJumpCut();
-            }
+            if (allowMovement) return;
+
+            CheckJumpCut();
         }
     }
 
@@ -189,8 +187,10 @@ public class PlayerMovementControl : MonoBehaviour
         //get desired walk speed, current walk speed, and the distance between them
         //apply a force proportional to this deltaV
         //at an angle dependent on currentGroundAngle
-
+        
         float desiredWalkSpeed = walkInput * walkSpeed;
+        
+        if (!AllowMovement) desiredWalkSpeed = 0.0f;
 
         Vector2 currentVel = body.linearVelocity;
         float
@@ -245,6 +245,8 @@ public class PlayerMovementControl : MonoBehaviour
     {
         float desiredWalkSpeed = walkInput * walkSpeed;
 
+        if (!AllowMovement) desiredWalkSpeed = 0.0f;
+        
         Vector2 currentVel = body.linearVelocity;
         float currentWalkSpeed = currentVel.x;
 
@@ -285,7 +287,7 @@ public class PlayerMovementControl : MonoBehaviour
     //input signals
     public void walk(InputAction.CallbackContext context)
     {
-        if (!AllowMovement) return;
+        // if (!AllowMovement) return;
         
         walkInput = context.ReadValue<float>();
     }
