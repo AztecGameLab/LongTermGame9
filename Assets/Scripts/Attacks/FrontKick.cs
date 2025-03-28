@@ -5,12 +5,16 @@ using UnityEngine.InputSystem;
 
 public class FrontKick : MonoBehaviour
 {
+    private static readonly int Kick = Animator.StringToHash("FrontKick");
+
     //Fields for the playerkick attack
     public int enemyDamage = 3;
     public float cooldownTime = 2f;
-    public bool isAttack;
+    private bool isAttack;
     private float currentCooldownTime;
 
+    public Animator animator;
+    
     ///  public Collider hitBox;
     private readonly HashSet<Health> enemies = new();
 
@@ -33,6 +37,8 @@ public class FrontKick : MonoBehaviour
         
         isAttack = true;
         currentCooldownTime = cooldownTime;
+        
+        animator.SetTrigger(Kick);
         
         foreach (var health in enemies)
         {

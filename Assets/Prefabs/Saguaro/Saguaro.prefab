@@ -425,8 +425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 3
-  cooldownTime: 2
-  isAttack: 0
+  cooldownTime: 0.5
+  animator: {fileID: 0}
 --- !u!1 &3557640281101815962
 GameObject:
   m_ObjectHideFlags: 0
