@@ -20,7 +20,7 @@ public class VegetationSpawner : MonoBehaviour
         {
             for (int i = 0; i < dropAmount; i++)
             {
-                Instantiate(itemDrop, transform.position + new Vector3(Random.value * 0.5f, Random.value * 0.5f), new Quaternion());
+                Instantiate(itemDrop, transform.position + new Vector3(Random.value, Random.value), new Quaternion());
                 enabled = false;
             }
         }

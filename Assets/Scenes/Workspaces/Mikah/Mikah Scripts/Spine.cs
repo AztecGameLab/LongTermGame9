@@ -40,8 +40,15 @@ public class Spine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
         if (!other.TryGetComponent<Health>(out var health)) return;
         if (!health.IsVulnerable(DamageType.PlayerThrow)) return;
+        if (health.IsDead) return;
             
         health.ApplyDamage(damage, DamageType.PlayerThrow, gameObject);
         Destroy(gameObject);

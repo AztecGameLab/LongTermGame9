@@ -50,7 +50,6 @@ public class playerHealth : MonoBehaviour
         }
         else
         {
-            Debug.Log(heartImage);
             heart = Instantiate(
                 heartImage, hearts[index].transform.position + new Vector3(rectT.sizeDelta.x, 0), 
                 Quaternion.identity, playerUICanvas.transform);
