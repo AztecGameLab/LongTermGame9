@@ -6,10 +6,14 @@ using UnityEngine.InputSystem;
 public class TailWhip : MonoBehaviour
 {
     //Just coppied the front kick for now
+    private static readonly int Whip = Animator.StringToHash("TailWhip");
+
     public int enemyDamage = 5;
     public float cooldownTime = 4f;
-    public bool isAttack;
+    private bool isAttack;
     private float currentCooldownTime;
+
+    public Animator animator;
 
     ///  public Collider hitBox;
     private readonly HashSet<Health> enemies = new();
@@ -34,6 +38,8 @@ public class TailWhip : MonoBehaviour
         isAttack = true;
         currentCooldownTime = cooldownTime;
 
+        animator.SetTrigger(Whip);
+
         foreach (var health in enemies)
         {
             // Debug.LogWarning("Hit");
@@ -44,7 +50,7 @@ public class TailWhip : MonoBehaviour
     //check if the hitbox collides with an enemy
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.LogWarning("Trigger has been entered.");
+        
         //Apply damage
         if (collision.TryGetComponent<Health>(out var health))
         {

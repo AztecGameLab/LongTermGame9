@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private int healthValue = 5;
-
+    
     public int Value => healthValue;
     public bool IsDead => healthValue <= 0;
 
@@ -17,12 +18,19 @@ public class Health : MonoBehaviour
     public UnityEvent<int, DamageType, GameObject> onDamage;
     
     public UnityEvent<GameObject> onDeath;
+    
+    public UnityEvent<int> onHealthChanged;
 
-    public void ApplyDamage(int damage, DamageType damageType, GameObject attacker)
+    private void Start()
+    {
+        // onHealthChanged.Invoke(healthValue);
+    }
+
+    public virtual void ApplyDamage(int damage, DamageType damageType, GameObject attacker)
     {
         if (IsDead) return;
         
-        if (!vulnerableDamageTypes.HasFlag(damageType))
+        if (!IsVulnerable(damageType))
         {
             damage = 0;
         }
@@ -35,12 +43,19 @@ public class Health : MonoBehaviour
             onDeath.Invoke(attacker);
         }
         
+        onHealthChanged.Invoke(healthValue);
         onDamage.Invoke(damage, damageType, attacker);
     }
 
-    public void AddHealth(int amount)
+    public virtual void AddHealth(int amount)
     {
         healthValue += amount;
+        onHealthChanged.Invoke(healthValue);
+    }
+
+    public bool IsVulnerable(DamageType damageType)
+    {
+        return vulnerableDamageTypes.HasFlag(damageType);
     }
     
 }
