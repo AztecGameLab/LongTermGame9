@@ -51,16 +51,30 @@ public class TESTSNAKE : MonoBehaviour
     }
 
     //detect if attack 2 hits player
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("Saguaro hit");
-            if (collision.gameObject.TryGetComponent<Health>(out var health))
+            Debug.Log("Saguaro got hit!");
+            SpriteRenderer sr = other.GetComponent<SpriteRenderer>();
+            if (sr != null)
             {
-                //put actual health values where it says damage once level design team decides
-                health.ApplyDamage(damage, DamageType.Enemy, gameObject);
+                sr.color = Color.red;
+
+                // Optional: reset the color after a short delay
+                StartCoroutine(ResetColorAfterHit(sr));
             }
+
+            // if (other.TryGetComponent<Health>(out var health))
+            // {
+            //     health.ApplyDamage(damage, DamageType.Enemy, gameObject);
+            // 
         }
+    }
+    IEnumerator ResetColorAfterHit(SpriteRenderer sr)
+    {
+        yield return new WaitForSeconds(0.3f); // wait a bit
+        sr.color = Color.white; // or whatever the default color is
     }
 }
