@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -903378373230529988, guid: 2c89d6d45eaeb47fcb99e78a8587cd2f, type: 3}
+  m_Sprite: {fileID: -7830378044817023046, guid: e28249eb64e9144199e2cfee2e8b9384, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,6 +122,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6821231588890935419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDrop: {fileID: 3174237273359950090, guid: 922cec01556554b0daaa1aae376cc9fe, type: 3}
+  dropAmount: 3
 --- !u!70 &7662977038619265079
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
