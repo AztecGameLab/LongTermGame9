@@ -58,7 +58,17 @@ public class tempmovement : MonoBehaviour
         {
 
             float moveInput = Input.GetAxis("Horizontal");
-            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocityY);
+            float temp = moveInput * moveSpeed + rb.linearVelocityX;
+            if (temp > 5)
+            {
+                temp = 5;
+            }
+            else if (temp < -5)
+            {
+                temp = -5;
+            }
+
+            rb.linearVelocity = new Vector2(temp, rb.linearVelocityY);
 
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
@@ -69,7 +79,7 @@ public class tempmovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Boss"))
         {
             isGrounded = true;
         }

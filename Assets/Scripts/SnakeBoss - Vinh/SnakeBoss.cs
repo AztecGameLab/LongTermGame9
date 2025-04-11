@@ -6,16 +6,24 @@ public class SnakeBoss : MonoBehaviour
 {
     [SerializeField] private int screenSize;
     
-    private int attack4Threshold = 5; // Set a default threshold
+    [SerializeField] private int attack4Threshold; // Set a default threshold
     private int attack4Counter;
     
     private Health health;
     private SpriteRenderer spriteRenderer;
+    
+    [SerializeField] private GameObject snakeAttack4;
 
+    [SerializeField] private bool finishedCutscene;
+    
+    [SerializeField] private int secondsInBetweenAttacks;
+    
     private int time;
 
-    [SerializeField] private Transform hitBox;
+    private bool bossBackup;
 
+    private bool attackInProgress;
+    
     private int width, length;
 
     public void Start()
@@ -27,12 +35,34 @@ public class SnakeBoss : MonoBehaviour
 
     public void FixedUpdate()
     {
-        time++;
-        if (time <= 200) return;
-        time = 0; 
-        Debug.Log("Current Health: " + health.Value);
-        Attack();
-        
+
+        if (bossBackup)
+        {
+            gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x+0.2f, gameObject.transform.position.y);
+            if (gameObject.transform.position.x > 11.5)
+            {
+                bossBackup = false;
+                snakeAttack4.SetActive(true); 
+                snakeAttack4.transform.position = new Vector2(12, -1.6f);
+            }
+        }
+        else if (gameObject.transform.position.x > 6.5 && snakeAttack4.activeSelf == false)
+        {
+            gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
+            attackInProgress = false;
+        }
+
+        if (!attackInProgress && finishedCutscene)
+        {
+            time++;
+            if (time <= secondsInBetweenAttacks*60) return;
+            time = 0; 
+            Debug.Log("Current Health: " + health.Value);
+            Debug.Log("Attack Counter: " + attack4Counter);
+            Debug.Log("Attack 4 ACtive?" + snakeAttack4.activeSelf);
+            Attack();
+            
+        }
     }
 
 private void OnCollisionEnter2D(Collision2D collision)
@@ -99,12 +129,15 @@ private void OnCollisionEnter2D(Collision2D collision)
         {
             case 1:
                 Attack1();
+                attack4Counter++;
                 break;
             case 2:
                 Attack2();
+                attack4Counter++;
                 break;
             case 3:
                 Attack3();
+                attack4Counter++;
                 break;
             case 4:
                 Attack4();
@@ -112,13 +145,11 @@ private void OnCollisionEnter2D(Collision2D collision)
                 break;
         }
 
-        attack4Counter++;
     }
 
     private void Attack1()
     {
         Debug.Log("Snake Boss uses Attack 1!");
-        
         // Implement attack logic here
     }
 
@@ -137,6 +168,8 @@ private void OnCollisionEnter2D(Collision2D collision)
     private void Attack4()
     {
         Debug.Log("Snake Boss uses its powerful Attack 4!");
+        attackInProgress = true;
+        bossBackup = true;
         // Implement attack logic here
     }
 }

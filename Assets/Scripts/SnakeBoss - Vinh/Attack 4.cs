@@ -11,12 +11,10 @@ public class Attack4 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-1, gameObject.transform.position.y);
-    }
-
-    public void AttackType4()
-    {
-        gameObject.SetActive(true);
-        gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
+        if (gameObject.transform.position.x < -32)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
