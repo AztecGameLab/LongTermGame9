@@ -1,29 +1,31 @@
 using UnityEngine;
 using System.Collections;
 
-public class MovingSquare : MonoBehaviour
+public class TESTSNAKE : MonoBehaviour
 {
+    //starting pos is x = 6.8892, y = 2.2692
+    //ending pos is x = -3.75, y = -2.05
+    [SerializeField] private int damage;
     public Vector2 startPosition; // Original position
     public Vector2 centerPosition = new Vector2(0, 0); // Target position
-    public float moveSpeed = 5f; // Speed of movement
+    public float moveSpeed = 10f; // Speed of movement
     public float lingerTime = 1.5f; // Time to stay in center
     private bool isMoving = false;
-
     void Start()
     {
         startPosition = transform.position; // Save the initial position
     }
-
+    //for debug purposes, will implement the attack into boss behavior later
     void Update()
     {
         // Move when J is pressed and it's not already moving
         if (Input.GetKeyDown(KeyCode.J) && !isMoving)
         {
-            StartCoroutine(MoveToCenterAndBack());
+            StartCoroutine(attack2());
         }
     }
 
-    IEnumerator MoveToCenterAndBack()
+    IEnumerator attack2()
     {
         isMoving = true;
 
@@ -48,11 +50,31 @@ public class MovingSquare : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //detect if attack 2 hits player
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("Moving square collided with the player!");
+            Debug.Log("Saguaro got hit!");
+            SpriteRenderer sr = other.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.color = Color.red;
+
+                // Optional: reset the color after a short delay
+                StartCoroutine(ResetColorAfterHit(sr));
+            }
+
+            // if (other.TryGetComponent<Health>(out var health))
+            // {
+            //     health.ApplyDamage(damage, DamageType.Enemy, gameObject);
+            // 
         }
+    }
+    IEnumerator ResetColorAfterHit(SpriteRenderer sr)
+    {
+        yield return new WaitForSeconds(0.3f); // wait a bit
+        sr.color = Color.white; // or whatever the default color is
     }
 }
