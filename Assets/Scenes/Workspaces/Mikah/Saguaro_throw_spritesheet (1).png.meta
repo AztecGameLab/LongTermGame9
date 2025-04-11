@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Saguaro_throw_spritesheet (1)_0: 4734580483950183730
+      Saguaro_throw_spritesheet (1)_1: -7855301687341694452
+      Saguaro_throw_spritesheet (1)_2: 5813844631111364689
+      Saguaro_throw_spritesheet (1)_3: -4224180647879598685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
