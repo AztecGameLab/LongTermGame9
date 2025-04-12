@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e28249eb64e9144199e2cfee2e8b9384
+guid: 9876a0dbdb3729a44830724c47b746e9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7830378044817023046
-    second: MByellow_0
+      213: 117336661567690536
+    second: rock_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MByellow_0
+      name: rock_2_0
       rect:
         serializedVersion: 2
-        x: 106
-        y: 119
-        width: 307
-        height: 215
+        x: 4
+        y: 133
+        width: 387
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abfd9a5c7a8e45390800000000000000
-      internalID: -7830378044817023046
+      spriteID: 8275fdf621dd0a100800000000000000
+      internalID: 117336661567690536
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      MByellow_0: -7830378044817023046
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

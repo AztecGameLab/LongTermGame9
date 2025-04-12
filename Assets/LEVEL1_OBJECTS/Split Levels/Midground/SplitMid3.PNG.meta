@@ -103,12 +103,12 @@ TextureImporter:
       name: SplitMid3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1924
-        height: 742
+        x: 1
+        y: 1
+        width: 879
+        height: 516
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: fd69966722423424d8ed46fc2f575d32
+    internalID: -1494785662
     vertices: []
     indices: 
     edges: []
