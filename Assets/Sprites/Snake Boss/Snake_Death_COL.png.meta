@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 102f8f503fc883246960f1d48a10cc9e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9156021222077212256
+    second: Snake_Death_COL_0
+  - first:
+      213: -3037975312078701886
+    second: Snake_Death_COL_1
+  - first:
+      213: 644759418953089047
+    second: Snake_Death_COL_2
+  - first:
+      213: -6383589968477725028
+    second: Snake_Death_COL_3
+  - first:
+      213: -3846371297205735644
+    second: Snake_Death_COL_4
+  - first:
+      213: 1569403517921661247
+    second: Snake_Death_COL_5
+  - first:
+      213: 3174560518003741783
+    second: Snake_Death_COL_6
+  - first:
+      213: 5455178957880616054
+    second: Snake_Death_COL_7
+  - first:
+      213: -5322866023877594270
+    second: Snake_Death_COL_8
+  - first:
+      213: -6587921215985270017
+    second: Snake_Death_COL_9
+  - first:
+      213: -537371463465384580
+    second: Snake_Death_COL_10
+  - first:
+      213: 8921760886482526476
+    second: Snake_Death_COL_11
+  - first:
+      213: -129441922166757539
+    second: Snake_Death_COL_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Snake_Death_COL_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7341ba0ac3ea9ca4194dc3755df6aed9
+      internalID: -2026128249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_1
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3a934c5dbff6540b92c68d6721da74
+      internalID: -2056851919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_2
+      rect:
+        serializedVersion: 2
+        x: 2484
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1765b2abf0f42d4fb467d059a2f7110
+      internalID: -1385218549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_3
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485f9106f97baae469d595faacf2da95
+      internalID: 1472574127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_4
+      rect:
+        serializedVersion: 2
+        x: 4968
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288ccf8c1f8f5cd43a44c96b9c874fac
+      internalID: 410895125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_5
+      rect:
+        serializedVersion: 2
+        x: 6210
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0620efb49718a7043aad8424d39df9be
+      internalID: -1176027245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_6
+      rect:
+        serializedVersion: 2
+        x: 7452
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ed232d168c5734d82e324d72aa5c3a
+      internalID: 248698115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_7
+      rect:
+        serializedVersion: 2
+        x: 8694
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fc03a3249d1814c9417bf01fb74dca
+      internalID: 1614147825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_8
+      rect:
+        serializedVersion: 2
+        x: 9936
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1b88b83ba50844ab13fa89844d9248
+      internalID: -1685514822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_9
+      rect:
+        serializedVersion: 2
+        x: 11178
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3690157c718c24e981ec6456f52de4
+      internalID: -1549388016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_10
+      rect:
+        serializedVersion: 2
+        x: 12420
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa215f92365d554799e3d423a130fc3
+      internalID: -1237408560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_11
+      rect:
+        serializedVersion: 2
+        x: 13662
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09aed458d5954f4d949b5154f49623d
+      internalID: -23931308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Death_COL_12
+      rect:
+        serializedVersion: 2
+        x: 14904
+        y: 0
+        width: 1242
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690e7ca69eaf7e544890aa9eca45736c
+      internalID: 1510453999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2dc491414d3879b44b8320fc887b653f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Snake_Death_COL_0: -2026128249
+      Snake_Death_COL_1: -2056851919
+      Snake_Death_COL_10: -1237408560
+      Snake_Death_COL_11: -23931308
+      Snake_Death_COL_12: 1510453999
+      Snake_Death_COL_2: -1385218549
+      Snake_Death_COL_3: 1472574127
+      Snake_Death_COL_4: 410895125
+      Snake_Death_COL_5: -1176027245
+      Snake_Death_COL_6: 248698115
+      Snake_Death_COL_7: 1614147825
+      Snake_Death_COL_8: -1685514822
+      Snake_Death_COL_9: -1549388016
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

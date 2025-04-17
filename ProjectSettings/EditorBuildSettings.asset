@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2ffaed8a6f8f94dd2b70e2379db6bddd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SnakeLvl 4-11.unity
     guid: 4366527d888e83b4b82663f31c25e11c
   - enabled: 0
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
     guid: 3530f7e40f22b6e4da8001835890baa4
+  - enabled: 1
+    path: Assets/Scenes/SnakeLvl 4-18.unity
+    guid: aad7c23e281843f448449f07b6b718e7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

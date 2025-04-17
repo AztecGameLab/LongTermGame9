@@ -5,6 +5,7 @@ using UnityEngine.Serialization;
 public class AmmoManager : MonoBehaviour
 {
     public int maxAmmo = 10;
+    public int startingAmmo = 3;
 
     private int currentAmmo;
 
@@ -22,7 +23,7 @@ public class AmmoManager : MonoBehaviour
     
     void Start()
     {
-        CurrentAmmo = maxAmmo;
+        CurrentAmmo = startingAmmo;
         // Debug.Log("Starting ammo: " + CurrentAmmo);  // Logs the starting ammo
     }
 

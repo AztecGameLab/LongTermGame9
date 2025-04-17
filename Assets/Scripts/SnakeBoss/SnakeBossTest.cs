@@ -2,9 +2,12 @@ using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-[RequireComponent(typeof(Health))]
-public class HealthUsageExample : MonoBehaviour
+public class SnakeBossTest : MonoBehaviour
 {
+    private static readonly int IsDead = Animator.StringToHash("isDead");
+
+    [SerializeField] private Animator animator;
+    
     private SpriteRenderer spriteRenderer;
     private Health health;
     
@@ -16,10 +19,8 @@ public class HealthUsageExample : MonoBehaviour
 
     public void OnDamage(int damage, DamageType damageType, GameObject attacker)
     {
-        if (health.IsDead) return;
+        // if (health.IsDead) return;
         if (spriteRenderer == null) return;
-        
-        Debug.Log("Attacked by " + attacker.name + " for " + damage + " damage");
         
         UniTask.Void(async () =>
         {
@@ -32,11 +33,10 @@ public class HealthUsageExample : MonoBehaviour
     
     public void OnDeath(GameObject attacker)
     {
-        Debug.Log("Killed by " + attacker.name);
+        // if (spriteRenderer == null) return;
         
-        if (spriteRenderer == null) return;
-        
-        spriteRenderer.color = new Color(0.45f, 0.45f, 0.45f);
+        // spriteRenderer.color = new Color(0.45f, 0.45f, 0.45f);
+        animator.SetBool(IsDead, true);
     }
     
 }
