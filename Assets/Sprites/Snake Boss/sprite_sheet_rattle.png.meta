@@ -434,7 +434,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprite_sheet_rattle_0: -3223110671420549866
+      sprite_sheet_rattle_1: -8626557818315150888
+      sprite_sheet_rattle_10: -8816089279333650710
+      sprite_sheet_rattle_11: -7566900251405263851
+      sprite_sheet_rattle_12: -4342793109611784766
+      sprite_sheet_rattle_2: -4413296510734083271
+      sprite_sheet_rattle_3: -6924535295692035847
+      sprite_sheet_rattle_4: 3593975089462786208
+      sprite_sheet_rattle_5: -9202509042829330438
+      sprite_sheet_rattle_6: 8265958861290075418
+      sprite_sheet_rattle_7: 5446775307831766311
+      sprite_sheet_rattle_8: 9062415701045465345
+      sprite_sheet_rattle_9: 880196816693921583
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
