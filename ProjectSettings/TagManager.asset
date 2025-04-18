@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Undefined
   - Boss
+  - Ground
+  - Wall
+  - Roof
+  - SnakeHitUp
+  - SnakeHitUpAndLeft
   layers:
   - Default
   - TransparentFX

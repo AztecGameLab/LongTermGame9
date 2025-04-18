@@ -1,5 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
+using UnityEditor.Build;
 using UnityEngine;
 
 public class SnakeBoss : MonoBehaviour
@@ -11,14 +12,19 @@ public class SnakeBoss : MonoBehaviour
     
     private Health health;
     private SpriteRenderer spriteRenderer;
-    
-    [SerializeField] private GameObject snakeAttack4;
 
     [SerializeField] private bool finishedCutscene;
-    
+
     [SerializeField] private int secondsInBetweenAttacks;
     
-    private int time;
+        
+    [SerializeField] private GameObject snakeAttack4;
+    [SerializeField] private GameObject snakeAttack1;
+    
+    private int timeForAttacks;
+
+    private int attack1ActiveTime;
+    private bool attack1Active;
 
     private bool bossBackup;
 
@@ -35,7 +41,12 @@ public class SnakeBoss : MonoBehaviour
 
     public void FixedUpdate()
     {
+        if (attack1Active)
+        {
+            
+        }
 
+        // This is for how the boss backs up to do the sweep across the floor attack
         if (bossBackup)
         {
             gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x+0.2f, gameObject.transform.position.y);
@@ -46,6 +57,7 @@ public class SnakeBoss : MonoBehaviour
                 snakeAttack4.transform.position = new Vector2(12, -1.6f);
             }
         }
+        //if the attack is done, bring back the boss
         else if (gameObject.transform.position.x > 6.5 && snakeAttack4.activeSelf == false)
         {
             gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
@@ -54,9 +66,9 @@ public class SnakeBoss : MonoBehaviour
 
         if (!attackInProgress && finishedCutscene)
         {
-            time++;
-            if (time <= secondsInBetweenAttacks*60) return;
-            time = 0; 
+            timeForAttacks++;
+            if (timeForAttacks <= secondsInBetweenAttacks*60) return;
+            timeForAttacks = 0; 
             Debug.Log("Current Health: " + health.Value);
             Debug.Log("Attack Counter: " + attack4Counter);
             Debug.Log("Attack 4 ACtive?" + snakeAttack4.activeSelf);
@@ -150,6 +162,8 @@ private void OnCollisionEnter2D(Collision2D collision)
     private void Attack1()
     {
         Debug.Log("Snake Boss uses Attack 1!");
+        attackInProgress = true;
+        attack1Active = true;
         // Implement attack logic here
     }
 
