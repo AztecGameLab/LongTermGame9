@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
-
+using UnityEngine.Audio;
 
 public class GroundStomp : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class GroundStomp : MonoBehaviour
     public float coolDownTime = 2f;
     public bool canAttack;
     private float currentCoolDownTime;
-
+    [SerializeField] private AudioSource stompSound = null;
 
     private readonly HashSet<Health> enemies = new();
     // Update is called once per frame
@@ -27,12 +27,11 @@ public class GroundStomp : MonoBehaviour
     public void Stomp(InputAction.CallbackContext context)
     {
         if (canAttack || !context.performed) return;
-
+        stompSound.Play();
         canAttack = true;
         currentCoolDownTime = coolDownTime;
         foreach(var health in enemies)
         {
-            Debug.Log("Hit");
             health.ApplyDamage(enemyDamage, DamageType.PlayerStomp, gameObject);
 
         }
