@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 136b4008f1800ef4c938abd859c06c60
+guid: 478b011f949c4ca4fa668fd71bba7e06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4377826695280923381
-    second: rock_3_0
+      213: 7620920728797406819
+    second: SplitMid1_Modular1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock_3_0
+      name: SplitMid1_Modular1_0
       rect:
         serializedVersion: 2
-        x: 103
-        y: 23
-        width: 198
-        height: 356
+        x: 0
+        y: 0
+        width: 472
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0dee8bb0d5de33c0800000000000000
-      internalID: -4377826695280923381
+      spriteID: 36661658603f2c960800000000000000
+      internalID: 7620920728797406819
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      rock_3_0: -4377826695280923381
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
