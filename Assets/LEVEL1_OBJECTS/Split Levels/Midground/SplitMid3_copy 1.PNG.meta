@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 36c5b21f543ad9849920fd943051e023
+guid: 167b1ed83d6ecc34881178e83ed29679
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5398799198546891593
-    second: SplitMid3_0
+      213: 3096998994309126268
+    second: SplitMid3_copy 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 641, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SplitMid3_0
+      name: SplitMid3_copy 1_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 879
-        height: 516
+        x: 639
+        y: 0
+        width: 1285
+        height: 741
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bce2f4abbc9315b0800000000000000
-      internalID: -5398799198546891593
+      spriteID: c78998d3d20cafa20800000000000000
+      internalID: 3096998994309126268
       vertices: []
       indices: 
       edges: []
@@ -125,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fd69966722423424d8ed46fc2f575d32
-    internalID: -1494785662
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SplitMid3_0: -5398799198546891593
+      SplitMid3_copy 1_0: 3096998994309126268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
