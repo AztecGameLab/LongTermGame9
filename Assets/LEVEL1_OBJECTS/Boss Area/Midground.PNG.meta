@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 478b011f949c4ca4fa668fd71bba7e06
+guid: 8a6307726375f3443ae9d62af8d8a748
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7620920728797406819
-    second: SplitMid1_Modular1_0
+      213: -3759627260301971092
+    second: Midground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SplitMid1_Modular1_0
+      name: Midground_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 472
-        height: 215
+        width: 1920
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36661658603f2c960800000000000000
-      internalID: 7620920728797406819
+      spriteID: c6173d51dee13dbc0800000000000000
+      internalID: -3759627260301971092
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SplitMid1_Modular1_0: 7620920728797406819
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
