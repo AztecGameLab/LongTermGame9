@@ -9,6 +9,7 @@ public class ArtemisAnimationTesting : MonoBehaviour
 
     public Animator animator;
     public PlayerMovementControl controller;
+    public GroundStomp stompScript;
 
     public void tailWhip(InputAction.CallbackContext context)
     {
@@ -30,7 +31,7 @@ public class ArtemisAnimationTesting : MonoBehaviour
         {
             animator.SetBool(GroundStomping, true);
             controller.AllowMovement = false;
-        } else if (context.canceled && animator.GetBool(GroundStomping))
+        } else if (context.canceled)
         {
             animator.SetBool(GroundStomping, false);
             controller.AllowMovement = true;
