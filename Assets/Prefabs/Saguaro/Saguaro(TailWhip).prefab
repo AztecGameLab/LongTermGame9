@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 5218531257912359496}
   - component: {fileID: 5192815621367961964}
   m_Layer: 0
-  m_Name: Saguaro
+  m_Name: Saguaro(TailWhip)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
