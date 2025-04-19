@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 5218531257912359496}
   - component: {fileID: 5192815621367961964}
   m_Layer: 0
-  m_Name: Saguaro
+  m_Name: Saguaro(TailWhip)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,10 +41,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8492907538410745698}
-  - {fileID: 1681433456610747155}
-  - {fileID: 6234328598059870202}
-  - {fileID: 6401220280444808481}
+  - {fileID: 7007646572677427823}
   - {fileID: 2223077141250456648}
+  - {fileID: 6401220280444808481}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6173526510231491161
@@ -227,7 +226,7 @@ MonoBehaviour:
   groundCheckVerticalOffset: 0.47
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 264
   animator: {fileID: 3258446017969606384}
 --- !u!114 &655675354395660482
 MonoBehaviour:
@@ -258,7 +257,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAmmo: 10
-  startingAmmo: 3
   onAmmoChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -392,7 +390,19 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3928085348460483638}
+        m_TargetAssemblyTypeName: TailWhip, Assembly-CSharp
+        m_MethodName: DealDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f7ec2bcd-b5d3-49c8-a64e-5ae0ef8c0534
     m_ActionName: 'Player/TailWhip[/Keyboard/x]'
   - m_PersistentCalls:
@@ -544,117 +554,6 @@ MonoBehaviour:
   enemyDamage: 3
   cooldownTime: 0.5
   animator: {fileID: 0}
---- !u!1 &2764074611169112363
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6234328598059870202}
-  - component: {fileID: 5039885353826895098}
-  - component: {fileID: 3438909220463252109}
-  - component: {fileID: 833647989783011314}
-  m_Layer: 16
-  m_Name: Stomp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6234328598059870202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764074611169112363}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.98000336, y: 0.3800001, z: 0}
-  m_LocalScale: {x: 1.1991, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5555969285793694952}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5039885353826895098
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764074611169112363}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.01, y: 1.62}
-  m_EdgeRadius: 0
---- !u!114 &3438909220463252109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764074611169112363}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60324025a14d4b044ba9742daf17848f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyDamage: 3
-  cooldownTime: 0.5
-  animator: {fileID: 0}
---- !u!114 &833647989783011314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764074611169112363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca215ae72c75ed44fa0c33005aec8a64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyDamage: 1
-  coolDownTime: 2
-  canAttack: 0
-  stompSound: {fileID: 0}
 --- !u!1 &3557640281101815962
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +664,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &5411465526388865592
+--- !u!1 &6691184800041450246
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -773,9 +672,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1681433456610747155}
-  - component: {fileID: 8556019426119224643}
-  - component: {fileID: 2590910750634166735}
+  - component: {fileID: 6401220280444808481}
+  m_Layer: 16
+  m_Name: ThrowPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6401220280444808481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691184800041450246}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.634, y: 0.573, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5555969285793694952}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6810875098325949404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7007646572677427823}
+  - component: {fileID: 8443782370265704790}
+  - component: {fileID: 3928085348460483638}
   m_Layer: 0
   m_Name: TailWhip
   m_TagString: Untagged
@@ -783,28 +713,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1681433456610747155
+--- !u!4 &7007646572677427823
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5411465526388865592}
+  m_GameObject: {fileID: 6810875098325949404}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.0706787, y: 0.57101893, z: 0}
-  m_LocalScale: {x: 2, y: 0.39999998, z: 1}
+  m_LocalPosition: {x: 1.442, y: -0.035, z: 0}
+  m_LocalScale: {x: 2, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5555969285793694952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8556019426119224643
+--- !u!61 &8443782370265704790
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5411465526388865592}
+  m_GameObject: {fileID: 6810875098325949404}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -844,13 +774,13 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.01, y: 1.62}
   m_EdgeRadius: 0
---- !u!114 &2590910750634166735
+--- !u!114 &3928085348460483638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5411465526388865592}
+  m_GameObject: {fileID: 6810875098325949404}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a598e0df00fd55b4eb23d46079fa7fe5, type: 3}
@@ -859,34 +789,3 @@ MonoBehaviour:
   enemyDamage: 5
   cooldownTime: 4
   animator: {fileID: 0}
---- !u!1 &6691184800041450246
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6401220280444808481}
-  m_Layer: 16
-  m_Name: ThrowPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6401220280444808481
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6691184800041450246}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.634, y: 0.573, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5555969285793694952}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
