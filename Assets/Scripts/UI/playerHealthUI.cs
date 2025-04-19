@@ -112,9 +112,6 @@ public class playerHealth : MonoBehaviour
         heartText.enabled = false;
         hearts = new GameObject[heartsToShow];
         rectT = heartImage.transform.GetComponent<RectTransform>();
-        // addHeart();
-        // addHeart();
-        // addHeart();
-        SetHearts(5);
+        SetHearts(1);
     }
 }

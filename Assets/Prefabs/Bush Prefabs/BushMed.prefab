@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 1
-  vulnerableDamageTypes: -1
+  vulnerableDamageTypes: 2
   onDamage:
     m_PersistentCalls:
       m_Calls: []

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 88690238641875584, guid: eb2630ba2397d4b74b84c14672a873d1, type: 3}
+      propertyPath: vulnerableDamageTypes
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3465853446211307460, guid: eb2630ba2397d4b74b84c14672a873d1, type: 3}
       propertyPath: m_Name
       value: BushSm

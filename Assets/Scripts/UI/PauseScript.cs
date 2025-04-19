@@ -11,10 +11,10 @@ public class PauseScript : MonoBehaviour
     {
         panel.SetActive(false);
     }
-
+    
     public void mainMenu()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
     
