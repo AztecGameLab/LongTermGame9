@@ -19,6 +19,7 @@ public static class PersistentSceneLoader
     private static async void LoadPersistentScene()
     {
         MasterScript.Settings = Settings;
+        MasterScript.MainGame = Settings.MainGame;
 // If playing in the Unity Editor
 #if UNITY_EDITOR 
         if (Settings.editorPlay.Equals(GameSettings.EditorPlayMethod.StartOfGame))

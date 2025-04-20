@@ -7,7 +7,9 @@ public class spineammoUI : MonoBehaviour
 {
     [SerializeField] GameObject spineImage;
     [SerializeField] private TextMeshProUGUI spineText;
+    [SerializeField] private TextMeshProUGUI maxText;
     [SerializeField] private Canvas playerUICanvas;
+    [SerializeField] private AmmoManager manager;
     private int spineIndex = 0;
 
     public void SetSpines(int spines)
@@ -17,6 +19,8 @@ public class spineammoUI : MonoBehaviour
             spineImage.SetActive(true);
             spineText.enabled = true;
         }
+
+        maxText.enabled = spines == manager.maxAmmo;
         
         spineIndex = spines;
         spineText.text = "x" + spineIndex;         

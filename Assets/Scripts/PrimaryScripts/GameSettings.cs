@@ -12,6 +12,7 @@ public class GameSettings : ScriptableObject
     public EditorPlayMethod editorPlay;
     public const string PersistentScenePath = "Assets/Scenes/PersistentScene.unity";
     public const string StartScenePath = "Assets/Scenes/MenuScenes/MainMenu.unity";
+    [Scene] public string MainGame = "Assets/Scenes/MenuScenes/MainGame.unity";
     
     /// <summary> Methods of starting the game in the Editor </summary>
     public enum EditorPlayMethod

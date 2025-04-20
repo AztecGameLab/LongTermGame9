@@ -46,6 +46,10 @@ public class GroundStomp : MonoBehaviour
         if (canAttack || !context.performed || !controller.IsGrounded())
         {
             DoStomp = false;
+            if (currentCoolDownTime > coolDownTime / 2)
+            {
+                currentCoolDownTime = coolDownTime / 2;
+            }
             animator.SetBool(GroundStomping, false);
             controller.AllowMovement = true;
             return;
