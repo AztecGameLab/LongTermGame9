@@ -734,7 +734,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnakeBiteNormal_0: 3071729321148647755
+      SnakeBiteNormal_1: 8048181149553062409
+      SnakeBiteNormal_10: -5478637352608040573
+      SnakeBiteNormal_11: 5078683362146426332
+      SnakeBiteNormal_12: -5955560234729028790
+      SnakeBiteNormal_13: -7032095311097035061
+      SnakeBiteNormal_14: -2719757782931081918
+      SnakeBiteNormal_15: 621027674142192211
+      SnakeBiteNormal_16: -8953997543484451870
+      SnakeBiteNormal_17: -4471915104236168977
+      SnakeBiteNormal_18: 660092910387125809
+      SnakeBiteNormal_19: 7645825689279570094
+      SnakeBiteNormal_2: 3256522569667343834
+      SnakeBiteNormal_20: -5119404886329563727
+      SnakeBiteNormal_21: -2221964365030316250
+      SnakeBiteNormal_22: -5341189597326955142
+      SnakeBiteNormal_23: 1276425367978318387
+      SnakeBiteNormal_24: 2498950731794136012
+      SnakeBiteNormal_3: 3602317610805508006
+      SnakeBiteNormal_4: -9194076290804180655
+      SnakeBiteNormal_5: 5273040956790369406
+      SnakeBiteNormal_6: 5593755202308992581
+      SnakeBiteNormal_7: -1972246526539290004
+      SnakeBiteNormal_8: -6206760444550637838
+      SnakeBiteNormal_9: 4340889607418532592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

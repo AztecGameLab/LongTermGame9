@@ -434,7 +434,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnakeAttackRattle_0: 527554545296232959
+      SnakeAttackRattle_1: -1657358413349296268
+      SnakeAttackRattle_10: 2795533928033140828
+      SnakeAttackRattle_11: 8400656297008033854
+      SnakeAttackRattle_12: 677218997745207227
+      SnakeAttackRattle_2: 4102894051383816291
+      SnakeAttackRattle_3: -8777757054207883987
+      SnakeAttackRattle_4: 7041117721052203039
+      SnakeAttackRattle_5: -1090700445900380087
+      SnakeAttackRattle_6: 3058470127812034765
+      SnakeAttackRattle_7: 5593386841866232206
+      SnakeAttackRattle_8: -6520151351156378530
+      SnakeAttackRattle_9: -4738821144629220482
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
