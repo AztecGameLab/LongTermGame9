@@ -16,11 +16,11 @@ GameObject:
   - component: {fileID: 1200935514326602854}
   - component: {fileID: 655675354395660482}
   - component: {fileID: 4108873100239225085}
-  - component: {fileID: 1351494427374706384}
   - component: {fileID: 6226862286240648731}
   - component: {fileID: 5218531257912359496}
   - component: {fileID: 5192815621367961964}
-  m_Layer: 0
+  - component: {fileID: 5957495379100124153}
+  m_Layer: 16
   m_Name: Saguaro
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275b2806934024e4f86833a8d7dd1202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthValue: 5
+  healthValue: 1
   vulnerableDamageTypes: 48
   onDamage:
     m_PersistentCalls:
@@ -203,7 +203,19 @@ MonoBehaviour:
         m_CallState: 2
   onHealthChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: playerHealth, Assembly-CSharp
+        m_MethodName: SetHearts
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1200935514326602854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,11 +228,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b74fe7604a5bc4b9a3ed52593a50f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 10
+  walkSpeed: 9
   gravity: 1.5
   accelerationMultiplier: 5
   accelerationPower: 1.5
-  acceptableClimbSlope: 45
+  acceptableClimbSlope: 75
   groundFriction: 0.4
   jumpForce: 12
   groundCheckBoxSize: {x: 0.93, y: 0.24}
@@ -228,6 +240,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  coyoteTime: 0.5
   animator: {fileID: 3258446017969606384}
 --- !u!114 &655675354395660482
 MonoBehaviour:
@@ -243,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwPoint: {fileID: 6401220280444808481}
   spinePrefab: {fileID: 3936772637767987028, guid: 41dd7a3e29ff5496ca4e127cd70f07fc, type: 3}
-  timeBtwShots: 1
+  timeBtwShots: 0.5
   anim: {fileID: 3258446017969606384}
 --- !u!114 &4108873100239225085
 MonoBehaviour:
@@ -257,27 +270,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530284a2fa0594dcea805d6c5f55e35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 10
-  startingAmmo: 3
+  maxAmmo: 8
+  startingAmmo: 1
   onAmmoChanged:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1351494427374706384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311657410292712341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15868a092b8d42db8970ed20819b2ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxAmmo: 10
-  OnAmmoChanged:
-    m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: spineammoUI, Assembly-CSharp
+        m_MethodName: SetSpines
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6226862286240648731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +459,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fba59584099e34493ab7bfe1dfb322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5957495379100124153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311657410292712341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2c89f83ab41bf4a903d15bebbd5e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoManager: {fileID: 4108873100239225085}
+  health: {fileID: 6451937271461580996}
 --- !u!1 &933320221906639891
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDamage: 3
   cooldownTime: 0.5
-  animator: {fileID: 0}
+  animator: {fileID: 3258446017969606384}
 --- !u!1 &2764074611169112363
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,8 +577,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6234328598059870202}
   - component: {fileID: 5039885353826895098}
-  - component: {fileID: 3438909220463252109}
   - component: {fileID: 833647989783011314}
+  - component: {fileID: 3680286389603855711}
   m_Layer: 16
   m_Name: Stomp
   m_TagString: Untagged
@@ -572,7 +595,7 @@ Transform:
   m_GameObject: {fileID: 2764074611169112363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.98000336, y: 0.3800001, z: 0}
+  m_LocalPosition: {x: 0.11, y: 0.23, z: 0}
   m_LocalScale: {x: 1.1991, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -612,7 +635,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.006340623, y: 0.15205431}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -622,23 +645,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.01, y: 1.62}
+  m_Size: {x: 1.9080358, y: 2.1978064}
   m_EdgeRadius: 0
---- !u!114 &3438909220463252109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764074611169112363}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60324025a14d4b044ba9742daf17848f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyDamage: 3
-  cooldownTime: 0.5
-  animator: {fileID: 0}
 --- !u!114 &833647989783011314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,9 +660,108 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 1
-  coolDownTime: 2
+  coolDownTime: 6
   canAttack: 0
-  stompSound: {fileID: 0}
+  stompSound: {fileID: 3680286389603855711}
+  controller: {fileID: 1200935514326602854}
+  animator: {fileID: 3258446017969606384}
+--- !u!82 &3680286389603855711
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2764074611169112363}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3ae025190c5ccfb44be79bdad882e5f9, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3ae025190c5ccfb44be79bdad882e5f9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3557640281101815962
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +815,7 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -729,9 +836,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1075210093
+  m_SortingLayer: 2
+  m_SortingOrder: 50
   m_Sprite: {fileID: -458248161, guid: bb2353bec0cb85748a55a60454d17bc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -792,7 +899,7 @@ Transform:
   m_GameObject: {fileID: 5411465526388865592}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.0706787, y: 0.57101893, z: 0}
+  m_LocalPosition: {x: 4.0706787, y: 0.2, z: 0}
   m_LocalScale: {x: 2, y: 0.39999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -832,7 +939,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.0781326, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -842,7 +949,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.01, y: 1.62}
+  m_Size: {x: 1.4465485, y: 1.62}
   m_EdgeRadius: 0
 --- !u!114 &2590910750634166735
 MonoBehaviour:
@@ -856,9 +963,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a598e0df00fd55b4eb23d46079fa7fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDamage: 5
-  cooldownTime: 4
-  animator: {fileID: 0}
+  enemyDamage: 1
+  cooldownTime: 1.5
+  animator: {fileID: 3258446017969606384}
 --- !u!1 &6691184800041450246
 GameObject:
   m_ObjectHideFlags: 0

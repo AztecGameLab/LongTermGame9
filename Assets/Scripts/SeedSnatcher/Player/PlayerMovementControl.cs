@@ -37,6 +37,8 @@ public class PlayerMovementControl : MonoBehaviour
     public LayerMask groundLayer;
     private float currentGroundAngle;
     private Vector2 currentGroundNormal = Vector2.zero;
+    public float coyoteTime = 0.1f;
+    private float coyoteTimeCounter;
 
     [Header("Animation")]
     public Animator animator;
@@ -61,8 +63,6 @@ public class PlayerMovementControl : MonoBehaviour
         }
     }
 
-    private bool wasGrounded;
-    
     public bool IsGrounded()
     {
         return Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckVerticalOffset,
@@ -86,11 +86,17 @@ public class PlayerMovementControl : MonoBehaviour
         {
             TrySetFriction(groundFriction);
             GroundedBehavior();
+            coyoteTimeCounter = coyoteTime;
         }
         else
         {
             TrySetFriction(0.0f);
             AirBehavior();
+        }
+
+        if (coyoteTimeCounter > 0.0f)
+        {
+            coyoteTimeCounter = Math.Max(coyoteTimeCounter - Time.deltaTime, 0.0f);
         }
     }
     
@@ -265,7 +271,7 @@ public class PlayerMovementControl : MonoBehaviour
 
     private void CheckIfJumpAllowed()
     {
-        if (IsGrounded())
+        if (IsGrounded() || coyoteTimeCounter > 0.0f)
         {
             JumpBehavior();
         } 
@@ -278,7 +284,7 @@ public class PlayerMovementControl : MonoBehaviour
 
     private void CheckJumpCut()
     {
-        if (!IsGrounded())
+        if (!IsGrounded() && coyoteTimeCounter == 0.0f)
         {
             JumpCut();
         }

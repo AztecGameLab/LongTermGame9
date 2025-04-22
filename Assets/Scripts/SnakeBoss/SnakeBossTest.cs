@@ -21,6 +21,8 @@ public class SnakeBossTest : MonoBehaviour
     {
         // if (health.IsDead) return;
         if (spriteRenderer == null) return;
+
+        if (damage <= 0) return;
         
         UniTask.Void(async () =>
         {
