@@ -1,25 +1,46 @@
 fileFormatVersion: 2
-guid: 59ed9225680a12a42b5b0d70f1fa6584
+guid: b179f5e70c44f7f4a88c22a82827d2ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8444768663202530432
-    second: saguaro jump sheet_0
+      213: -2589272346770739275
+    second: saguaro jump colored sheet_0
   - first:
-      213: -5473426537396037724
-    second: saguaro jump sheet_1
+      213: -8904854821715807607
+    second: saguaro jump colored sheet_1
   - first:
-      213: 2718810281211463012
-    second: saguaro jump sheet_2
+      213: 6388972043555344186
+    second: saguaro jump colored sheet_2
   - first:
-      213: 752899633584029635
-    second: saguaro jump sheet_3
+      213: -1447442172128573000
+    second: saguaro jump colored sheet_3
   - first:
-      213: 3186552125704667643
-    second: saguaro jump sheet_4
+      213: 4243770802949714884
+    second: saguaro jump colored sheet_4
   - first:
-      213: 328499688644668878
-    second: saguaro jump sheet_5
+      213: 525619656626970623
+    second: saguaro jump colored sheet_5
+  - first:
+      213: 4982067984374404935
+    second: saguaro jump colored sheet_6
+  - first:
+      213: 2330655308188578618
+    second: saguaro jump colored sheet_7
+  - first:
+      213: 6086877762312973714
+    second: saguaro jump colored sheet_8
+  - first:
+      213: 1015492351630770447
+    second: saguaro jump colored sheet_9
+  - first:
+      213: -5671384467114266332
+    second: saguaro jump colored sheet_10
+  - first:
+      213: 8370727759307676889
+    second: saguaro jump colored sheet_11
+  - first:
+      213: 5834475365271979748
+    second: saguaro jump colored sheet_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +108,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -115,79 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 552
-        width: 452
-        height: 552
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6c3898a4e54a8f47805b7e2418bb526
-      internalID: -874414425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_1
-      rect:
-        serializedVersion: 2
-        x: 452
-        y: 552
-        width: 452
-        height: 552
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3c9c00b967435c43881157502332690
-      internalID: -1757358503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_2
-      rect:
-        serializedVersion: 2
-        x: 904
-        y: 552
-        width: 452
-        height: 552
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 972ab3111143d0147aa679ef45e955ff
-      internalID: 1810046835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_3
+      name: saguaro jump colored sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 452
-        height: 552
+        width: 252
+        height: 322
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14524a487c0e2a94eafa8cb53a0c587d
-      internalID: 1453053855
+      spriteID: 7ba4e83718edb334fa613c1c7b1c4e8b
+      internalID: 2033659326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_4
+      name: saguaro jump colored sheet_1
       rect:
         serializedVersion: 2
-        x: 452
+        x: 252
         y: 0
-        width: 452
-        height: 552
+        width: 252
+        height: 322
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,8 +173,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08fefe0380e537a44bcbbfd027116ee1
-      internalID: 410004190
+      spriteID: 80fb31ef0a403674ca4dc6e841bc20da
+      internalID: 1728705184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro jump colored sheet_2
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 252
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511b2063e75f5b544903c55a2213333a
+      internalID: 149317225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro jump colored sheet_3
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 252
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b8c20cba63e4a4caeb828bcaab6ccb
+      internalID: -1794030186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro jump colored sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 252
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d40cb993df59b4a9eaaa9515dd884f
+      internalID: -686585171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro jump colored sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 252
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f3c2becb5159a45a10226c86dc6f1d
+      internalID: -1548407148
       vertices: []
       indices: 
       edges: []
@@ -228,7 +271,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 385fdc24250826e4da0f66e950c9d8db
+    spriteID: a736f6daf9c3c2042aae60b0a7c3f914
     internalID: 0
     vertices: []
     indices: 
@@ -238,11 +281,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Jump_0: -874414425
-      Jump_1: -1757358503
-      Jump_2: 1810046835
-      Jump_3: 1453053855
-      Jump_4: 410004190
+      saguaro jump colored sheet_0: 2033659326
+      saguaro jump colored sheet_1: 1728705184
+      saguaro jump colored sheet_2: 149317225
+      saguaro jump colored sheet_3: -1794030186
+      saguaro jump colored sheet_4: -686585171
+      saguaro jump colored sheet_5: -1548407148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

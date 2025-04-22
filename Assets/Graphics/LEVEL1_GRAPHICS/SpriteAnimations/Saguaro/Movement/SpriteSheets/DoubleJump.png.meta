@@ -1,85 +1,160 @@
 fileFormatVersion: 2
-guid: c490d227c2d61f940aead9b03ac9f120
+guid: 362de3906b48ef54685b4c3d27aad35d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -995694547287389393
-    second: saguaro double jump sheet_0
+      213: 5597761321505959515
+    second: saguaro double jump colored sheet_0
   - first:
-      213: 3069108957473639067
-    second: saguaro double jump sheet_1
+      213: -6092636728907806061
+    second: saguaro double jump colored sheet_1
   - first:
-      213: -386703121021537535
-    second: saguaro double jump sheet_2
+      213: -4466352437497986042
+    second: saguaro double jump colored sheet_2
   - first:
-      213: -3792503851040302762
-    second: saguaro double jump sheet_3
+      213: 7131427650871795687
+    second: saguaro double jump colored sheet_3
   - first:
-      213: 5992103879754681944
-    second: saguaro double jump sheet_4
+      213: 5875566327064222735
+    second: saguaro double jump colored sheet_4
   - first:
-      213: -1702029854987237963
-    second: saguaro double jump sheet_5
+      213: 3030099628001315133
+    second: saguaro double jump colored sheet_5
   - first:
-      213: -3702649320243838855
-    second: saguaro double jump sheet_6
+      213: -7363810130805595928
+    second: saguaro double jump colored sheet_6
   - first:
-      213: 6194328057695129834
-    second: saguaro double jump sheet_7
+      213: -5989294465779752552
+    second: saguaro double jump colored sheet_7
   - first:
-      213: -2345110098545632972
-    second: saguaro double jump sheet_8
+      213: -7391359828579375320
+    second: saguaro double jump colored sheet_8
   - first:
-      213: -8084744307025238160
-    second: saguaro double jump sheet_9
+      213: 1503733367824192311
+    second: saguaro double jump colored sheet_9
   - first:
-      213: 4701446960893569816
-    second: saguaro double jump sheet_10
+      213: -2352151723565900722
+    second: saguaro double jump colored sheet_10
   - first:
-      213: -6183368809582917681
-    second: saguaro double jump sheet_11
+      213: -3074644551415468464
+    second: saguaro double jump colored sheet_11
   - first:
-      213: -2075924325930228758
-    second: saguaro double jump sheet_12
+      213: -1373487111346817762
+    second: saguaro double jump colored sheet_12
   - first:
-      213: 1919499637380204339
-    second: saguaro double jump sheet_13
+      213: 3373979230302498311
+    second: saguaro double jump colored sheet_13
   - first:
-      213: 2644181449242168316
-    second: saguaro double jump sheet_14
+      213: -9162208927056824999
+    second: saguaro double jump colored sheet_14
   - first:
-      213: 9076900031217599417
-    second: saguaro double jump sheet_15
+      213: -5578736552499236662
+    second: saguaro double jump colored sheet_15
   - first:
-      213: -2418099618109794003
-    second: saguaro double jump sheet_16
+      213: 4316028345249502564
+    second: saguaro double jump colored sheet_16
   - first:
-      213: 6955885871306584866
-    second: saguaro double jump sheet_17
+      213: 4238597950376178905
+    second: saguaro double jump colored sheet_17
   - first:
-      213: 522538569702471433
-    second: saguaro double jump sheet_18
+      213: 2808531057431395049
+    second: saguaro double jump colored sheet_18
   - first:
-      213: 6608709229956556796
-    second: saguaro double jump sheet_19
+      213: 2752913909105326413
+    second: saguaro double jump colored sheet_19
   - first:
-      213: -1705139463412020718
-    second: saguaro double jump sheet_20
+      213: 6018476404353816398
+    second: saguaro double jump colored sheet_20
   - first:
-      213: -2039646107098744661
-    second: saguaro double jump sheet_21
+      213: -4204738292381206569
+    second: saguaro double jump colored sheet_21
   - first:
-      213: 4373723571624120786
-    second: saguaro double jump sheet_22
+      213: -6350777123044405006
+    second: saguaro double jump colored sheet_22
   - first:
-      213: 267709589422896998
-    second: saguaro double jump sheet_23
+      213: -6929887403354491004
+    second: saguaro double jump colored sheet_23
   - first:
-      213: 4983956944547045097
-    second: saguaro double jump sheet_24
+      213: 5718991178771580627
+    second: saguaro double jump colored sheet_24
   - first:
-      213: 6850253686226220637
-    second: saguaro double jump sheet_25
+      213: -6483263434987767222
+    second: saguaro double jump colored sheet_25
+  - first:
+      213: 7945445078837637322
+    second: saguaro double jump colored sheet_26
+  - first:
+      213: -1959430787741580245
+    second: saguaro double jump colored sheet_27
+  - first:
+      213: 8407837158046490068
+    second: saguaro double jump colored sheet_28
+  - first:
+      213: 3778069242281877581
+    second: saguaro double jump colored sheet_29
+  - first:
+      213: 6445934416105324015
+    second: saguaro double jump colored sheet_30
+  - first:
+      213: -3377010525963309076
+    second: saguaro double jump colored sheet_31
+  - first:
+      213: -349385694036115000
+    second: saguaro double jump colored sheet_32
+  - first:
+      213: -1689321217070455174
+    second: saguaro double jump colored sheet_33
+  - first:
+      213: -6371813619306742586
+    second: saguaro double jump colored sheet_34
+  - first:
+      213: 453579659094806371
+    second: saguaro double jump colored sheet_35
+  - first:
+      213: -7747743956628540756
+    second: saguaro double jump colored sheet_36
+  - first:
+      213: -3972987825200818598
+    second: saguaro double jump colored sheet_37
+  - first:
+      213: 3019996150566888069
+    second: saguaro double jump colored sheet_38
+  - first:
+      213: -1308084860345940608
+    second: saguaro double jump colored sheet_39
+  - first:
+      213: -3328495737637299726
+    second: saguaro double jump colored sheet_40
+  - first:
+      213: -4053976259837100355
+    second: saguaro double jump colored sheet_41
+  - first:
+      213: -1892635683033637113
+    second: saguaro double jump colored sheet_42
+  - first:
+      213: 3669323926774779617
+    second: saguaro double jump colored sheet_43
+  - first:
+      213: -4992621603160136639
+    second: saguaro double jump colored sheet_44
+  - first:
+      213: -5870279027606947073
+    second: saguaro double jump colored sheet_45
+  - first:
+      213: 5294678879917177144
+    second: saguaro double jump colored sheet_46
+  - first:
+      213: 1801927614856083850
+    second: saguaro double jump colored sheet_47
+  - first:
+      213: 9022763413661624874
+    second: saguaro double jump colored sheet_48
+  - first:
+      213: 1555587841246557636
+    second: saguaro double jump colored sheet_49
+  - first:
+      213: 1093116222566741424
+    second: saguaro double jump colored sheet_50
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,7 +222,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -175,353 +250,529 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DoubleJump_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1764
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 471b1458a92fd1943847b120732ebe40
-      internalID: 81955993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_1
-      rect:
-        serializedVersion: 2
-        x: 552
-        y: 1764
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99ab4be824717f14fb568471c7e7e5b2
-      internalID: -1508542360
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_2
-      rect:
-        serializedVersion: 2
-        x: 1104
-        y: 1764
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83ef6d00e2cbe7444acb572137256997
-      internalID: -652194463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_3
-      rect:
-        serializedVersion: 2
-        x: 1656
-        y: 1764
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87d277a9180a8644eaae4f90a69ee39b
-      internalID: -333489403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_4
-      rect:
-        serializedVersion: 2
-        x: 2208
-        y: 1764
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d922bb02949d584a94e7657630bbf27
-      internalID: -1616230974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_5
-      rect:
-        serializedVersion: 2
-        x: 2760
-        y: 1764
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ec8ca9297a65ee469dba77ef8f2c9d7
-      internalID: 276665656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 882
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2978625fb8ab77489cf9111c75aea03
-      internalID: 2074560657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_7
-      rect:
-        serializedVersion: 2
-        x: 552
-        y: 882
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da3a60bebcbfe8c4d8885f10cf48a383
-      internalID: -1032410025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_8
-      rect:
-        serializedVersion: 2
-        x: 1104
-        y: 882
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11fce1f4fd8f8e24ebe94506b1f42398
-      internalID: -408136497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_9
-      rect:
-        serializedVersion: 2
-        x: 1656
-        y: 882
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b76d01a666f6dd4b94aed19270f10fa
-      internalID: 839255618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_10
-      rect:
-        serializedVersion: 2
-        x: 2208
-        y: 882
-        width: 552
-        height: 882
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e7cbb562939ac24ab768891d1498908
-      internalID: -1126492907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump_11
+      name: saguaro double jump colored sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 552
-        height: 882
+        width: 322
+        height: 352
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67d93968b90f65b4684109ebb4de9e73
-      internalID: 1714165296
+      spriteID: 906a8f1d341d3d448b8f9220d77e4c3e
+      internalID: 1488299187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump_12
+      name: saguaro double jump colored sheet_1
       rect:
         serializedVersion: 2
-        x: 552
+        x: 322
         y: 0
-        width: 552
-        height: 882
+        width: 322
+        height: 352
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 002f9fe3934788349910430ed9947cca
-      internalID: -988729263
+      spriteID: 9f8611df1e25a2d42ba93bf8172c6d5d
+      internalID: 388925439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump_13
+      name: saguaro double jump colored sheet_2
       rect:
         serializedVersion: 2
-        x: 1104
+        x: 644
         y: 0
-        width: 552
-        height: 882
+        width: 322
+        height: 352
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82de991d5f0479845af86dc37ee632db
-      internalID: 1183804459
+      spriteID: a2b2eefbc39ee3546b2f4651087c53a8
+      internalID: -633073424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump_14
+      name: saguaro double jump colored sheet_3
       rect:
         serializedVersion: 2
-        x: 1656
+        x: 966
         y: 0
-        width: 552
-        height: 882
+        width: 322
+        height: 352
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa6f70cadec7a6c459fcf1f303736431
-      internalID: 1924558327
+      spriteID: 7bc4c63b0961c7c49bb7eda6d84f00bd
+      internalID: -1150584093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump_15
+      name: saguaro double jump colored sheet_4
       rect:
         serializedVersion: 2
-        x: 2208
+        x: 1288
         y: 0
-        width: 552
-        height: 882
+        width: 322
+        height: 352
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eee902b54c3b9ca45ae727895366d5b7
-      internalID: -1749986186
+      spriteID: a6c0444c9aa6604478db9519537189f0
+      internalID: -2132587619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dd0a584440d2e4cbaa2f8917e63cf1
+      internalID: 319722961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f546eafe55ab0648a04e17ba99944d5
+      internalID: 281921288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9caa98ead3bffda489c62968b2ab2e2b
+      internalID: -1386760293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c87aeaaaeacf24482cace005aea108
+      internalID: -1550776067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f88940bca3252e468c8538afd1dc3cb
+      internalID: -43434432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6963965764bde8442a1d624a9f38b100
+      internalID: -1204974997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a992caad4d10ef4a809106e02f889a6
+      internalID: 256106925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259889c1f347c824f8643321c333bcf3
+      internalID: -2103513158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_13
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b12d8f3344a75449d767eb0023c0a6
+      internalID: 608833241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_14
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bacd4c67ba857a4fb5e4e3c2cb5949a
+      internalID: 292422043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_15
+      rect:
+        serializedVersion: 2
+        x: 4830
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e295dafc3929da94188fb95b653c0808
+      internalID: -214892458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_16
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7472a33da7a93f48a5d7502e7cb444d
+      internalID: 2122249599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_17
+      rect:
+        serializedVersion: 2
+        x: 5474
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4f94d543475d54d8267102de958a1c
+      internalID: -441379344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5796
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9b465da22e486488abec8f758956a6
+      internalID: 1495171654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_19
+      rect:
+        serializedVersion: 2
+        x: 6118
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60dd2a7c4dac1d44aceca661bd69e5c
+      internalID: 2108718134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_20
+      rect:
+        serializedVersion: 2
+        x: 6440
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78796b54fa5d1243a4cc5aa42f13085
+      internalID: -1114263848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_21
+      rect:
+        serializedVersion: 2
+        x: 6762
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9880c782cf756b74ba57047e3475c0f8
+      internalID: -1558396667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_22
+      rect:
+        serializedVersion: 2
+        x: 7084
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e5c1696a876854facbeb6139f35e8f
+      internalID: -578360368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro double jump colored sheet_23
+      rect:
+        serializedVersion: 2
+        x: 7406
+        y: 0
+        width: 322
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac7edc524be86e48b83bd1ff730708f
+      internalID: -461537075
       vertices: []
       indices: 
       edges: []
@@ -530,7 +781,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7457c7c0b320c7f44b72366286722a82
+    spriteID: 4d0ca6525f4b4724c99c2df2535ac244
     internalID: 0
     vertices: []
     indices: 
@@ -540,22 +791,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DoubleJump_0: 81955993
-      DoubleJump_1: -1508542360
-      DoubleJump_10: -1126492907
-      DoubleJump_11: 1714165296
-      DoubleJump_12: -988729263
-      DoubleJump_13: 1183804459
-      DoubleJump_14: 1924558327
-      DoubleJump_15: -1749986186
-      DoubleJump_2: -652194463
-      DoubleJump_3: -333489403
-      DoubleJump_4: -1616230974
-      DoubleJump_5: 276665656
-      DoubleJump_6: 2074560657
-      DoubleJump_7: -1032410025
-      DoubleJump_8: -408136497
-      DoubleJump_9: 839255618
+      saguaro double jump colored sheet_0: 1488299187
+      saguaro double jump colored sheet_1: 388925439
+      saguaro double jump colored sheet_10: -1204974997
+      saguaro double jump colored sheet_11: 256106925
+      saguaro double jump colored sheet_12: -2103513158
+      saguaro double jump colored sheet_13: 608833241
+      saguaro double jump colored sheet_14: 292422043
+      saguaro double jump colored sheet_15: -214892458
+      saguaro double jump colored sheet_16: 2122249599
+      saguaro double jump colored sheet_17: -441379344
+      saguaro double jump colored sheet_18: 1495171654
+      saguaro double jump colored sheet_19: 2108718134
+      saguaro double jump colored sheet_2: -633073424
+      saguaro double jump colored sheet_20: -1114263848
+      saguaro double jump colored sheet_21: -1558396667
+      saguaro double jump colored sheet_22: -578360368
+      saguaro double jump colored sheet_23: -461537075
+      saguaro double jump colored sheet_3: -1150584093
+      saguaro double jump colored sheet_4: -2132587619
+      saguaro double jump colored sheet_5: 319722961
+      saguaro double jump colored sheet_6: 281921288
+      saguaro double jump colored sheet_7: -1386760293
+      saguaro double jump colored sheet_8: -1550776067
+      saguaro double jump colored sheet_9: -43434432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

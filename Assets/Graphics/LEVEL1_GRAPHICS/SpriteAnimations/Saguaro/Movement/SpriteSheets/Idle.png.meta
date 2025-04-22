@@ -1,25 +1,49 @@
 fileFormatVersion: 2
-guid: d37b04becc9ba9448965a3f90a8f6143
+guid: 7d3788e2c36ff0548aaf2bc836d97888
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4258127279205516719
-    second: saguaro idle sheet_0
+      213: -1647081002946624101
+    second: saguaro idle colored sheet real_0
   - first:
-      213: -2376670777214109459
-    second: saguaro idle sheet_1
+      213: -7813993771316532438
+    second: saguaro idle colored sheet real_1
   - first:
-      213: 7588239735418603755
-    second: saguaro idle sheet_2
+      213: -369888462143746978
+    second: saguaro idle colored sheet real_2
   - first:
-      213: 6375110989093737263
-    second: saguaro idle sheet_3
+      213: -3615914047402988051
+    second: saguaro idle colored sheet real_3
   - first:
-      213: 3758218324436148117
-    second: saguaro idle sheet_4
+      213: 29876406058579578
+    second: saguaro idle colored sheet real_4
   - first:
-      213: -1003990285151301268
-    second: saguaro idle sheet_5
+      213: -3049164493533083492
+    second: saguaro idle colored sheet real_5
+  - first:
+      213: 5887846457488544361
+    second: saguaro idle colored sheet real_6
+  - first:
+      213: 3437393081372814242
+    second: saguaro idle colored sheet real_7
+  - first:
+      213: -6825339239589131278
+    second: saguaro idle colored sheet real_8
+  - first:
+      213: 2922269592985233814
+    second: saguaro idle colored sheet real_9
+  - first:
+      213: 6491441835217196812
+    second: saguaro idle colored sheet real_10
+  - first:
+      213: 3665696077909516027
+    second: saguaro idle colored sheet real_11
+  - first:
+      213: -414306305840729692
+    second: saguaro idle colored sheet real_12
+  - first:
+      213: 4903803578360548673
+    second: saguaro idle colored sheet real_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +111,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -115,67 +139,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 452
-        width: 452
-        height: 452
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c298d651248eaa4d8ddc6f23a44da09
-      internalID: -1054627120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_1
-      rect:
-        serializedVersion: 2
-        x: 452
-        y: 452
-        width: 452
-        height: 452
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14ccb3840197aa44d97d65dd354257d1
-      internalID: 258480007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_2
+      name: saguaro idle colored sheet real_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 452
-        height: 452
+        width: 252
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 77b3ad086cc087c45a132fa59be271ec
-      internalID: 1825831397
+      spriteID: b95821fed846429e0800000000000000
+      internalID: -1647081002946624101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro idle colored sheet real_1
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 252
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b2097b01e1f8390800000000000000
+      internalID: -7813993771316532438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro idle colored sheet real_2
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 252
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5c08674764eddaf0800000000000000
+      internalID: -369888462143746978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro idle colored sheet real_3
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 252
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded2332f451b1ddc0800000000000000
+      internalID: -3615914047402988051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro idle colored sheet real_4
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 252
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76794ade642a6000800000000000000
+      internalID: 29876406058579578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: saguaro idle colored sheet real_5
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 252
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c980a3d5c013fa5d0800000000000000
+      internalID: -3049164493533083492
       vertices: []
       indices: 
       edges: []
@@ -184,7 +274,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 391cb618528d41943a2af8def9bce50e
+    spriteID: ab8324321c7ec2a4ba25d3be407c4074
     internalID: 0
     vertices: []
     indices: 
@@ -194,9 +284,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle_0: -1054627120
-      Idle_1: 258480007
-      Idle_2: 1825831397
+      saguaro idle colored sheet real_0: -1647081002946624101
+      saguaro idle colored sheet real_1: -7813993771316532438
+      saguaro idle colored sheet real_2: -369888462143746978
+      saguaro idle colored sheet real_3: -3615914047402988051
+      saguaro idle colored sheet real_4: 29876406058579578
+      saguaro idle colored sheet real_5: -3049164493533083492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

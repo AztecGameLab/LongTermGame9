@@ -401,11 +401,35 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2590910750634166735}
+        m_TargetAssemblyTypeName: TailWhip, Assembly-CSharp
+        m_MethodName: DealDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f7ec2bcd-b5d3-49c8-a64e-5ae0ef8c0534
     m_ActionName: 'Player/TailWhip[/Keyboard/x]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 833647989783011314}
+        m_TargetAssemblyTypeName: GroundStomp, Assembly-CSharp
+        m_MethodName: Stomp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d013ab7f-b75c-4ad3-b85b-9e288f30ef78
     m_ActionName: 'Player/GroundStomp[/Keyboard/c]'
   - m_PersistentCalls:
@@ -428,6 +452,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: cc1ae81e-a6b8-4e3c-b725-1b746d777f94
     m_ActionName: 'Player/Crouch[/Keyboard/downArrow,/Keyboard/s]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 984d64f9-d61c-4e3d-b25b-31c8488b8ab2
+    m_ActionName: 'UI/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -839,7 +867,7 @@ SpriteRenderer:
   m_SortingLayerID: -1075210093
   m_SortingLayer: 2
   m_SortingOrder: 50
-  m_Sprite: {fileID: -458248161, guid: bb2353bec0cb85748a55a60454d17bc0, type: 3}
+  m_Sprite: {fileID: -1647081002946624101, guid: 7d3788e2c36ff0548aaf2bc836d97888, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -860,7 +888,7 @@ Animator:
   m_GameObject: {fileID: 3557640281101815962}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19b8bee6830330a449dc822105c215de, type: 2}
+  m_Controller: {fileID: 9100000, guid: d9647a6090867fa49983c8fd4740d50f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
