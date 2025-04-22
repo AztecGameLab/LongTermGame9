@@ -39,6 +39,8 @@ public class PlayerMovementControl : MonoBehaviour
     private Vector2 currentGroundNormal = Vector2.zero;
     public float coyoteTime = 0.1f;
     private float coyoteTimeCounter;
+    private const float CoyoteDebounceTime = 0.25f;
+    private float coyoteDebounceCounter;
 
     [Header("Animation")]
     public Animator animator;
@@ -62,7 +64,7 @@ public class PlayerMovementControl : MonoBehaviour
             CheckJumpCut();
         }
     }
-
+    
     public bool IsGrounded()
     {
         return Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckVerticalOffset,
@@ -82,21 +84,29 @@ public class PlayerMovementControl : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if (coyoteTimeCounter > 0.0f)
+        {
+            coyoteTimeCounter = Math.Max(coyoteTimeCounter - Time.deltaTime, 0.0f);
+        }
+
+        if (coyoteDebounceCounter > 0.0f)
+        {
+            coyoteDebounceCounter = Math.Max(coyoteDebounceCounter - Time.deltaTime, 0.0f);
+        }
+        
         if (IsGrounded())
         {
             TrySetFriction(groundFriction);
             GroundedBehavior();
-            coyoteTimeCounter = coyoteTime;
+            if (Mathf.Approximately(coyoteDebounceCounter, 0))
+            {
+                coyoteTimeCounter = coyoteTime;
+            }
         }
         else
         {
             TrySetFriction(0.0f);
             AirBehavior();
-        }
-
-        if (coyoteTimeCounter > 0.0f)
-        {
-            coyoteTimeCounter = Math.Max(coyoteTimeCounter - Time.deltaTime, 0.0f);
         }
     }
     
@@ -269,10 +279,17 @@ public class PlayerMovementControl : MonoBehaviour
         currentGroundNormal = Vector2.zero;
     }
 
+    private void ResetCoyoteTime()
+    {
+        coyoteTimeCounter = 0.0f;
+        coyoteDebounceCounter = CoyoteDebounceTime;
+    }
+    
     private void CheckIfJumpAllowed()
     {
         if (IsGrounded() || coyoteTimeCounter > 0.0f)
         {
+            ResetCoyoteTime();
             JumpBehavior();
         } 
         else if (hasDoubleJump)
