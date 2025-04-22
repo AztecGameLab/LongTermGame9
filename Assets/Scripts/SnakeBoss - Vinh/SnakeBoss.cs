@@ -43,6 +43,15 @@ public class SnakeBoss : MonoBehaviour
     {
         if (attack1Active)
         {
+            snakeAttack1.SetActive(true);
+            attack1ActiveTime++;
+            if (attack1ActiveTime >= 60)
+            {
+                snakeAttack1.SetActive(false);
+                attackInProgress = false;
+                attack1ActiveTime = 0;
+                attack1Active = false;
+            }
             
         }
 
@@ -50,7 +59,7 @@ public class SnakeBoss : MonoBehaviour
         if (bossBackup)
         {
             gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x+0.2f, gameObject.transform.position.y);
-            if (gameObject.transform.position.x > 11.5)
+            if (gameObject.transform.position.x > 12)
             {
                 bossBackup = false;
                 snakeAttack4.SetActive(true); 
@@ -58,7 +67,7 @@ public class SnakeBoss : MonoBehaviour
             }
         }
         //if the attack is done, bring back the boss
-        else if (gameObject.transform.position.x > 6.5 && snakeAttack4.activeSelf == false)
+        else if (gameObject.transform.position.x > 5.5 && snakeAttack4.activeSelf == false)
         {
             gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
             attackInProgress = false;
@@ -121,9 +130,9 @@ private void OnCollisionEnter2D(Collision2D collision)
         if (tempPlayer != null)
         {
             playerPositionX = tempPlayer.transform.position.x;
-            if (playerPositionX < -(screenSize / 2)) return 1;
+            if (playerPositionX < -(screenSize / 2)) return 3;
             if (playerPositionX < 0) return 2;
-            return 3;
+            return 1;
         }
         Debug.Log("no player found");
         return 0;
