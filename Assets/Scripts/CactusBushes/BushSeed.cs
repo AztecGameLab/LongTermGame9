@@ -1,4 +1,7 @@
+using System;
+using Cysharp.Threading.Tasks;
 using SeedSnatcher.Target;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace CactusBushes
@@ -12,16 +15,19 @@ namespace CactusBushes
             private SnatchableTarget targetMarker;
             private const float GracePeriod = 1.0f; // prevent seed from freezing on spawn
             private float graceTime = GracePeriod;
+            private bool slowDown;
         
             public override void OnCollect(Health health, AmmoManager ammoManager)
             {
                 health.AddHealth(healthReward);
             }
 
-            private void Start()
+            private async void Start()
             {
                 rb = GetComponent<Rigidbody2D>();
                 targetMarker = GetComponent<SnatchableTarget>();
+                await UniTask.Delay(TimeSpan.FromSeconds(1));
+                slowDown = true;
             }
 
             private void Update()
@@ -42,6 +48,10 @@ namespace CactusBushes
                 else
                 {
                     graceTime = GracePeriod;
+                    if (slowDown)
+                    {
+                        rb.linearVelocity *= 0.95f;
+                    }
                 }
                 
                 targetMarker.canExpire = isStopped;

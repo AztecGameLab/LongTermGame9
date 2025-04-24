@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099c3c1f89ae4f13b6cd8d7dbb3f0543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expiryTime: 10
+  expiryTime: 0
   canExpire: 0
   isExpired: 0
   isBeingTargeted: 0

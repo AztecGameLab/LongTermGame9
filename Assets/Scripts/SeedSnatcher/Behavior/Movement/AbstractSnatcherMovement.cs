@@ -18,7 +18,7 @@ namespace SeedSnatcher.Behavior.Movement
 
         [SerializeField] private Sprite sprite;
         
-        private void Start()
+        private void Awake()
         {
             snatcherTargeting = GetComponentInParent<SnatcherTargeting>();
             snatcherController = GetComponentInParent<SnatcherController>();
