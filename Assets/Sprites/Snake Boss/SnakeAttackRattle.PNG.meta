@@ -108,7 +108,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -136,28 +136,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SnakeAttackRattle_0
-      rect:
-        serializedVersion: 2
-        x: 1165
-        y: 473
-        width: 14
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff156085010425700800000000000000
-      internalID: 527554545296232959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SnakeAttackRattle_1
       rect:
         serializedVersion: 2
@@ -165,8 +143,8 @@ TextureImporter:
         y: 131
         width: 626
         height: 654
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -180,28 +158,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SnakeAttackRattle_2
-      rect:
-        serializedVersion: 2
-        x: 3085
-        y: 473
-        width: 14
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 360bbc3d66860f830800000000000000
-      internalID: 4102894051383816291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SnakeAttackRattle_3
       rect:
         serializedVersion: 2
@@ -209,8 +165,8 @@ TextureImporter:
         y: 131
         width: 626
         height: 654
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,28 +180,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SnakeAttackRattle_4
-      rect:
-        serializedVersion: 2
-        x: 5005
-        y: 473
-        width: 14
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f184609034317b160800000000000000
-      internalID: 7041117721052203039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SnakeAttackRattle_5
       rect:
         serializedVersion: 2
@@ -253,8 +187,8 @@ TextureImporter:
         y: 131
         width: 626
         height: 654
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -268,28 +202,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SnakeAttackRattle_6
-      rect:
-        serializedVersion: 2
-        x: 6925
-        y: 473
-        width: 14
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dc04164706ed17a20800000000000000
-      internalID: 3058470127812034765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SnakeAttackRattle_7
       rect:
         serializedVersion: 2
@@ -297,8 +209,8 @@ TextureImporter:
         y: 131
         width: 626
         height: 654
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -312,28 +224,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SnakeAttackRattle_8
-      rect:
-        serializedVersion: 2
-        x: 8845
-        y: 473
-        width: 14
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e547a8034e4c385a0800000000000000
-      internalID: -6520151351156378530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SnakeAttackRattle_9
       rect:
         serializedVersion: 2
@@ -341,8 +231,8 @@ TextureImporter:
         y: 131
         width: 626
         height: 654
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,28 +246,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SnakeAttackRattle_10
-      rect:
-        serializedVersion: 2
-        x: 10765
-        y: 473
-        width: 14
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c50c7f1db4bbbc620800000000000000
-      internalID: 2795533928033140828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SnakeAttackRattle_11
       rect:
         serializedVersion: 2
@@ -385,8 +253,8 @@ TextureImporter:
         y: 131
         width: 626
         height: 654
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -399,33 +267,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: SnakeAttackRattle_12
-      rect:
-        serializedVersion: 2
-        x: 8326
-        y: 102
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb7cfb32717f56900800000000000000
-      internalID: 677218997745207227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a5c8a739f91fe1d46b1eaddec7cb0a7c
     internalID: 0
     vertices: []
     indices: 

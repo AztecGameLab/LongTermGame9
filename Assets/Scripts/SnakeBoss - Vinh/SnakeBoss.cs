@@ -59,15 +59,15 @@ public class SnakeBoss : MonoBehaviour
         if (bossBackup)
         {
             gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x+0.2f, gameObject.transform.position.y);
-            if (gameObject.transform.position.x > 12)
+            if (gameObject.transform.position.x > 18)
             {
                 bossBackup = false;
                 snakeAttack4.SetActive(true); 
-                snakeAttack4.transform.position = new Vector2(12, -1.6f);
+                snakeAttack4.transform.position = new Vector2(18, -1.6f);
             }
         }
         //if the attack is done, bring back the boss
-        else if (gameObject.transform.position.x > 5.5 && snakeAttack4.activeSelf == false)
+        else if (gameObject.transform.position.x > 8.2 && snakeAttack4.activeSelf == false)
         {
             gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
             attackInProgress = false;
