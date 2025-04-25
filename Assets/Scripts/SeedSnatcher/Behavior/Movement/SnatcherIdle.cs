@@ -46,7 +46,7 @@ namespace SeedSnatcher.Behavior.Movement
             snatcherTargeting.FindTarget();
             if (snatcherTargeting.HasTarget())
             {
-                GetSnatcherController().SetState(SnatcherState.Diving);
+                GetSnatcherController().SetState(SnatcherState.Investigate);
             }
         }
         

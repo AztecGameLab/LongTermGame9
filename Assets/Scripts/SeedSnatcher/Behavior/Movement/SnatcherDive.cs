@@ -4,14 +4,84 @@ using UnityEngine;
 
 namespace SeedSnatcher.Behavior.Movement
 {
+    internal class BezierPathing
+    {
+        private readonly List<Vector3> controlPoints;
+        private readonly AnimationCurve animeCurve;
+        public float Length { get; }
+
+        public BezierPathing(List<Vector3> controlPoints, AnimationCurve animeCurve)
+        {
+            this.animeCurve = animeCurve;
+            this.controlPoints = controlPoints;
+            Length = CalculateLength();
+        }
+        
+        public BezierPathing(Vector3 startPosition, Vector3 endPosition, AnimationCurve animeCurve)
+        {
+            this.animeCurve = animeCurve;
+            controlPoints = SetupControlPoints(startPosition, endPosition);
+            Length = CalculateLength();
+        }
+        
+        /**
+         * Computes appropriate control points for the
+         * dive's Bézier curve.
+         */
+        private List<Vector3> SetupControlPoints(Vector3 startPosition, Vector3 endPosition)
+        {
+            var midpointTop = (startPosition + endPosition) / 2;
+            midpointTop.y = startPosition.y;
+            var midpointBottom = midpointTop;
+            midpointBottom.y = endPosition.y;
+            /*var midpointMidpoint = (midpointBottom + midpointTop) / 2;
+            var startLow = new Vector3(startPosition.x, endPosition.y, 0.0f);
+            var midpoint = (startPosition + endPosition) / 2;
+            var midpointHigh = new Vector3(midpoint.x, startPosition.y, 0.0f);
+            var midpointLow = new Vector3(midpoint.x, endPosition.y, 0.0f);*/
+            
+            return new List<Vector3>()
+            {
+                startPosition,
+                midpointTop,
+                midpointBottom,
+                endPosition
+            };
+        }
+        
+        public Vector3 CalculateNextPosition(float normalizedTime)
+        {
+            var t = animeCurve.Evaluate(normalizedTime);
+            return BezierCurve.CalculateBezierPoint(controlPoints, t);
+        }
+        
+        private float CalculateLength(int precision = 100)
+        {
+            var length = 0f;
+            var prev = controlPoints[0];
+            for (var i = 0; i < precision; i++)
+            {
+                var percentage = i / (precision * 1.0f);
+                var targetPosition = CalculateNextPosition(percentage);
+                var distance = Vector3.Distance(prev, targetPosition);
+                length += distance;
+                Debug.DrawLine(targetPosition, prev, Color.red, 90);
+                prev = targetPosition;
+            }
+
+            return length;
+        }
+    }
+    
+    internal enum DiveStage {
+        Dive,
+        Recovery,
+        Glide,
+        Complete
+    }
+    
     public class SnatcherDive : SnatcherMovement
     {
-        /** for creating the Bézier curve */
-        private List<Vector3> controlPoints;
-        /** the actual points along the curve */
-        private List<Vector3> path;
-        /** the position in the dive */
-        private int diveStep;
         /**
          * Whether a stage has just changed.
          * Can't use diveStep == 0 since we can't be sure
@@ -19,8 +89,6 @@ namespace SeedSnatcher.Behavior.Movement
          */
         private bool isNewStage = true;
 
-        private float acceleratedSpeed;
-        
         /**
          * Dives have three stages: start, bottom, and end.
          * The start stage creates the curve down to the bottom
@@ -28,80 +96,20 @@ namespace SeedSnatcher.Behavior.Movement
          * end position (on top of handling the target). The end
          * stage switches back to the idle mode.
          */
-        private int diveStage;
+        private DiveStage diveStage;
+        private BezierPathing bezierPathing;
 
-        /**
-         * Computes appropriate control points for the
-         * dive's Bézier curve.
-         */
-        private void SetupControlPoints()
-        {
-            var midpointTop = (StartPosition + EndPosition) / 2;
-            midpointTop.y = StartPosition.y;
-            var midpointBottom = midpointTop;
-            midpointBottom.y = EndPosition.y;
-            var midpointMidpoint = (midpointBottom + midpointTop) / 2;
-
-            controlPoints = new List<Vector3>()
-            {
-                StartPosition,
-                midpointTop,
-                midpointMidpoint,
-                midpointBottom,
-                EndPosition
-            };
-        }
-        
-        /**
-         * Generates a Bézier curve that the bird should fly along,
-         * using `controlPoints` for De Casteljau's algorithm.
-         */
-        private void GeneratePath(int precision = 100)
-        {
-            path = new List<Vector3>();
-            for (var i = 0; i < precision; i++)
-            {
-                var percentage = i / (precision * 1.0f);
-                var targetPosition = BezierCurve.CalculateBezierPoint(controlPoints, percentage);
-                path.Add(targetPosition);
-                if (path.Count > 1)
-                {
-                    Debug.DrawLine(path[i], path[i - 1], Color.red, 90);
-                }
-            }
-        }
-        
-        /**
-         * Generates the curve back up from the bottom.
-         * The end point will be the same Y position as
-         * the original start point. Its X position will
-         * be the distance from the original target position,
-         * times two.
-         */
-        private void CalculateReverseDive()
-        {
-            var newEndPosition = StartPosition;
-            StartPosition = EndPosition;
-            newEndPosition.x = 2 * EndPosition.x - newEndPosition.x;
-            EndPosition = newEndPosition;
-        }
-
-        /**
-         * Wrapper function for all the helper
-         * functions to set up the curve.
-         *
-         * Kinda useless. Maybe I should just
-         * make the actual functions do more.
-         */
-        private void SetupDive()
-        {
-            SetupControlPoints();
-            GeneratePath();
-            DetermineFacingDirection();
-        }
+        [SerializeField] private AnimationCurve diveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        [SerializeField] private AnimationCurve recoveryCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        [SerializeField] private float recoveryDistance = 10.0f;
+        private float diveDuration = 5f;
+        private float elapsedTime;
+        private Vector3 targetPosition;
+        private AnimationCurve animeCurve;
 
         private void ExitDive()
         {
+            transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
             GetSnatcherController().SetState(SnatcherState.Idle);
         }
 
@@ -111,76 +119,82 @@ namespace SeedSnatcher.Behavior.Movement
             SetSprite();
             // reset values to defaults in case this was previously used
             diveStage = 0;
-            diveStep = 0;
-            controlPoints = null;
-            path = null;
             isNewStage = true;
-            acceleratedSpeed = speed;
         }
-
+        
         public override void Loop()
         {
             // Cancel when the target disappears (i.e. seed picked up)
-            if (diveStage < 1 && !GetSnatcherTargeting().HasTarget())
+            if ((int)diveStage < 1 && !GetSnatcherTargeting().HasTarget())
             {
                 ExitDive();
-            }
-            
-            // Setup for dive stages
-            if (isNewStage)
-            {
-                isNewStage = false;
-                switch (diveStage)
-                {
-                    case 0:
-                        var thisPosition = transform.position;
-                        var targetPosition = GetSnatcherTargeting().GetTargetPosition();
-                        (StartPosition, EndPosition) = (thisPosition, targetPosition);
-                        SetupDive();
-                        Debug.DrawLine(StartPosition, EndPosition, Color.green, 90);
-                        break;
-                    case 1:
-                        GetSnatcherTargeting().DestroyTarget();
-                        CalculateReverseDive();
-                        SetupDive();
-                        break;
-                    case 2:
-                        ExitDive();
-                        break;
-                }
+                return;
             }
 
-            if (path == null) return;
-            
-            // Move to next point in curve
-            var nextPosition = path[diveStep];
-            transform.position = Vector3.MoveTowards(transform.position, nextPosition, acceleratedSpeed * Time.deltaTime);
-            if (HasReachedPosition(nextPosition))
+            if (isNewStage)
             {
-                diveStep++;
-                if (diveStage < 1)
+                switch (diveStage)
                 {
-                    acceleratedSpeed = Mathf.Max(speed, 5.0f * (diveStep + 1) / path.Count + 0.2f);
+                    case DiveStage.Dive:
+                        var thisPosition = transform.position;
+                        targetPosition = GetSnatcherTargeting().GetTargetPosition();
+                        (StartPosition, EndPosition) = (thisPosition, targetPosition);
+                        animeCurve = diveCurve;
+                        bezierPathing = new BezierPathing(StartPosition, EndPosition, animeCurve);
+                        break;
+                    case DiveStage.Recovery:
+                        GetSnatcherTargeting().DestroyTarget();
+                        var originalHeight = StartPosition.y;
+                        StartPosition = EndPosition;
+                        var recoveryDirection = IsFacingLeft() ? Vector3.left : Vector3.right;
+                        var recoveryXComp = recoveryDirection * recoveryDistance;
+                        EndPosition = StartPosition + recoveryXComp;
+                        EndPosition.y = originalHeight;
+                        animeCurve = recoveryCurve;
+                        bezierPathing = new BezierPathing(StartPosition, EndPosition, animeCurve);
+                        break;
+                    case DiveStage.Glide:
+                        /*StartPosition = EndPosition;
+                        EndPosition.x *= 1.1f;
+                        var ctrlPts = new List<Vector3>()
+                        {
+                            StartPosition,
+                            EndPosition
+                        };
+                        animeCurve = AnimationCurve.Linear(0, 0, 1, 1);
+                        bezierPathing = new BezierPathing(ctrlPts, animeCurve);
+                        break;*/
+                    case DiveStage.Complete:
+                    default:
+                        ExitDive();
+                        return;
                 }
-                else
-                {
-                    acceleratedSpeed = Mathf.Max(speed, 5.0f * (path.Count - diveStep) / path.Count + 0.2f);
-                }
+                
+                DetermineFacingDirection();
+                diveDuration = bezierPathing.Length / speed;
+                isNewStage = false;
             }
+            
+            elapsedTime += Time.deltaTime;
+            var normalizedTime = elapsedTime / diveDuration;
+            var pos = bezierPathing.CalculateNextPosition(normalizedTime);
+            
+            transform.position = pos;
+            
+            var lookAheadTime = Mathf.Max(elapsedTime + 0.3f, 1f);
+            var lookAheadPos = bezierPathing.CalculateNextPosition(lookAheadTime);
+            
             // Orient bird to next point
-            // float xComp = nextPosition.x - StartPosition.x;
-            // float yComp = nextPosition.y - StartPosition.y;
-            // float angle = Mathf.Atan2(yComp, xComp) * Mathf.Rad2Deg;
-            Vector2 target = nextPosition - StartPosition;
+            Vector2 target = lookAheadPos - pos;
             float angle = Vector2.SignedAngle(IsFacingLeft() ? Vector2.left : Vector2.right, target);
             transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
-            
-            
-            // Move to next stage when end of curve reached
-            if (diveStep < path.Count) return;
-            diveStep = 0;
-            diveStage++;
-            isNewStage = true;
+
+            if (elapsedTime >= diveDuration || (diveStage == DiveStage.Recovery && (lookAheadPos - pos).magnitude < 0.5f))
+            {
+                diveStage += 1;
+                isNewStage = true;
+                elapsedTime = 0;
+            }
         }
     }
 }
