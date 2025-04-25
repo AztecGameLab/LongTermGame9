@@ -9,7 +9,7 @@ public class SnakeBoss : MonoBehaviour
     
     [SerializeField] private int attack4Threshold; // Set a default threshold
     private int attack4Counter;
-    
+    private Animator animator;
     private Health health;
     private SpriteRenderer spriteRenderer;
 
@@ -26,7 +26,11 @@ public class SnakeBoss : MonoBehaviour
     private int attack1ActiveTime;
     private bool attack1Active;
 
-    private bool bossBackup;
+    private bool bossBackup4th;
+    
+    private bool bossBackup2nd;
+    private bool bossComeUp2nd;
+
 
     private bool attackInProgress;
     
@@ -36,7 +40,9 @@ public class SnakeBoss : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         health = GetComponent<Health>();
+        animator = GetComponent<Animator>();
         //time = Time.fixedTime;
+        
     }
 
     public void FixedUpdate()
@@ -54,19 +60,41 @@ public class SnakeBoss : MonoBehaviour
             }
             
         }
+        
+        // This is for how the boss backs up to do the sweep across the floor attack
+        if(bossBackup2nd)
+        {
+            Debug.Log("bossBackup2nd");
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x+0.2f, gameObject.transform.position.y);
+            if (gameObject.transform.position.x > 13)
+            {
+                bossBackup2nd = false;
+                animator.SetBool("Snake2ndAttack", true);
+                // call animate
+            }
+        }//if the attack is done, bring back the boss
+        else if (bossComeUp2nd)
+        {
+            Debug.Log("bossComeUp2nd");
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
+            if (gameObject.transform.position.x > 8.2)
+            {
+                attackInProgress = false;
+                bossBackup2nd = false;
+            }
+        }
 
         // This is for how the boss backs up to do the sweep across the floor attack
-        if (bossBackup)
+        if (bossBackup4th)
         {
-            gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x+0.2f, gameObject.transform.position.y);
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x+0.2f, gameObject.transform.position.y);
             if (gameObject.transform.position.x > 18)
             {
-                bossBackup = false;
+                bossBackup4th = false;
                 snakeAttack4.SetActive(true); 
                 snakeAttack4.transform.position = new Vector2(18, -1.6f);
             }
-        }
-        //if the attack is done, bring back the boss
+        }//if the attack is done, bring back the boss
         else if (gameObject.transform.position.x > 8.2 && snakeAttack4.activeSelf == false)
         {
             gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
@@ -179,7 +207,15 @@ private void OnCollisionEnter2D(Collision2D collision)
     private void Attack2()
     {
         Debug.Log("Snake Boss uses Attack 2!");
+        attackInProgress = true;
+        bossBackup2nd = true;
         // Implement attack logic here
+    }
+
+    public void BossFinishedAttack2()
+    {
+        bossComeUp2nd = true;
+        animator.SetBool("Snake2ndAttack", false);
     }
 
     private void Attack3()
@@ -192,7 +228,7 @@ private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Snake Boss uses its powerful Attack 4!");
         attackInProgress = true;
-        bossBackup = true;
+        bossBackup4th = true;
         // Implement attack logic here
     }
 }

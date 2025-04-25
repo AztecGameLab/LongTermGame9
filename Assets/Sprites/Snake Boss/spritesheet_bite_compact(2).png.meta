@@ -1,0 +1,1267 @@
+fileFormatVersion: 2
+guid: 66325bace775f66439ec547c73e7ca4d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3842254242386428003
+    second: spritesheet_bite_compact(2)_0
+  - first:
+      213: 7484775579048646897
+    second: spritesheet_bite_compact(2)_1
+  - first:
+      213: 2885825367617971264
+    second: spritesheet_bite_compact(2)_2
+  - first:
+      213: 7450271224628287933
+    second: spritesheet_bite_compact(2)_3
+  - first:
+      213: -3302054981854818
+    second: spritesheet_bite_compact(2)_4
+  - first:
+      213: 8805531631668642234
+    second: spritesheet_bite_compact(2)_5
+  - first:
+      213: -2368200416231714649
+    second: spritesheet_bite_compact(2)_6
+  - first:
+      213: 3108237987471800706
+    second: spritesheet_bite_compact(2)_7
+  - first:
+      213: 7167393283248212367
+    second: spritesheet_bite_compact(2)_8
+  - first:
+      213: -2903741217123777797
+    second: spritesheet_bite_compact(2)_9
+  - first:
+      213: -7336713705615093247
+    second: spritesheet_bite_compact(2)_10
+  - first:
+      213: 6408339290299874885
+    second: spritesheet_bite_compact(2)_11
+  - first:
+      213: -2715208413768383324
+    second: spritesheet_bite_compact(2)_12
+  - first:
+      213: -5057619263252820203
+    second: spritesheet_bite_compact(2)_13
+  - first:
+      213: -6180653078186540716
+    second: spritesheet_bite_compact(2)_14
+  - first:
+      213: -5683231604148260513
+    second: spritesheet_bite_compact(2)_15
+  - first:
+      213: -4274531626165538638
+    second: spritesheet_bite_compact(2)_16
+  - first:
+      213: 4765725128440335213
+    second: spritesheet_bite_compact(2)_17
+  - first:
+      213: -3665984790202211805
+    second: spritesheet_bite_compact(2)_18
+  - first:
+      213: 5447327067030786755
+    second: spritesheet_bite_compact(2)_19
+  - first:
+      213: -3915117720077972049
+    second: spritesheet_bite_compact(2)_20
+  - first:
+      213: -3698000481861498954
+    second: spritesheet_bite_compact(2)_21
+  - first:
+      213: 3746383155970310597
+    second: spritesheet_bite_compact(2)_22
+  - first:
+      213: -5355991579408907463
+    second: spritesheet_bite_compact(2)_23
+  - first:
+      213: 7059028230477658132
+    second: spritesheet_bite_compact(2)_24
+  - first:
+      213: -8579745977072801287
+    second: spritesheet_bite_compact(2)_25
+  - first:
+      213: -8382670245908093002
+    second: spritesheet_bite_compact(2)_26
+  - first:
+      213: -1802123436827690988
+    second: spritesheet_bite_compact(2)_27
+  - first:
+      213: 1345293040934205142
+    second: spritesheet_bite_compact(2)_28
+  - first:
+      213: 926647946128257111
+    second: spritesheet_bite_compact(2)_29
+  - first:
+      213: -5935861532996576587
+    second: spritesheet_bite_compact(2)_30
+  - first:
+      213: 8498534148086423092
+    second: spritesheet_bite_compact(2)_31
+  - first:
+      213: 5833163769523908516
+    second: spritesheet_bite_compact(2)_32
+  - first:
+      213: 3834711049672921604
+    second: spritesheet_bite_compact(2)_33
+  - first:
+      213: -5482755423047228225
+    second: spritesheet_bite_compact(2)_34
+  - first:
+      213: 8338883364109235587
+    second: spritesheet_bite_compact(2)_35
+  - first:
+      213: -7816102464638150147
+    second: spritesheet_bite_compact(2)_36
+  - first:
+      213: -4487778233341999772
+    second: spritesheet_bite_compact(2)_37
+  - first:
+      213: 8533449954772335448
+    second: spritesheet_bite_compact(2)_38
+  - first:
+      213: -8827882705554047012
+    second: spritesheet_bite_compact(2)_39
+  - first:
+      213: 123411674618984398
+    second: spritesheet_bite_compact(2)_40
+  - first:
+      213: -5650043908875821836
+    second: spritesheet_bite_compact(2)_41
+  - first:
+      213: -852107741125892165
+    second: spritesheet_bite_compact(2)_42
+  - first:
+      213: 1304940409983359450
+    second: spritesheet_bite_compact(2)_43
+  - first:
+      213: 2999531355193761807
+    second: spritesheet_bite_compact(2)_44
+  - first:
+      213: -3077466140562066211
+    second: spritesheet_bite_compact(2)_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_0
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 6966
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3604e2650ed625530800000000000000
+      internalID: 3842254242386428003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 6624
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f896bcabb34fd760800000000000000
+      internalID: 7484775579048646897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_2
+      rect:
+        serializedVersion: 2
+        x: 3088
+        y: 6966
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0442ea0d1e28c0820800000000000000
+      internalID: 2885825367617971264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_3
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 6624
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db99840a43ea46760800000000000000
+      internalID: 7450271224628287933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_4
+      rect:
+        serializedVersion: 2
+        x: 5010
+        y: 6966
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9917c96cc444fff0800000000000000
+      internalID: -3302054981854818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_5
+      rect:
+        serializedVersion: 2
+        x: 5124
+        y: 6624
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab143148d58833a70800000000000000
+      internalID: 8805531631668642234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_6
+      rect:
+        serializedVersion: 2
+        x: 6932
+        y: 6966
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a09399c446722fd0800000000000000
+      internalID: -2368200416231714649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_7
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 6624
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289b1a04bfda22b20800000000000000
+      internalID: 3108237987471800706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_8
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 5884
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89c7857732b77360800000000000000
+      internalID: 7167393283248212367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_9
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 5542
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf24da96fb6d3b7d0800000000000000
+      internalID: -2903741217123777797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_10
+      rect:
+        serializedVersion: 2
+        x: 3088
+        y: 5884
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102921e91c1ce2a90800000000000000
+      internalID: -7336713705615093247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_11
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 5542
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54eb086b1aefee850800000000000000
+      internalID: 6408339290299874885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_12
+      rect:
+        serializedVersion: 2
+        x: 5010
+        y: 5884
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a40f2e5554a15ad0800000000000000
+      internalID: -2715208413768383324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_13
+      rect:
+        serializedVersion: 2
+        x: 5124
+        y: 5542
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f84a4931abfc9b0800000000000000
+      internalID: -5057619263252820203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_14
+      rect:
+        serializedVersion: 2
+        x: 6932
+        y: 5884
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45144ca95c8e93aa0800000000000000
+      internalID: -6180653078186540716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_15
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 5542
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51387297fa1121b0800000000000000
+      internalID: -5683231604148260513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_16
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 5513
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0fa392220dda4c0800000000000000
+      internalID: -4274531626165538638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_17
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 4802
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6bc6d121c1432240800000000000000
+      internalID: 4765725128440335213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_18
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 4460
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322230ca14ecf1dc0800000000000000
+      internalID: -3665984790202211805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_19
+      rect:
+        serializedVersion: 2
+        x: 3088
+        y: 4802
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c29db53b1bc89b40800000000000000
+      internalID: 5447327067030786755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_20
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 4446
+        width: 594
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad4ae04d25baa9c0800000000000000
+      internalID: -3915117720077972049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_21
+      rect:
+        serializedVersion: 2
+        x: 4495
+        y: 4432
+        width: 529
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b70c6397201eacc0800000000000000
+      internalID: -3698000481861498954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_22
+      rect:
+        serializedVersion: 2
+        x: 5157
+        y: 4459
+        width: 593
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c10e1491a3ddf330800000000000000
+      internalID: 3746383155970310597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_23
+      rect:
+        serializedVersion: 2
+        x: 6932
+        y: 4802
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93349592902bba5b0800000000000000
+      internalID: -5355991579408907463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_24
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 4460
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 418331976c4b6f160800000000000000
+      internalID: 7059028230477658132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_25
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 3720
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f92d75cd7e9ee880800000000000000
+      internalID: -8579745977072801287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_26
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 3379
+        width: 593
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7696b13d5caab80800000000000000
+      internalID: -8382670245908093002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_27
+      rect:
+        serializedVersion: 2
+        x: 3088
+        y: 3720
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 418ba7248429df6e0800000000000000
+      internalID: -1802123436827690988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_28
+      rect:
+        serializedVersion: 2
+        x: 3227
+        y: 3379
+        width: 601
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d630bf94e07ba210800000000000000
+      internalID: 1345293040934205142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_29
+      rect:
+        serializedVersion: 2
+        x: 4460
+        y: 3574
+        width: 564
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750f1dcb56d1cdc00800000000000000
+      internalID: 926647946128257111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_30
+      rect:
+        serializedVersion: 2
+        x: 5085
+        y: 3379
+        width: 665
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba55d1a2659f9da0800000000000000
+      internalID: -5935861532996576587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_31
+      rect:
+        serializedVersion: 2
+        x: 6932
+        y: 3720
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ed730d7cbd0f570800000000000000
+      internalID: 8498534148086423092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_32
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 3378
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afa62ffa8f83f050800000000000000
+      internalID: 5833163769523908516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_33
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 2492
+        width: 564
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 402150ce161a73530800000000000000
+      internalID: 3834711049672921604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_34
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 2297
+        width: 665
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb46ceaddf659e3b0800000000000000
+      internalID: -5482755423047228225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_35
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 2297
+        width: 1257
+        height: 1060
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38535250d3aa9b370800000000000000
+      internalID: 8338883364109235587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_36
+      rect:
+        serializedVersion: 2
+        x: 4071
+        y: 2295
+        width: 1653
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9103b4830a78390800000000000000
+      internalID: -7816102464638150147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_37
+      rect:
+        serializedVersion: 2
+        x: 6932
+        y: 2638
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4658bea597538b1c0800000000000000
+      internalID: -4487778233341999772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_38
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 2296
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b37ce8587ec6670800000000000000
+      internalID: 8533449954772335448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_39
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1232
+        width: 1751
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdff2a0937f0d7580800000000000000
+      internalID: -8827882705554047012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_40
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 1232
+        width: 1751
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec7fcc2a34276b100800000000000000
+      internalID: 123411674618984398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_41
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 1239
+        width: 1698
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcd81600030791b0800000000000000
+      internalID: -5650043908875821836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_42
+      rect:
+        serializedVersion: 2
+        x: 6932
+        y: 1556
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7a4db2684bc24f0800000000000000
+      internalID: -852107741125892165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_43
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 1214
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad95c1693641c1210800000000000000
+      internalID: 1304940409983359450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_44
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 474
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0068f610e970a920800000000000000
+      internalID: 2999531355193761807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bite_compact(2)_45
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 132
+        width: 626
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4718ba9d4aa45d0800000000000000
+      internalID: -3077466140562066211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
