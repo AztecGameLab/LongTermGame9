@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6572960070691782444}
   controller: {fileID: 7396352342580471226}
+  stompScript: {fileID: 0}
 --- !u!1001 &8507171295181779420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,14 +144,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8483496085650992844}
-    - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8483496085650992844}
-    - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -165,22 +158,6 @@ PrefabInstance:
     - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: tailWhip
-      objectReference: {fileID: 0}
-    - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: groundStomp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ArtemisAnimationTesting, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ArtemisAnimationTesting, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6226862286240648731, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

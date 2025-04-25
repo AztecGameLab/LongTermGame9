@@ -1,3 +1,5 @@
+using System;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour
@@ -40,9 +42,13 @@ public class CameraControl : MonoBehaviour
 
     private float speed;
 
+    private bool sceneLoaded;
 
-    private void Start()
+
+    private async void Start()
     {
+        await UniTask.Delay(TimeSpan.FromSeconds(0.05));
+        sceneLoaded = true;
         saguaro = FindSaguaro();
         usCamera = GetComponent<Camera>();
 
@@ -63,6 +69,7 @@ public class CameraControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!sceneLoaded) return;
         //1. set desired position based on current targetPosInfo
         FindTargetPos();
 

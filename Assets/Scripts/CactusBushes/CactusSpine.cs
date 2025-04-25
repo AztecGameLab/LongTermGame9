@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class CactusSpine : MonoBehaviour
+namespace CactusBushes
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class CactusSpine : DroppableItem
     {
+        [SerializeField] private int ammoReward = 1;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void OnCollect(Health health, AmmoManager ammoManager)
+        {
+               ammoManager.IncreaseAmmo(ammoReward);
+        }
     }
 }

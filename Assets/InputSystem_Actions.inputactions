@@ -171,6 +171,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f383b286-dfe7-4d5c-99e9-c7aa95516da6",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "FrontKick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e18eb1ec-4f0b-448c-aaae-0e203a9cae06",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -184,6 +195,17 @@
                     "name": "",
                     "id": "1e161cca-2e88-4704-b75b-a6c35542244b",
                     "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "TailWhip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56a10b30-1d22-480c-a25e-6f8be1dd9fa9",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -215,6 +237,17 @@
                 },
                 {
                     "name": "",
+                    "id": "626c402e-05bc-43c3-ad8f-b99d1fc1b715",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "ThrowSpine",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4dcf2724-522d-4c82-a47f-f74151b9e324",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
@@ -228,6 +261,17 @@
                     "name": "",
                     "id": "058a2c11-8ae3-4ff5-8573-54175e3edc42",
                     "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "GroundStomp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "26326bbe-aa6b-4905-9cd4-eeeec22c3f4a",
+                    "path": "<Keyboard>/o",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
