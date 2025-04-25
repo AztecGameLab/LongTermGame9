@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4016279904239132408}
   - component: {fileID: 3999221644882844016}
   - component: {fileID: 7183048973495059240}
+  - component: {fileID: 5003312102553885741}
   - component: {fileID: 5938091071472260474}
   - component: {fileID: 2752951619462235140}
   - component: {fileID: -7815057116725434919}
-  - component: {fileID: 5003312102553885741}
   m_Layer: 0
   m_Name: SeedSnatcher
   m_TagString: Untagged
@@ -122,6 +122,23 @@ MonoBehaviour:
   sprite: {fileID: -292803467, guid: eec170aa53acaf0f3af9adeb690d070d, type: 3}
   patrolStartPosition: {x: 0, y: 0, z: 0}
   patrolEndPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &5003312102553885741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6130611759229974114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc449f987634be98e1b2e8457c232fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  positionTolerance: 0.5
+  sprite: {fileID: 736463740, guid: eec170aa53acaf0f3af9adeb690d070d, type: 3}
+  maximumDiveRange: 20
+  minimumDiveHeight: 10
 --- !u!114 &5938091071472260474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,9 +151,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3215236a1d4351832caa8f69de3a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   positionTolerance: 0.5
   sprite: {fileID: -292803467, guid: eec170aa53acaf0f3af9adeb690d070d, type: 3}
+  diveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  recoveryCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.47539157
+      value: 0.48690963
+      inSlope: 0.35755014
+      outSlope: 0.35755014
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.9245291
+      outSlope: 1.9245291
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.20853743
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  diveDuration: 1
 --- !u!114 &2752951619462235140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,20 +249,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5003312102553885741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6130611759229974114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cc449f987634be98e1b2e8457c232fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  positionTolerance: 0.5
-  sprite: {fileID: 0}
-  maximumDiveRange: 20
-  minimumDiveHeight: 10
