@@ -23,7 +23,7 @@ public class Attack3 : MonoBehaviour
 
 
     
-    async void Attack()
+    public async void Attack(SnakeBoss sb)
     {
         snakeHead.SetActive(true);
         while (snakeHead.transform.localScale.x < headAttackMaxStretch)
@@ -45,6 +45,7 @@ public class Attack3 : MonoBehaviour
             await UniTask.Delay(TimeSpan.FromSeconds(Time.deltaTime));
         }
         snakeHead.SetActive(false);
+        sb.setAttackInProgress(false);
     }
 
 

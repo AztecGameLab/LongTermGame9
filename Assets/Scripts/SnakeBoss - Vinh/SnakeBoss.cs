@@ -20,6 +20,8 @@ public class SnakeBoss : MonoBehaviour
         
     [SerializeField] private GameObject snakeAttack4;
     [SerializeField] private GameObject snakeAttack1;
+
+    [SerializeField] private Attack3 snakeAttack3;
     
     private int timeForAttacks;
 
@@ -221,7 +223,8 @@ private void OnCollisionEnter2D(Collision2D collision)
     private void Attack3()
     {
         Debug.Log("Snake Boss uses Attack 3!");
-        // Implement attack logic here
+        attackInProgress = true;
+        snakeAttack3.Attack(this);
     }
 
     private void Attack4()
@@ -230,5 +233,9 @@ private void OnCollisionEnter2D(Collision2D collision)
         attackInProgress = true;
         bossBackup4th = true;
         // Implement attack logic here
+    }
+
+    public void setAttackInProgress(bool b){
+        attackInProgress = b;
     }
 }
