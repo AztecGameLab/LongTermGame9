@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5938091071472260474}
   - component: {fileID: 2752951619462235140}
   - component: {fileID: -7815057116725434919}
+  - component: {fileID: 5003312102553885741}
   m_Layer: 0
   m_Name: SeedSnatcher
   m_TagString: Untagged
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3215236a1d4351832caa8f69de3a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   positionTolerance: 0.5
   sprite: {fileID: -292803467, guid: eec170aa53acaf0f3af9adeb690d070d, type: 3}
 --- !u!114 &2752951619462235140
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   doFindTarget: 1
+  maximumRange: 100
 --- !u!95 &-7815057116725434919
 Animator:
   serializedVersion: 7
@@ -172,3 +174,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5003312102553885741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6130611759229974114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc449f987634be98e1b2e8457c232fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  positionTolerance: 0.5
+  sprite: {fileID: 0}
+  maximumDiveRange: 20
+  minimumDiveHeight: 10

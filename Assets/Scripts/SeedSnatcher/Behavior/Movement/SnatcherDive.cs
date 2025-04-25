@@ -102,6 +102,7 @@ namespace SeedSnatcher.Behavior.Movement
 
         private void ExitDive()
         {
+            transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
             GetSnatcherController().SetState(SnatcherState.Idle);
         }
 
@@ -124,6 +125,7 @@ namespace SeedSnatcher.Behavior.Movement
             if (diveStage < 1 && !GetSnatcherTargeting().HasTarget())
             {
                 ExitDive();
+                return;
             }
             
             // Setup for dive stages
@@ -168,13 +170,9 @@ namespace SeedSnatcher.Behavior.Movement
                 }
             }
             // Orient bird to next point
-            // float xComp = nextPosition.x - StartPosition.x;
-            // float yComp = nextPosition.y - StartPosition.y;
-            // float angle = Mathf.Atan2(yComp, xComp) * Mathf.Rad2Deg;
             Vector2 target = nextPosition - StartPosition;
             float angle = Vector2.SignedAngle(IsFacingLeft() ? Vector2.left : Vector2.right, target);
             transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
-            
             
             // Move to next stage when end of curve reached
             if (diveStep < path.Count) return;

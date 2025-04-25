@@ -40,7 +40,12 @@ namespace SeedSnatcher.Behavior
 
         public bool HasTarget()
         {
-            return !target.IsUnityNull();
+            var isNull = target.IsUnityNull();
+            if (isNull)
+            {
+                target = null;
+            }
+            return !isNull;
         }
 
         public void DestroyTarget()

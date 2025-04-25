@@ -59,8 +59,16 @@ namespace SeedSnatcher.Target
             {
                 SnatchableTarget closestTarget = null;
                 var shortestDistance = float.MaxValue;
+                var badSeeds = new List<SnatchableTarget>();
                 foreach (var seed in expiredSeeds)
                 {
+                    // sometimes seeds may get destroyed for reasons beyond our control
+                    if (seed.IsUnityNull())
+                    {
+                        badSeeds.Add(seed);
+                        continue;
+                    }
+                    
                     if (seed.isBeingTargeted)
                     {
                         continue;
@@ -78,6 +86,11 @@ namespace SeedSnatcher.Target
                         closestTarget = seed;
                         shortestDistance = distance;
                     }
+                }
+
+                foreach (var seed in badSeeds)
+                {
+                    expiredSeeds.Remove(seed);
                 }
 
                 return closestTarget;

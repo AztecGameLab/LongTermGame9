@@ -7,7 +7,8 @@ namespace SeedSnatcher
     public enum SnatcherState
     {
         Idle,
-        Diving
+        Diving,
+        Investigate
     }
     
     public class SnatcherController : MonoBehaviour
@@ -26,7 +27,8 @@ namespace SeedSnatcher
             snatcherMovements = new Dictionary<SnatcherState, SnatcherMovement>()
             {
                 { SnatcherState.Idle, GetComponent<SnatcherIdle>()},
-                { SnatcherState.Diving, GetComponent<SnatcherDive>()}
+                { SnatcherState.Diving, GetComponent<SnatcherDive>()},
+                { SnatcherState.Investigate, GetComponent<SnatcherInvestigate>()}
             };
             
             SetState(SnatcherState.Idle);

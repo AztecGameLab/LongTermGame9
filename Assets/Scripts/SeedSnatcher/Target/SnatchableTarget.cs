@@ -34,9 +34,13 @@ namespace SeedSnatcher.Target
             }
         }
 
-        public void Destroy()
+        public void OnDestroy()
         {
             seedManager.RemoveSeed(this);
+        }
+
+        public void Destroy()
+        {
             Destroy(gameObject);
         }
     }
