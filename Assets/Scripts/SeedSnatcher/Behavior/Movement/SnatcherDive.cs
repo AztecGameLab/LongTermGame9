@@ -99,6 +99,14 @@ namespace SeedSnatcher.Behavior.Movement
         private DiveStage diveStage;
         private BezierPathing bezierPathing;
 
+        [SerializeField] private AnimationCurve diveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        [SerializeField] private AnimationCurve recoveryCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        [SerializeField] private float recoveryDistance = 10.0f;
+        private float diveDuration = 5f;
+        private float elapsedTime;
+        private Vector3 targetPosition;
+        private AnimationCurve animeCurve;
+
         private void ExitDive()
         {
             transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
@@ -113,13 +121,6 @@ namespace SeedSnatcher.Behavior.Movement
             diveStage = 0;
             isNewStage = true;
         }
-
-        public AnimationCurve diveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-        public AnimationCurve recoveryCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-        public float diveDuration = 5f;
-        private float elapsedTime;
-        private Vector3 targetPosition;
-        private AnimationCurve animeCurve;
         
         public override void Loop()
         {
@@ -143,10 +144,12 @@ namespace SeedSnatcher.Behavior.Movement
                         break;
                     case DiveStage.Recovery:
                         GetSnatcherTargeting().DestroyTarget();
-                        var newEndPosition = StartPosition;
+                        var originalHeight = StartPosition.y;
                         StartPosition = EndPosition;
-                        newEndPosition.x = 2 * (2 * EndPosition.x - newEndPosition.x);
-                        EndPosition = newEndPosition;
+                        var recoveryDirection = IsFacingLeft() ? Vector3.left : Vector3.right;
+                        var recoveryXComp = recoveryDirection * recoveryDistance;
+                        EndPosition = StartPosition + recoveryXComp;
+                        EndPosition.y = originalHeight;
                         animeCurve = recoveryCurve;
                         bezierPathing = new BezierPathing(StartPosition, EndPosition, animeCurve);
                         break;
