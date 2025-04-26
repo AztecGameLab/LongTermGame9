@@ -53,6 +53,7 @@ namespace Player.Melee
             }
 
             animator.SetBool(AnimatorHash, true);
+            PlayAudio();
             controller.AllowMovement = false;
             CanAttack = true;
             CurrentCooldownTime = cooldownTime;
