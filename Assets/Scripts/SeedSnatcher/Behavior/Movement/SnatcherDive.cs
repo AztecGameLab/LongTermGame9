@@ -144,6 +144,7 @@ namespace SeedSnatcher.Behavior.Movement
                         bezierPathing = new BezierPathing(StartPosition, EndPosition, animeCurve);
                         break;
                     case DiveStage.Recovery:
+                        SnatcherSfx.PlayDestroy();
                         SnatcherTargeting.DestroyTarget();
                         var originalHeight = StartPosition.y;
                         StartPosition = EndPosition;

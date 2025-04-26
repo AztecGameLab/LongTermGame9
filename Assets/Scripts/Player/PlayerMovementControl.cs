@@ -49,7 +49,8 @@ public class PlayerMovementControl : MonoBehaviour
 
     private bool hasDoubleJump;
     private bool HasInput => AllowMovement && !Mathf.Approximately(walkInput, 0.0f);
-
+    public bool IsMoving => body.linearVelocityX > 0.1f;
+    public event Action OnJumped;
     private bool allowMovement = true;
 
     public bool AllowMovement
@@ -64,7 +65,7 @@ public class PlayerMovementControl : MonoBehaviour
             CheckJumpCut();
         }
     }
-    
+
     public bool IsGrounded()
     {
         return Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckVerticalOffset,
@@ -109,6 +110,7 @@ public class PlayerMovementControl : MonoBehaviour
             AirBehavior();
         }
     }
+
     
     private void Update()
     {
@@ -242,6 +244,7 @@ public class PlayerMovementControl : MonoBehaviour
     //jumps up. 
     private void JumpBehavior()
     {
+        OnJumped?.Invoke();
         currentGroundNormal = Vector2.zero;
         body.linearVelocityY = 0;
         body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);

@@ -233,7 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 491472328590170990}
-  snatcherDiveSfx: {fileID: 0}
+  snatcherDiveSfx: {fileID: 8300000, guid: 3956e3c1062501102b10fbbbb181afb7, type: 3}
+  snatcherDestroySfx: {fileID: 8300000, guid: a5c905fe18665f393888dc3de22c61ff, type: 3}
 --- !u!82 &491472328590170990
 AudioSource:
   m_ObjectHideFlags: 0

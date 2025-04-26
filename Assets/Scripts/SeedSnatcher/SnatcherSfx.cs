@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace SeedSnatcher
@@ -6,17 +7,17 @@ namespace SeedSnatcher
     {
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip snatcherDiveSfx;
-        
-        public void PlayBeginDive()
-        {  
-            PlaySfx(snatcherDiveSfx);
-        }
+        [SerializeField] private AudioClip snatcherDestroySfx;
 
-        private void PlaySfx(AudioClip newClip)
+        public void PlayBeginDive()
         {
-            audioSource.clip = newClip;
+            audioSource.clip = snatcherDiveSfx;
             audioSource.Play();
         }
-        
+
+        public void PlayDestroy()
+        {
+            audioSource.PlayOneShot(snatcherDestroySfx);
+        }
     }
 }
