@@ -1,86 +1,70 @@
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.InputSystem;
-using UnityEngine.Audio;
 
-public class GroundStomp : MonoBehaviour
+namespace Attacks
 {
-    private static readonly int GroundStomping = Animator.StringToHash("GroundStomping");
-    
-    public int enemyDamage = 1;
-    public float coolDownTime = 2f;
-    public bool canAttack;
-    private float currentCoolDownTime;
-    private float audioInterval;
-    
-    [SerializeField] private AudioSource stompSound = null;
-    [SerializeField] private PlayerMovementControl controller;
-    [SerializeField] private Animator animator;
-    
-    private readonly HashSet<Health> enemies = new();
-
-    // Update is called once per frame
-
-    public bool DoStomp { get; private set; }
-    
-    void Update()
+    public class GroundStomp : AbstractPlayerAttack
     {
-        if(currentCoolDownTime > 0){ currentCoolDownTime -= Time.deltaTime; }
-        else if (canAttack){ canAttack = false; }
-        
-        if (currentCoolDownTime < coolDownTime / 2)
+        private static readonly int GroundStomping = Animator.StringToHash("GroundStomping");
+        protected override DamageType DamageType => DamageType.PlayerStomp;
+        protected override int AnimatorHash => GroundStomping;
+        private float audioInterval;
+
+        [SerializeField] private AudioSource stompSound;
+        [SerializeField] private PlayerMovementControl controller;
+
+        private bool doStomp;
+
+        protected override void CooldownTick()
         {
-            DoStomp = false;
-            animator.SetBool(GroundStomping, false);
-        }
-        else if (currentCoolDownTime < audioInterval - 0.5f && DoStomp)
-        {
-            stompSound.Play();
-            audioInterval -= 0.5f;
-        }
-        
-        
-    }
-    public void Stomp(InputAction.CallbackContext context)
-    {
-        if (canAttack || !context.performed || !controller.IsGrounded())
-        {
-            DoStomp = false;
-            if (currentCoolDownTime > coolDownTime / 2)
+            if (CurrentCooldownTime > 0)
             {
-                currentCoolDownTime = coolDownTime / 2;
+                CurrentCooldownTime -= Time.deltaTime;
             }
-            animator.SetBool(GroundStomping, false);
-            controller.AllowMovement = true;
-            return;
-        }
-        animator.SetBool(GroundStomping, true);
-        stompSound.Play();
-        controller.AllowMovement = false;
-        canAttack = true;
-        currentCoolDownTime = coolDownTime;
-        audioInterval = coolDownTime;
-        DoStomp = true;
-        
-        foreach(var health in enemies)
-        {
-            health.ApplyDamage(enemyDamage, DamageType.PlayerStomp, gameObject);
+            else if (CanAttack)
+            {
+                CanAttack = false;
+            }
 
+            if (CurrentCooldownTime < cooldownTime / 2)
+            {
+                doStomp = false;
+                animator.SetBool(GroundStomping, false);
+            }
+            else if (CurrentCooldownTime < audioInterval - 0.5f && doStomp)
+            {
+                stompSound.Play();
+                audioInterval -= 0.5f;
+            }
         }
-    }
-    //check if hitbox collides with enemy
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<Health>(out var health))
+
+        public override void DealDamage(InputAction.CallbackContext context)
         {
-            enemies.Add(health);
-        }
-    }
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<Health>(out var health))
-        {
-            enemies.Remove(health);
+            if (CanAttack || !context.performed || !controller.IsGrounded())
+            {
+                doStomp = false;
+                if (CurrentCooldownTime > cooldownTime / 2)
+                {
+                    CurrentCooldownTime = cooldownTime / 2;
+                }
+
+                animator.SetBool(AnimatorHash, false);
+                controller.AllowMovement = true;
+                return;
+            }
+
+            animator.SetBool(AnimatorHash, true);
+            stompSound.Play();
+            controller.AllowMovement = false;
+            CanAttack = true;
+            CurrentCooldownTime = cooldownTime;
+            audioInterval = cooldownTime;
+            doStomp = true;
+
+            foreach (var health in Enemies)
+            {
+                health.ApplyDamage(enemyDamage, DamageType, gameObject);
+            }
         }
     }
 }

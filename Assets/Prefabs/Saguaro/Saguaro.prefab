@@ -403,7 +403,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2590910750634166735}
-        m_TargetAssemblyTypeName: TailWhip, Assembly-CSharp
+        m_TargetAssemblyTypeName: Attacks.AbstractPlayerAttack, Assembly-CSharp
         m_MethodName: DealDamage
         m_Mode: 0
         m_Arguments:
@@ -419,8 +419,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 833647989783011314}
-        m_TargetAssemblyTypeName: GroundStomp, Assembly-CSharp
-        m_MethodName: Stomp
+        m_TargetAssemblyTypeName: Attacks.GroundStomp, Assembly-CSharp
+        m_MethodName: DealDamage
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -688,11 +688,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 1
-  coolDownTime: 6
-  canAttack: 0
+  cooldownTime: 0
+  animator: {fileID: 3258446017969606384}
   stompSound: {fileID: 3680286389603855711}
   controller: {fileID: 1200935514326602854}
-  animator: {fileID: 3258446017969606384}
 --- !u!82 &3680286389603855711
 AudioSource:
   m_ObjectHideFlags: 0
