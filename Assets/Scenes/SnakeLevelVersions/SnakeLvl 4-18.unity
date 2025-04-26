@@ -19832,6 +19832,14 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 501591072}
+    - target: {fileID: 4108873100239225085, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2110925315}
+    - target: {fileID: 4108873100239225085, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSpines
+      objectReference: {fileID: 0}
     - target: {fileID: 5555969285793694952, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -110.67
@@ -19871,6 +19879,14 @@ PrefabInstance:
     - target: {fileID: 5555969285793694952, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451937271461580996, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2110925316}
+    - target: {fileID: 6451937271461580996, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetHearts
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1351494427374706384, guid: 02ca07625751124479555c7e289500fe, type: 3}
