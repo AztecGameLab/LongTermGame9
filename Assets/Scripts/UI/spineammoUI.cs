@@ -1,5 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
+using Player.Throwables;
 using TMPro;
 using UnityEngine;
  
