@@ -19884,14 +19884,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 2590910750634166735, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: enemyDamage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590910750634166735, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: cooldownTime
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3438909220463252109, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: animator
       value: 
@@ -19935,10 +19927,6 @@ PrefabInstance:
     - target: {fileID: 4108873100239225085, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4348480067707062553, guid: 02ca07625751124479555c7e289500fe, type: 3}
-      propertyPath: cooldownTime
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5039885353826895098, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: m_Size.x

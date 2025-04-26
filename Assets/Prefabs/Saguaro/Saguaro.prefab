@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 1
-  cooldownTime: 0
+  cooldownTime: 6
   animator: {fileID: 3258446017969606384}
   stompSound: {fileID: 3680286389603855711}
   controller: {fileID: 1200935514326602854}
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 1
-  cooldownTime: 1.5
+  cooldownTime: 2
   animator: {fileID: 3258446017969606384}
 --- !u!1 &6691184800041450246
 GameObject:
