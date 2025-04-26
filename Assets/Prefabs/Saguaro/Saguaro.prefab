@@ -260,7 +260,7 @@ MonoBehaviour:
   timeBtwShots: 0.5
   anim: {fileID: 3258446017969606384}
   audioSource: {fileID: 5128129440683865622}
-  throwSound: {fileID: 0}
+  throwSound: {fileID: 8300000, guid: 2ffa8f4e71d129e57a768bf94cc77b09, type: 3}
 --- !u!114 &4108873100239225085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
   cooldownTime: 0.5
   animator: {fileID: 3258446017969606384}
   audioSource: {fileID: 5128129440683865622}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: f16d111bf8f15af738acc732473c6080, type: 3}
 --- !u!1 &2764074611169112363
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ MonoBehaviour:
   cooldownTime: 2
   animator: {fileID: 3258446017969606384}
   audioSource: {fileID: 5128129440683865622}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: eed6f5e6ef9d0bdbeb6caa4cfca03e89, type: 3}
 --- !u!1 &6691184800041450246
 GameObject:
   m_ObjectHideFlags: 0
