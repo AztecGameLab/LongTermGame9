@@ -7,24 +7,42 @@ namespace Player.Melee
     public abstract class AbstractPlayerAttack : MonoBehaviour
     {
         // Common fields shared bewteen player attacks
+        [Tooltip("The amount of damage this attack should inflict on enemies.")]
         [SerializeField] protected int enemyDamage;
+        [Tooltip("The duration of downtime between attacks (in seconds).")]
         [SerializeField] protected float cooldownTime;
-        [SerializeField] protected Animator animator;
-        [SerializeField] protected AudioSource audioSource;
-        [SerializeField] protected AudioClip audioClip;
         
+        [Tooltip("The player character's Animator component.")]
+        [SerializeField] protected Animator animator;
+
+        [Tooltip("The player character's Audio Source component.")]
+        [SerializeField] protected AudioSource audioSource;
+        [Tooltip("The sound effect associated with this attack.")]
+        [SerializeField] protected AudioClip audioClip;
+
+        // Override this variable with the return of an Animator.StringToHash().
+        protected virtual int AnimatorHash => -1;
+        // Override this variable with the desired DamageType enum.
+        protected virtual DamageType DamageType => DamageType.PlayerKick;
+
         protected readonly HashSet<Health> Enemies = new();
         protected bool CanAttack = true;
         protected float CurrentCooldownTime;
-        protected virtual int AnimatorHash => -1;
 
+        /**
+         * Wrapper function to the SFX
+         * associated with this attack.
+         */
         protected void PlayAudio()
         {
             audioSource.clip = audioClip;
             audioSource.Play();
         }
-        
-        // Check if the hitbox collides with an enemy
+
+        /**
+         * Event trigger to start tracking an enemy
+         * who has left the attack's collision box.
+         */
         private void OnTriggerEnter2D(Collider2D collision)
         {
             // Apply damage
@@ -34,6 +52,10 @@ namespace Player.Melee
             }
         }
 
+        /**
+         * Event trigger to stop tracking an enemy
+         * who has left the attack's collision box.
+         */
         private void OnTriggerExit2D(Collider2D collision)
         {
             if (collision.TryGetComponent<Health>(out var health))
@@ -42,6 +64,11 @@ namespace Player.Melee
             }
         }
 
+        /**
+         * Controls the behavior of the cooldown and any
+         * of the cooldown's side effects (i.e. whether
+         * the player should be allowed to attack).
+         */
         protected virtual void CooldownTick()
         {
             // Handle cooldown
@@ -55,18 +82,21 @@ namespace Player.Melee
             }
         }
 
-        protected virtual DamageType DamageType => DamageType.PlayerKick;
-
+        /**
+         * Callback function to deal damage to enemies within the
+         * attack's collision box. Should be triggered with a
+         * Player Input component.
+         */
         public virtual void DealDamage(InputAction.CallbackContext context)
         {
             if (!context.performed || !CanAttack) return;
 
             CanAttack = false;
             CurrentCooldownTime = cooldownTime;
-            
+
             animator.SetTrigger(AnimatorHash);
             PlayAudio();
-            
+
             foreach (var health in Enemies)
             {
                 health.ApplyDamage(enemyDamage, DamageType, gameObject);
