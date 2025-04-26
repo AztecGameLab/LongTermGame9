@@ -10,7 +10,6 @@ namespace Player.Melee
         protected override int AnimatorHash => GroundStomping;
         private float audioInterval;
 
-        [SerializeField] private AudioSource stompSound;
         [SerializeField] private PlayerMovementControl controller;
 
         private bool doStomp;
@@ -33,7 +32,7 @@ namespace Player.Melee
             }
             else if (CurrentCooldownTime < audioInterval - 0.5f && doStomp)
             {
-                stompSound.Play();
+                PlayAudio();
                 audioInterval -= 0.5f;
             }
         }
@@ -54,7 +53,6 @@ namespace Player.Melee
             }
 
             animator.SetBool(AnimatorHash, true);
-            stompSound.Play();
             controller.AllowMovement = false;
             CanAttack = true;
             CurrentCooldownTime = cooldownTime;

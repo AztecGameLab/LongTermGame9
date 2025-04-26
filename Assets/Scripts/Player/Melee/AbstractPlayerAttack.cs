@@ -10,12 +10,20 @@ namespace Player.Melee
         [SerializeField] protected int enemyDamage;
         [SerializeField] protected float cooldownTime;
         [SerializeField] protected Animator animator;
+        [SerializeField] protected AudioSource audioSource;
+        [SerializeField] protected AudioClip audioClip;
         
         protected readonly HashSet<Health> Enemies = new();
         protected bool CanAttack = true;
         protected float CurrentCooldownTime;
         protected virtual int AnimatorHash => -1;
 
+        protected void PlayAudio()
+        {
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
+        
         // Check if the hitbox collides with an enemy
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -57,6 +65,7 @@ namespace Player.Melee
             CurrentCooldownTime = cooldownTime;
             
             animator.SetTrigger(AnimatorHash);
+            PlayAudio();
             
             foreach (var health in Enemies)
             {

@@ -19,9 +19,19 @@ namespace Player.Throwables
         [Header("Animation")]
         [SerializeField] private Animator anim;
 
+        [Header("Audio")]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip throwSound;
+        
         private PlayerMovementControl movementControl;
         private PlayerFlip playerFlip;
 
+        private void PlayAudio()
+        {
+            audioSource.clip = throwSound;
+            audioSource.Play();
+        }
+        
         void Start()
         {
             ammoManager = FindFirstObjectByType<AmmoManager>();
@@ -77,6 +87,8 @@ namespace Player.Throwables
                     {
                         anim.SetTrigger(ThrowSpine);
                     }
+
+                    PlayAudio();
 
                     int direction = playerFlip != null && playerFlip.ForwardVector2.x < 0 ? -1 : 1;
 
