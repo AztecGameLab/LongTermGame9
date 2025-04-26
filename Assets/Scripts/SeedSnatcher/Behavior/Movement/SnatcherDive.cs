@@ -110,7 +110,7 @@ namespace SeedSnatcher.Behavior.Movement
         private void ExitDive()
         {
             transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
-            GetSnatcherController().SetState(SnatcherState.Idle);
+            SnatcherController.SetState(SnatcherState.Idle);
         }
 
         public override void Init()
@@ -125,7 +125,7 @@ namespace SeedSnatcher.Behavior.Movement
         public override void Loop()
         {
             // Cancel when the target disappears (i.e. seed picked up)
-            if ((int)diveStage < 1 && !GetSnatcherTargeting().HasTarget())
+            if ((int)diveStage < 1 && !SnatcherTargeting.HasTarget())
             {
                 ExitDive();
                 return;
@@ -136,14 +136,15 @@ namespace SeedSnatcher.Behavior.Movement
                 switch (diveStage)
                 {
                     case DiveStage.Dive:
+                        SnatcherSfx.PlayBeginDive();
                         var thisPosition = transform.position;
-                        targetPosition = GetSnatcherTargeting().GetTargetPosition();
+                        targetPosition = SnatcherTargeting.GetTargetPosition();
                         (StartPosition, EndPosition) = (thisPosition, targetPosition);
                         animeCurve = diveCurve;
                         bezierPathing = new BezierPathing(StartPosition, EndPosition, animeCurve);
                         break;
                     case DiveStage.Recovery:
-                        GetSnatcherTargeting().DestroyTarget();
+                        SnatcherTargeting.DestroyTarget();
                         var originalHeight = StartPosition.y;
                         StartPosition = EndPosition;
                         var recoveryDirection = IsFacingLeft() ? Vector3.left : Vector3.right;

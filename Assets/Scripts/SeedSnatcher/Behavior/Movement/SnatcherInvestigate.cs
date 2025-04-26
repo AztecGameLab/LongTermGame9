@@ -21,7 +21,7 @@ namespace SeedSnatcher.Behavior.Movement
             DetermineFacingDirection();
             transform.position = Vector3.MoveTowards(StartPosition, targetPosition, speed * Time.deltaTime);
         }
-        
+
         public override void Init()
         {
             SetSprite();
@@ -30,14 +30,17 @@ namespace SeedSnatcher.Behavior.Movement
         public override void Loop()
         {
             StartPosition = transform.position;
-            if (GetSnatcherTargeting().HasTarget())
+            if (SnatcherTargeting.HasTarget())
             {
-                EndPosition = GetSnatcherTargeting().GetTargetPosition();
+                SnatcherTargeting.ReevaluateTarget();
+                
+                EndPosition = SnatcherTargeting.GetTargetPosition();
                 var isWithinRange = Vector3.Distance(StartPosition, EndPosition) < maximumDiveRange;
                 var isAtMinHeight = (StartPosition.y - (EndPosition.y + minimumDiveHeight)) <= positionTolerance;
                 if (isWithinRange && isAtMinHeight)
                 {
-                    GetSnatcherController().SetState(SnatcherState.Diving);
+                    SnatcherTargeting.ClaimTarget();
+                    SnatcherController.SetState(SnatcherState.Diving);
                 }
                 else
                 {
@@ -46,7 +49,7 @@ namespace SeedSnatcher.Behavior.Movement
             }
             else
             {
-                GetSnatcherController().SetState(SnatcherState.Idle);
+                SnatcherController.SetState(SnatcherState.Idle);
             }
         }
     }

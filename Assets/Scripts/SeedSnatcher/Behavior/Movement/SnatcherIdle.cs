@@ -42,11 +42,10 @@ namespace SeedSnatcher.Behavior.Movement
 
         private void SearchForTarget()
         {
-            var snatcherTargeting = GetSnatcherTargeting();
-            snatcherTargeting.FindTarget();
-            if (snatcherTargeting.HasTarget())
+            SnatcherTargeting.FindTarget();
+            if (SnatcherTargeting.HasTarget())
             {
-                GetSnatcherController().SetState(SnatcherState.Investigate);
+                SnatcherController.SetState(SnatcherState.Investigate);
             }
         }
         

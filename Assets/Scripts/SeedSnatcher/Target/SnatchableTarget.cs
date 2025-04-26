@@ -12,7 +12,7 @@ namespace SeedSnatcher.Target
         public bool canExpire = true;
         private float timer;
         public bool isExpired;
-        public bool isBeingTargeted;
+        public GameObject pursuant;
 
         private SnatcherTargetManager seedManager;
 

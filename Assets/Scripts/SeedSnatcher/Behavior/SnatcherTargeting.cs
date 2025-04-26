@@ -22,6 +22,13 @@ namespace SeedSnatcher.Behavior
             target = newTarget;
         }
 
+        private SnatchableTarget FindNearestTarget()
+        {
+            var thisPosition = transform.position;
+            var possibleTarget = seedManager.GetNearestSeed(thisPosition, maximumRange);
+            return !possibleTarget.IsUnityNull() ? possibleTarget : null;
+        }
+        
         // Find seed GameObject that have been on the ground too long 
         public void FindTarget()
         {
@@ -29,12 +36,16 @@ namespace SeedSnatcher.Behavior
             {
                 return;
             }
-            
-            var thisPosition = transform.position;
-            var possibleTarget = seedManager.GetNearestSeed(thisPosition, maximumRange);
-            if (!possibleTarget.IsUnityNull()) {
-                possibleTarget.isBeingTargeted = true;
-                SetTarget(possibleTarget);
+            var newTarget = FindNearestTarget();
+            SetTarget(newTarget);
+        }
+
+        public void ReevaluateTarget()
+        {
+            var newTarget = FindNearestTarget();
+            if (newTarget != target)
+            {
+                SetTarget(newTarget);
             }
         }
 
@@ -44,8 +55,20 @@ namespace SeedSnatcher.Behavior
             if (isNull)
             {
                 target = null;
+                return false;
             }
-            return !isNull;
+            var isBeingPursued = !target.pursuant.IsUnityNull() && target.pursuant != gameObject;
+            if (isBeingPursued)
+            {
+                target = null;
+                return false;
+            }
+            return true;
+        }
+
+        public void ClaimTarget()
+        {
+            target.pursuant = gameObject;
         }
 
         public void DestroyTarget()

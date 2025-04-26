@@ -69,7 +69,7 @@ namespace SeedSnatcher.Target
                         continue;
                     }
                     
-                    if (seed.isBeingTargeted)
+                    if (!seed.pursuant.IsUnityNull())
                     {
                         continue;
                     }

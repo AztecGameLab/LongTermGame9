@@ -11,8 +11,9 @@ namespace SeedSnatcher.Behavior.Movement
         // make sure the endPosition is way larger than this
         [SerializeField] protected float positionTolerance = 0.5f;
         
-        private SnatcherTargeting snatcherTargeting;
-        private SnatcherController snatcherController;
+        protected SnatcherTargeting SnatcherTargeting {get; private set;}
+        protected SnatcherController SnatcherController  {get; private set;}
+        protected SnatcherSfx SnatcherSfx {get; private set;}
         private SpriteRenderer spriteRenderer;
         private Animator animator;
 
@@ -20,8 +21,9 @@ namespace SeedSnatcher.Behavior.Movement
         
         private void Awake()
         {
-            snatcherTargeting = GetComponentInParent<SnatcherTargeting>();
-            snatcherController = GetComponentInParent<SnatcherController>();
+            SnatcherTargeting = GetComponentInParent<SnatcherTargeting>();
+            SnatcherController = GetComponentInParent<SnatcherController>();
+            SnatcherSfx = GetComponentInParent<SnatcherSfx>();
             spriteRenderer = GetComponentInParent<SpriteRenderer>();
             animator = GetComponentInParent<Animator>();
         }
@@ -39,16 +41,6 @@ namespace SeedSnatcher.Behavior.Movement
         protected void SetSprite()
         {
             spriteRenderer.sprite = sprite;
-        }
-
-        protected SnatcherTargeting GetSnatcherTargeting()
-        {
-            return snatcherTargeting;
-        }
-
-        protected SnatcherController GetSnatcherController()
-        {
-            return snatcherController;
         }
         
         // for flipping the bird (not *that* kind) when it's looping back
