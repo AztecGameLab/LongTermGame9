@@ -33,10 +33,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 866851675437874085, guid: 8dafcf88c7e524a8481d3593f96eda46, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: TriggerItemDrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 866851675437874085, guid: 8dafcf88c7e524a8481d3593f96eda46, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: VegetationSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
