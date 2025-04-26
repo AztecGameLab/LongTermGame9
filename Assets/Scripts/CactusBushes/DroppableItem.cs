@@ -1,3 +1,4 @@
+using Player.Throwables;
 using UnityEngine;
 
 namespace CactusBushes

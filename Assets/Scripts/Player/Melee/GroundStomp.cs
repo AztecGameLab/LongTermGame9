@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Attacks
+namespace Player.Melee
 {
     public class GroundStomp : AbstractPlayerAttack
     {

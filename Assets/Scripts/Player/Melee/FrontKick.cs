@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Attacks
+namespace Player.Melee
 {
     public class FrontKick : AbstractPlayerAttack
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Attacks
+namespace Player.Melee
 {
     public abstract class AbstractPlayerAttack : MonoBehaviour
     {
