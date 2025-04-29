@@ -76,3 +76,6 @@ crashlytics-build.properties
 
 # OSX metadata
 .DS_Store
+
+# Ignore big files (videos)
+/[Aa]ssets/[Ss]treamingAssets/[Vv]ideos/*

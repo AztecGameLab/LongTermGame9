@@ -449,7 +449,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433704698}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: db5ab93b3a2108070aa11ea0cfe4bad8, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -467,7 +467,7 @@ VideoPlayer:
   - {fileID: 1433704701}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://upload.wikimedia.org/wikipedia/commons/4/49/0_A.D._Alpha_12_Loucetios.webm
+  m_Url: Assets/StreamingAssets/Videos/kyu-kurarin.webm
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3074bee06eade41238f671081a322e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 0}
+  videoPlayer: {fileID: 1433704700}
 --- !u!4 &2143368182
 Transform:
   m_ObjectHideFlags: 0
