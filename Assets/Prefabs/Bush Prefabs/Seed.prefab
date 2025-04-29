@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4376682359258625809}
   - component: {fileID: 4383717654022096208}
   - component: {fileID: 1568591605683687808}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Seed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 69632
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -125,8 +125,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.025238309, y: 0}
-  m_Radius: 0.72905296
+  m_Offset: {x: -0.014096285, y: 0.10226986}
+  m_Radius: 1.051596
 --- !u!50 &4376682359258625809
 Rigidbody2D:
   serializedVersion: 5
@@ -168,8 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expiryTime: 0
   canExpire: 0
-  isExpired: 0
-  isBeingTargeted: 0
+  isExpired: 1
+  pursuant: {fileID: 0}
+  isStopped: 0
 --- !u!114 &1568591605683687808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +184,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthReward: 1
+  isStopped: 0

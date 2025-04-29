@@ -75,8 +75,9 @@ namespace SeedSnatcher.Target
                     }
 
                     var distance = Vector3.Distance(position, seed.transform.position);
+                    var stopped = seed.isStopped;
 
-                    if (distance > maximumRange)
+                    if (distance > maximumRange || !seed.isStopped)
                     {
                         continue;
                     }

@@ -10,9 +10,10 @@ namespace CactusBushes
     public class BushSeed : DroppableItem
     {
             [SerializeField] private int healthReward = 1;
-            private bool isStopped;
-            private const float StoppingThreshold = 0.1f;
+            public bool isStopped;
+            private const float StoppingThreshold = 1f;
             private Rigidbody2D rb;
+            private CircleCollider2D sc;
             private SnatchableTarget targetMarker;
             private const float GracePeriod = 1.0f; // prevent seed from freezing on spawn
             private float graceTime = GracePeriod;
@@ -27,8 +28,11 @@ namespace CactusBushes
             {
                 rb = GetComponent<Rigidbody2D>();
                 targetMarker = GetComponent<SnatchableTarget>();
+                sc = GetComponent<CircleCollider2D>();
                 await UniTask.Delay(TimeSpan.FromSeconds(1));
+                if(sc){sc.excludeLayers &= ~(1 << LayerMask.NameToLayer("Player"));}
                 slowDown = true;
+                
             }
 
             private void Update()
@@ -51,11 +55,11 @@ namespace CactusBushes
                     graceTime = GracePeriod;
                     if (slowDown)
                     {
-                        rb.linearVelocity *= 0.95f;
+                        rb.linearVelocity *= 0.4f;
                     }
                 }
                 
-                targetMarker.canExpire = isStopped;
+                targetMarker.isStopped = isStopped;
             }
 
     }

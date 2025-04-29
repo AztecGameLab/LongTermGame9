@@ -13,6 +13,7 @@ namespace SeedSnatcher.Target
         private float timer;
         public bool isExpired;
         public GameObject pursuant;
+        public bool isStopped;
 
         private SnatcherTargetManager seedManager;
 
