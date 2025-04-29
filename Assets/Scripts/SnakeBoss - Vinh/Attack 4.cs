@@ -1,7 +1,8 @@
 using UnityEngine;
 
 public class Attack4 : MonoBehaviour
-{
+{    
+    [SerializeField] private GameObject snake;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,7 +14,8 @@ public class Attack4 : MonoBehaviour
     {
         gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
         if (gameObject.transform.position.x < -32)
-        {
+        {            
+            snake.gameObject.SendMessage("BossFinishedAttack4");
             gameObject.SetActive(false);
         }
     }

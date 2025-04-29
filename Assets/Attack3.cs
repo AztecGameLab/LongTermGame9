@@ -6,9 +6,10 @@ public class Attack3 : MonoBehaviour
 {
     public GameObject snakeHead;
 
-    public float headAttackStretchSpeed = 12f;
+    public float headAttackStretchSpeed = 50f;
+    public float headAttackRetractSpeed = 80f;
 
-    public float headAttackMaxStretch = 12f;
+    public float headAttackMaxStretch = 13f;
 
     Vector3 startScale;
 
@@ -40,7 +41,7 @@ public class Attack3 : MonoBehaviour
         {
             snakeHead.transform.localScale += -1 * new Vector3(headAttackStretchSpeed * Time.deltaTime, 0);
 
-            snakeHead.transform.position += headAttackStretchSpeed * (Time.deltaTime / 2f) * snakeHead.transform.right;
+            snakeHead.transform.position += headAttackRetractSpeed * (Time.deltaTime / 2f) * snakeHead.transform.right;
             
             await UniTask.Delay(TimeSpan.FromSeconds(Time.deltaTime));
         }

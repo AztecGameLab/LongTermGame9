@@ -22,6 +22,7 @@ public class tempmovement : MonoBehaviour
     public void OnDamage(int damage, DamageType damageType, GameObject attacker)
     {
         Debug.Log("Attacked by " + attacker.name + " for " + damage + " damage");
+        Debug.Log("Remaining Health:" + health.Value);
         
         UniTask.Void(async () =>
         {

@@ -1,0 +1,867 @@
+fileFormatVersion: 2
+guid: 277b50eb80342e2498527c53aa37e73b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7067948813595729352
+    second: Snake_Slither_Col_Compact_SpS_0
+  - first:
+      213: 4719368761703359413
+    second: Snake_Slither_Col_Compact_SpS_1
+  - first:
+      213: -3637104101851636454
+    second: Snake_Slither_Col_Compact_SpS_2
+  - first:
+      213: -1590994216277283333
+    second: Snake_Slither_Col_Compact_SpS_3
+  - first:
+      213: 8591904123836581726
+    second: Snake_Slither_Col_Compact_SpS_4
+  - first:
+      213: -8130759106616658032
+    second: Snake_Slither_Col_Compact_SpS_5
+  - first:
+      213: -4731281091112857883
+    second: Snake_Slither_Col_Compact_SpS_6
+  - first:
+      213: 720702168980579775
+    second: Snake_Slither_Col_Compact_SpS_7
+  - first:
+      213: -508238406847599957
+    second: Snake_Slither_Col_Compact_SpS_8
+  - first:
+      213: 7114842108620541099
+    second: Snake_Slither_Col_Compact_SpS_9
+  - first:
+      213: -7442019640105563353
+    second: Snake_Slither_Col_Compact_SpS_10
+  - first:
+      213: -1436286161160780842
+    second: Snake_Slither_Col_Compact_SpS_11
+  - first:
+      213: -7460978067205642885
+    second: Snake_Slither_Col_Compact_SpS_12
+  - first:
+      213: -6263008663876724140
+    second: Snake_Slither_Col_Compact_SpS_13
+  - first:
+      213: -4769308939144258952
+    second: Snake_Slither_Col_Compact_SpS_14
+  - first:
+      213: -7086621337764614648
+    second: Snake_Slither_Col_Compact_SpS_15
+  - first:
+      213: 8735991079054451659
+    second: Snake_Slither_Col_Compact_SpS_16
+  - first:
+      213: -2959765598603360137
+    second: Snake_Slither_Col_Compact_SpS_17
+  - first:
+      213: 4798793980611526503
+    second: Snake_Slither_Col_Compact_SpS_18
+  - first:
+      213: -8896183485093712605
+    second: Snake_Slither_Col_Compact_SpS_19
+  - first:
+      213: 6187041068329608791
+    second: Snake_Slither_Col_Compact_SpS_20
+  - first:
+      213: 2537771518786275759
+    second: Snake_Slither_Col_Compact_SpS_21
+  - first:
+      213: 8469237711422987440
+    second: Snake_Slither_Col_Compact_SpS_22
+  - first:
+      213: 6498269295322904215
+    second: Snake_Slither_Col_Compact_SpS_23
+  - first:
+      213: -6016652742241768654
+    second: Snake_Slither_Col_Compact_SpS_24
+  - first:
+      213: 8663198286090854572
+    second: Snake_Slither_Col_Compact_SpS_25
+  - first:
+      213: 4917810888080932908
+    second: Snake_Slither_Col_Compact_SpS_26
+  - first:
+      213: 6459558312969757113
+    second: Snake_Slither_Col_Compact_SpS_27
+  - first:
+      213: 7774051982960533724
+    second: Snake_Slither_Col_Compact_SpS_28
+  - first:
+      213: 5647950190370782957
+    second: Snake_Slither_Col_Compact_SpS_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_0
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 5001
+        width: 622
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd54059ff5661260800000000000000
+      internalID: 7067948813595729352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_1
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 5001
+        width: 622
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3676d62e09e7140800000000000000
+      internalID: 4719368761703359413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_2
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 5001
+        width: 859
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d540ee619668dc0800000000000000
+      internalID: -3637104101851636454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_3
+      rect:
+        serializedVersion: 2
+        x: 4270
+        y: 5016
+        width: 1008
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd67139037abe9e0800000000000000
+      internalID: -1590994216277283333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_4
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 4295
+        width: 859
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e574e7d57439c3770800000000000000
+      internalID: 8591904123836581726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_5
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 4310
+        width: 1008
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09777dfcbadb92f80800000000000000
+      internalID: -8130759106616658032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_6
+      rect:
+        serializedVersion: 2
+        x: 2903
+        y: 4310
+        width: 1008
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee02bf3aec175eb0800000000000000
+      internalID: -4731281091112857883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_7
+      rect:
+        serializedVersion: 2
+        x: 4222
+        y: 4324
+        width: 1040
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5e0f2edc2700a00800000000000000
+      internalID: 720702168980579775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_8
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 3618
+        width: 1040
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa63aa9cdf52f8f0800000000000000
+      internalID: -508238406847599957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_9
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 3618
+        width: 1040
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac8155a33ffcb260800000000000000
+      internalID: 7114842108620541099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_10
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 3600
+        width: 835
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b070c1192a8b890800000000000000
+      internalID: -7442019640105563353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_11
+      rect:
+        serializedVersion: 2
+        x: 4222
+        y: 3618
+        width: 1040
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3c330a859411ce0800000000000000
+      internalID: -1436286161160780842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2894
+        width: 835
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b752a335af7457890800000000000000
+      internalID: -7460978067205642885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_13
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 2898
+        width: 913
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a1f649dc25519a0800000000000000
+      internalID: -6263008663876724140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_14
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 2898
+        width: 913
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a163ae9c200ddb0800000000000000
+      internalID: -4769308939144258952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_15
+      rect:
+        serializedVersion: 2
+        x: 4335
+        y: 2883
+        width: 859
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e26d8907347ad90800000000000000
+      internalID: -7086621337764614648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_16
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 2192
+        width: 1008
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3a504e9997c3970800000000000000
+      internalID: 8735991079054451659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_17
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2192
+        width: 1008
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77843dc9edccce6d0800000000000000
+      internalID: -2959765598603360137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_18
+      rect:
+        serializedVersion: 2
+        x: 2855
+        y: 2206
+        width: 1040
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ff1a443bdb89240800000000000000
+      internalID: 4798793980611526503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_19
+      rect:
+        serializedVersion: 2
+        x: 4335
+        y: 2177
+        width: 859
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32dea4a11486a8480800000000000000
+      internalID: -8896183485093712605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_20
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1500
+        width: 1040
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7562a804219ccd550800000000000000
+      internalID: 6187041068329608791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_21
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 1482
+        width: 835
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa90c5a20c9f73320800000000000000
+      internalID: 2537771518786275759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_22
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 1482
+        width: 835
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc95bb93d6c88570800000000000000
+      internalID: 8469237711422987440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_23
+      rect:
+        serializedVersion: 2
+        x: 4597
+        y: 1471
+        width: 593
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796bc8aae7d7e2a50800000000000000
+      internalID: 6498269295322904215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_24
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 780
+        width: 913
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23bacc1653e808ca0800000000000000
+      internalID: -6016652742241768654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_25
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 780
+        width: 913
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0e73d01fcd93870800000000000000
+      internalID: 8663198286090854572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_26
+      rect:
+        serializedVersion: 2
+        x: 2903
+        y: 780
+        width: 1008
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20cc9072f29f3440800000000000000
+      internalID: 4917810888080932908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_27
+      rect:
+        serializedVersion: 2
+        x: 4597
+        y: 765
+        width: 593
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1eb7abf06f4a950800000000000000
+      internalID: 6459558312969757113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_28
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 59
+        width: 622
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0a8cdf61bf2eb60800000000000000
+      internalID: 7774051982960533724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Slither_Col_Compact_SpS_29
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 59
+        width: 622
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee762626cc816e40800000000000000
+      internalID: 5647950190370782957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,9 +1,7 @@
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
-public class SnakeHeadDamage : MonoBehaviour
+public class Attack3Damage : MonoBehaviour
 {
-    
     [SerializeField] private int damage;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -11,7 +9,7 @@ public class SnakeHeadDamage : MonoBehaviour
     {
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.CompareTag("Player"))
@@ -23,7 +21,8 @@ public class SnakeHeadDamage : MonoBehaviour
             
             if (collision.gameObject.TryGetComponent<Rigidbody2D>(out var rb))
             {
-                rb.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
+                //rb.linearVelocity = new Vector2(rb.linearVelocityX, 10);
+                rb.AddForce(new Vector2(-10f, 5f), ForceMode2D.Impulse);
             }
         }
     }
