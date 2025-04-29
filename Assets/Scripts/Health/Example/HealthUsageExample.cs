@@ -25,6 +25,7 @@ public class HealthUsageExample : MonoBehaviour
         {
             spriteRenderer.color = Color.red;
             await UniTask.Delay(TimeSpan.FromSeconds(0.5));
+            if (health.IsDead) return;
             spriteRenderer.color = Color.white;
         });
     }
@@ -35,7 +36,7 @@ public class HealthUsageExample : MonoBehaviour
         
         if (spriteRenderer == null) return;
         
-        spriteRenderer.color = Color.black;
+        spriteRenderer.color = new Color(0.45f, 0.45f, 0.45f);
     }
     
 }

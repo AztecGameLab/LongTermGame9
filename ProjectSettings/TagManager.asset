@@ -11,6 +11,7 @@ TagManager:
   - Roof
   - SnakeHitUp
   - SnakeHitUpAndLeft
+  - ExpiredSeed
   layers:
   - Default
   - TransparentFX
@@ -20,15 +21,15 @@ TagManager:
   - UI
   - 
   - 
+  - Ground
   - 
   - 
   - 
+  - Seed
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -47,6 +48,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2279132375
+    locked: 0
+  - name: midground
+    uniqueID: 3219757203
+    locked: 0
+  - name: foreground
+    uniqueID: 992232793
     locked: 0
   m_RenderingLayers:
   - Default

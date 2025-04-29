@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: SaguaroSettings
   m_EditorClassIdentifier: 
   editorPlay: 1
+  MainGame: Assets/Scenes/SnakeLevelVersions/SnakeLvl 4-18.unity

@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 566fc847f681f45ea8ed8c12ab712cb0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 467687377042961868
+    second: SeedSnatchers1_0
+  - first:
+      213: -6245351067232202258
+    second: SeedSnatchers1_1
+  - first:
+      213: -538862069475879607
+    second: SeedSnatchers1_2
+  - first:
+      213: 4228109646726584467
+    second: SeedSnatchers1_3
+  - first:
+      213: 3508622751850864208
+    second: SeedSnatchers1_4
+  - first:
+      213: 9101646244507163386
+    second: SeedSnatchers1_5
+  - first:
+      213: 625355056782552948
+    second: SeedSnatchers1_6
+  - first:
+      213: -1452829135592602502
+    second: SeedSnatchers1_7
+  - first:
+      213: -7066045999138023710
+    second: SeedSnatchers1_8
+  - first:
+      213: 8012633181957254901
+    second: SeedSnatchers1_9
+  - first:
+      213: -3071227922764195918
+    second: SeedSnatchers1_10
+  - first:
+      213: 1475678218924949526
+    second: SeedSnatchers1_11
+  - first:
+      213: 5005816677362121072
+    second: SeedSnatchers1_12
+  - first:
+      213: 3493319166097496216
+    second: SeedSnatchers1_13
+  - first:
+      213: 2477241873708500934
+    second: SeedSnatchers1_14
+  - first:
+      213: -7268154618916491209
+    second: SeedSnatchers1_15
+  - first:
+      213: 3763015743561111668
+    second: SeedSnatchers1_16
+  - first:
+      213: 6103687918896772446
+    second: SeedSnatchers1_17
+  - first:
+      213: -5542058136597138699
+    second: SeedSnatchers1_18
+  - first:
+      213: 2641904543738862577
+    second: SeedSnatchers1_19
+  - first:
+      213: -1117909398220588675
+    second: SeedSnatchers1_20
+  - first:
+      213: -4459743608762443389
+    second: SeedSnatchers1_21
+  - first:
+      213: 8481130386823778827
+    second: SeedSnatchers1_22
+  - first:
+      213: -6003786784491316870
+    second: SeedSnatchers1_23
+  - first:
+      213: 2934339724620097541
+    second: SeedSnatchers1_24
+  - first:
+      213: -1487134805734364696
+    second: SeedSnatchers1_25
+  - first:
+      213: -2156686367600926608
+    second: SeedSnatchers1_26
+  - first:
+      213: 2228893224245580482
+    second: SeedSnatchers1_27
+  - first:
+      213: 7229648841696694361
+    second: SeedSnatchers1_28
+  - first:
+      213: -7371878464662767994
+    second: SeedSnatchers1_29
+  - first:
+      213: 2881252361066668876
+    second: SeedSnatchers1_30
+  - first:
+      213: 4304011079289135745
+    second: SeedSnatchers1_31
+  - first:
+      213: 1171645271613609718
+    second: SeedSnatchers1_32
+  - first:
+      213: -6123092010942781168
+    second: SeedSnatchers1_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SeedSnatchers1_0
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1331
+        width: 645
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f85854183c3d45908c0a699bc43acd6
+      internalID: 521044739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeedSnatchers1_1
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1328
+        width: 645
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d9260131a854e51a772c7af494e49d
+      internalID: 746246105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeedSnatchers1_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 759
+        width: 645
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5512376f2c1734776ae0fb5ac9bddeca
+      internalID: -1123908735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeedSnatchers1_3
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 732
+        width: 645
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9b9b2957e1a4f5ea29ed7d2c895eef
+      internalID: -767544728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeedSnatchers1_4
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 147
+        width: 645
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988f4f28da0f24b51ac79d8f57bce882
+      internalID: -902376592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 95a011484e3c4454eb44dd2162ed17b9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SeedSnatchers1_0: 521044739
+      SeedSnatchers1_1: 746246105
+      SeedSnatchers1_2: -1123908735
+      SeedSnatchers1_3: -767544728
+      SeedSnatchers1_4: -902376592
+      SeedSnatchers1_5: 567379179
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
