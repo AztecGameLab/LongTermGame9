@@ -20,6 +20,9 @@ namespace Player
 
         [Tooltip("For when the character hits the ground.")] 
         [SerializeField] private AudioClip[] landingAudioClips;
+        
+        [Tooltip("For when the character is attacked.")]
+        [SerializeField] private AudioClip[] hitAudioClips;
 
 
         [Header("Thresholds")]
@@ -50,6 +53,11 @@ namespace Player
         private void PlayLandingSfx()
         {
             jumpAudioSource.PlayOneShot(landingAudioClips[UnityEngine.Random.Range(0, landingAudioClips.Length)], 0.6f);
+        }
+        
+        public void PlayHitSfx()
+        {
+            jumpAudioSource.PlayOneShot(hitAudioClips[UnityEngine.Random.Range(0, hitAudioClips.Length)], 0.6f);
         }
 
         private void HandleWalkSfx()

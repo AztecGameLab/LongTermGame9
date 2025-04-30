@@ -9485,6 +9485,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014315859}
   m_CullTransparentMesh: 1
+--- !u!1 &1015364491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015364493}
+  - component: {fileID: 1015364492}
+  - component: {fileID: 1015364494}
+  m_Layer: 0
+  m_Name: VoidBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1015364492
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015364491}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 761.63, y: 17.14}
+  m_EdgeRadius: 0
+--- !u!4 &1015364493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015364491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 56, y: -19.7, z: -0.00014509042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015364494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015364491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6f9ac91707c394d905137f707c9fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1023046395
 GameObject:
   m_ObjectHideFlags: 0
@@ -14903,6 +14994,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1510072130 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8673804343619392397, guid: 02ca07625751124479555c7e289500fe, type: 3}
+  m_PrefabInstance: {fileID: 8507171295174991614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97e79a3ecbf6a595936fa5f6a19de49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1512761503
 GameObject:
   m_ObjectHideFlags: 0
@@ -17669,6 +17771,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 463598288}
     m_Modifications:
+    - target: {fileID: 308788400650601126, guid: 2f62cd7660db6c845b7aca5a199cff0c, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 403205343132742120, guid: 2f62cd7660db6c845b7aca5a199cff0c, type: 3}
       propertyPath: m_Name
       value: SnakeBossComplete
@@ -17676,6 +17782,14 @@ PrefabInstance:
     - target: {fileID: 1052399108029264073, guid: 2f62cd7660db6c845b7aca5a199cff0c, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 0.476
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747400882537792305, guid: 2f62cd7660db6c845b7aca5a199cff0c, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609832107921942269, guid: 2f62cd7660db6c845b7aca5a199cff0c, type: 3}
+      propertyPath: vulnerableDamageTypes
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8562458297258875910, guid: 2f62cd7660db6c845b7aca5a199cff0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20944,6 +21058,14 @@ PrefabInstance:
       propertyPath: onAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetSpines
       objectReference: {fileID: 0}
+    - target: {fileID: 5192815621367961964, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: playerSfx
+      value: 
+      objectReference: {fileID: 1510072130}
+    - target: {fileID: 5192815621367961964, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: deathScene
+      value: Assets/Scenes/MainMenu.unity
+      objectReference: {fileID: 0}
     - target: {fileID: 5555969285793694952, guid: 02ca07625751124479555c7e289500fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -110.67
@@ -21000,6 +21122,14 @@ PrefabInstance:
       propertyPath: onHealthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetHearts
       objectReference: {fileID: 0}
+    - target: {fileID: 8673804343619392397, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: hitAudioClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673804343619392397, guid: 02ca07625751124479555c7e289500fe, type: 3}
+      propertyPath: 'hitAudioClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c8599d40f86b8fa4f9d8417d701bc6e2, type: 3}
     m_RemovedComponents:
     - {fileID: 1351494427374706384, guid: 02ca07625751124479555c7e289500fe, type: 3}
     - {fileID: 3438909220463252109, guid: 02ca07625751124479555c7e289500fe, type: 3}
@@ -21034,3 +21164,4 @@ SceneRoots:
   - {fileID: 292477669}
   - {fileID: 261046236}
   - {fileID: 463598288}
+  - {fileID: 1015364493}
