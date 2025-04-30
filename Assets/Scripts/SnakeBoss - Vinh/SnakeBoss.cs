@@ -13,7 +13,7 @@ public class SnakeBoss : MonoBehaviour
     private Health health;
     private SpriteRenderer spriteRenderer;
 
-    [SerializeField] private bool finishedCutscene;
+    public bool finishedCutscene;
 
     [SerializeField] private int secondsInBetweenAttacks;
     
@@ -40,8 +40,24 @@ public class SnakeBoss : MonoBehaviour
     
     private int width, length;
 
+    private Vector3 positionOffset;
+    private readonly Vector3 hardCodedPosition = new(8.2f, -0.68f, -1.0f);
+    
+    private Vector3 getOffsetVector(Vector3 position)
+    {
+        return position - positionOffset;
+    }
+    
+
+    public void setFinishedCutscene(bool b)
+    {
+        finishedCutscene = b;
+    }
+    
     public void Start()
     {
+        positionOffset = transform.position - hardCodedPosition;
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
         health = GetComponent<Health>();
         animator = GetComponent<Animator>();
@@ -51,14 +67,15 @@ public class SnakeBoss : MonoBehaviour
 
     public void FixedUpdate()
     {
+        if (health.IsDead) return;
         // This is for how the boss backs up to do the sweep across the floor attack
         
-        Debug.Log("Before Position: " + transform.position.x);
+        // Debug.Log("Before Position: " + getOffsetVector(transform.position).x);
 
         if (Attack1Forward)
         {
             gameObject.transform.position = new Vector2(transform.position.x-0.3f, transform.position.y);
-            if (transform.position.x <= 2.3)
+            if (getOffsetVector(transform.position).x <= 2.3)
             {
                 Attack1Forward = false;
                 Attack1Backward = true;
@@ -67,19 +84,19 @@ public class SnakeBoss : MonoBehaviour
         else if (Attack1Backward)
         {
             gameObject.transform.position = new Vector2(transform.position.x+0.3f, transform.position.y);
-            if (transform.position.x >= 8.2)
+            if (getOffsetVector(transform.position).x >= 8.2)
             {
                 Attack1Backward = false;
             }
         }
         else if(bossBackup2nd)
         {
-            Debug.Log("Position: " + transform.position.x);
+            // Debug.Log("Position: " + transform.position.x);
             gameObject.transform.position = new Vector2(transform.position.x+0.2f, transform.position.y);
             
             //gameObject.transform.position.Set(gameObject.transform.position.x+0.2f,gameObject.transform.position.y,gameObject.transform.position.z);
-            Debug.Log("AFTER Position: " + transform.position.x);
-            if (gameObject.transform.position.x > 13)
+            // Debug.Log("AFTER Position: " + transform.position.x);
+            if (getOffsetVector(gameObject.transform.position).x > 13)
             {
                 bossBackup2nd = false;
                 animator.Play("Snake Bite Close");
@@ -90,7 +107,7 @@ public class SnakeBoss : MonoBehaviour
         else if (bossComeUp2nd)
         {
             gameObject.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
-            if (gameObject.transform.position.x <= 8.2)
+            if (getOffsetVector(gameObject.transform.position).x <= 8.2)
             {
                 attackInProgress = false;
                 bossComeUp2nd = false;
@@ -100,17 +117,17 @@ public class SnakeBoss : MonoBehaviour
         else if (bossBackup4th)
         {
             gameObject.transform.position = new Vector2(gameObject.transform.position.x+0.2f, gameObject.transform.position.y);
-            if (gameObject.transform.position.x > 18)
+            if (getOffsetVector(gameObject.transform.position).x > 18)
             {
                 bossBackup4th = false;
                 snakeAttack4.SetActive(true); 
-                snakeAttack4.transform.position = new Vector2(18, -1.6f);
+                snakeAttack4.transform.position = new Vector3(18.0f, -1.6f, 0.0f) + positionOffset;
             }
         }//if the attack is done, bring back the boss
         else if (bossComeUp4th)
         {
             gameObject.transform.transform.position = new Vector2(gameObject.transform.position.x-0.2f, gameObject.transform.position.y);
-            if (gameObject.transform.position.x <= 8.2)
+            if (getOffsetVector(gameObject.transform.position).x <= 8.2)
             {
                 bossComeUp4th = false;
                 attackInProgress = false;
@@ -118,7 +135,7 @@ public class SnakeBoss : MonoBehaviour
 
         }
 
-        Debug.Log("After If Chain Position: " + transform.position.x);
+        // Debug.Log("After If Chain Position: " + transform.position.x);
         
         if (!attackInProgress && finishedCutscene)
         {
@@ -129,14 +146,14 @@ public class SnakeBoss : MonoBehaviour
             }
             if (timeForAttacks <= secondsInBetweenAttacks*60) return;
             timeForAttacks = 0; 
-            Debug.Log("Current Health: " + health.Value);
-            Debug.Log("Attack Counter: " + attack4Counter);
-            Debug.Log("Attack 4 Active?" + snakeAttack4.activeSelf);
+            // Debug.Log("Current Health: " + health.Value);
+            // Debug.Log("Attack Counter: " + attack4Counter);
+            // Debug.Log("Attack 4 Active?" + snakeAttack4.activeSelf);
             Attack();
             
         }
         
-        Debug.Log("After EVerything Position: " + transform.position.x);
+        // Debug.Log("After EVerything Position: " + transform.position.x);
     }
 
 private void OnCollisionEnter2D(Collision2D collision)
@@ -183,7 +200,7 @@ private void OnCollisionEnter2D(Collision2D collision)
         float playerPositionX;
         if (tempPlayer != null)
         {
-            playerPositionX = tempPlayer.transform.position.x;
+            playerPositionX = getOffsetVector(tempPlayer.transform.position).x;
             if (playerPositionX < -(screenSize / 2)) return 3;
             if (playerPositionX < 0) return 2;
             return 1;

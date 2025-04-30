@@ -1,4 +1,5 @@
 using System;
+using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,15 +9,14 @@ public class PlayerMovementControl : MonoBehaviour
     private static readonly int VerticalSpeed = Animator.StringToHash("VerticalSpeed");
     private static readonly int Grounded = Animator.StringToHash("Grounded");
     private static readonly int DoubleJumping = Animator.StringToHash("DoubleJumping");
-    
+
     /*
      * movement control behaviour
      *
      */
 
     //related to walking
-    [Header("Walking")] 
-    public float walkSpeed = 1.0f;
+    [Header("Walking")] public float walkSpeed = 1.0f;
     public float gravity = 1.0f;
 
     public float accelerationMultiplier = 5.0f;
@@ -28,11 +28,9 @@ public class PlayerMovementControl : MonoBehaviour
     private float walkInput;
 
     //related to jumping
-    [Header("Jumping")] 
-    public float jumpForce = 10.0f;
+    [Header("Jumping")] public float jumpForce = 10.0f;
 
-    [Header("Ground Check")] 
-    public Vector2 groundCheckBoxSize = Vector2.one;
+    [Header("Ground Check")] public Vector2 groundCheckBoxSize = Vector2.one;
     public float groundCheckVerticalOffset;
     public LayerMask groundLayer;
     private float currentGroundAngle;
@@ -42,9 +40,10 @@ public class PlayerMovementControl : MonoBehaviour
     private const float CoyoteDebounceTime = 0.25f;
     private float coyoteDebounceCounter;
 
-    [Header("Animation")]
-    public Animator animator;
-    
+    [Header("Animation")] public Animator animator;
+
+    [Header("SFX")] public PlayerSfx sounds;
+
     private Rigidbody2D body;
 
     private bool hasDoubleJump;
@@ -71,7 +70,7 @@ public class PlayerMovementControl : MonoBehaviour
         return Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckVerticalOffset,
             groundLayer);
     }
-    
+
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -82,7 +81,7 @@ public class PlayerMovementControl : MonoBehaviour
             body.sharedMaterial = new PhysicsMaterial2D();
         }
     }
-    
+
     private void FixedUpdate()
     {
         if (coyoteTimeCounter > 0.0f)
@@ -94,7 +93,7 @@ public class PlayerMovementControl : MonoBehaviour
         {
             coyoteDebounceCounter = Math.Max(coyoteDebounceCounter - Time.deltaTime, 0.0f);
         }
-        
+
         if (IsGrounded())
         {
             TrySetFriction(groundFriction);
@@ -111,24 +110,24 @@ public class PlayerMovementControl : MonoBehaviour
         }
     }
 
-    
+
     private void Update()
     {
         if (!hasDoubleJump && IsGrounded())
         {
             hasDoubleJump = true;
         }
-        
+
         if (animator)
         {
             UpdateAnimations();
         }
     }
-    
+
     private void TrySetFriction(float friction)
     {
         if (Mathf.Approximately(body.sharedMaterial.friction, friction)) return;
-        
+
         var material = body.sharedMaterial;
         material.friction = friction;
         body.sharedMaterial = material;
@@ -205,9 +204,9 @@ public class PlayerMovementControl : MonoBehaviour
         //get desired walk speed, current walk speed, and the distance between them
         //apply a force proportional to this deltaV
         //at an angle dependent on currentGroundAngle
-        
+
         float desiredWalkSpeed = walkInput * walkSpeed;
-        
+
         if (!AllowMovement) desiredWalkSpeed = 0.0f;
 
         Vector2 currentVel = body.linearVelocity;
@@ -265,7 +264,7 @@ public class PlayerMovementControl : MonoBehaviour
         float desiredWalkSpeed = walkInput * walkSpeed;
 
         if (!AllowMovement) desiredWalkSpeed = 0.0f;
-        
+
         Vector2 currentVel = body.linearVelocity;
         float currentWalkSpeed = currentVel.x;
 
@@ -278,7 +277,7 @@ public class PlayerMovementControl : MonoBehaviour
         Vector2 walkForceVector = new Vector2(deltaV, 0);
 
         body.AddForce(walkForceVector);
-        
+
         currentGroundNormal = Vector2.zero;
     }
 
@@ -287,18 +286,20 @@ public class PlayerMovementControl : MonoBehaviour
         coyoteTimeCounter = 0.0f;
         coyoteDebounceCounter = CoyoteDebounceTime;
     }
-    
+
     private void CheckIfJumpAllowed()
     {
         if (IsGrounded() || coyoteTimeCounter > 0.0f)
         {
             ResetCoyoteTime();
             JumpBehavior();
-        } 
+            sounds.PlayJumpSfx();
+        }
         else if (hasDoubleJump)
         {
             hasDoubleJump = false;
             JumpBehavior();
+            sounds.PlayDoubleJumpSfx();
         }
     }
 
@@ -314,14 +315,14 @@ public class PlayerMovementControl : MonoBehaviour
     public void walk(InputAction.CallbackContext context)
     {
         // if (!AllowMovement) return;
-        
+
         walkInput = context.ReadValue<float>();
     }
 
     public void jump(InputAction.CallbackContext context)
     {
         if (!AllowMovement) return;
-        
+
         if (context.performed)
         {
             CheckIfJumpAllowed();

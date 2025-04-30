@@ -7,29 +7,52 @@ namespace Player
     {
         [SerializeField] private PlayerMovementControl movementControl;
 
-        [Header("Movement")]
-        [Tooltip("For when the character travels along the ground.")]
-        [SerializeField] private AudioSource walkAudioSource;
-        [Tooltip("For when the character jumps off the ground.")]
-    
-        [SerializeField] private AudioSource jumpAudioSource;
-        [Tooltip("For when the character hits the ground.")]
-        [SerializeField] private AudioSource landingAudioSource;
+        [Header("Movement")] [Tooltip("For when the character travels along the ground.")] [SerializeField]
+        private AudioSource walkAudioSource;
 
-        [Header("Thresholds")]        
+        [Tooltip("For when the character jumps off the ground.")] [SerializeField]
+        private AudioSource jumpAudioSource;
+
+        [SerializeField] private AudioClip[] jumpAudioClips;
+
+        [Tooltip("For when the character jumps a second time in the air.")] 
+        [SerializeField] private AudioClip[] doubleJumpAudioClips;
+
+        [Tooltip("For when the character hits the ground.")] 
+        [SerializeField] private AudioClip[] landingAudioClips;
+
+
+        [Header("Thresholds")]
         [Tooltip("How long after leaving the ground should the walk sound cut off?")]
-        [SerializeField] private float walkAirTimeThreshold = 0.2f;
-        [Tooltip("How long after leaving the ground should the landing sound be able to play?")]
-        [SerializeField] private float landingAirTimeThreshold = 0.8f;
+        [SerializeField]
+        private float walkAirTimeThreshold = 0.2f;
+
+        [Tooltip("How long after leaving the ground should the landing sound be able to play?")] [SerializeField]
+        private float landingAirTimeThreshold = 0.8f;
 
 
-        private float AirTime;
-        private bool isInAir { get {
-            return AirTime > walkAirTimeThreshold;
-        } }
+        private float airTime;
+
+        private bool IsInAir => airTime > walkAirTimeThreshold;
+
         private bool wasInAir;
 
-        private void HandleWalkSFX()
+        public void PlayJumpSfx()
+        {
+            jumpAudioSource.PlayOneShot(jumpAudioClips[UnityEngine.Random.Range(0, jumpAudioClips.Length)]);
+        }
+
+        public void PlayDoubleJumpSfx()
+        {
+            jumpAudioSource.PlayOneShot(doubleJumpAudioClips[UnityEngine.Random.Range(0, doubleJumpAudioClips.Length)]);
+        }
+
+        private void PlayLandingSfx()
+        {
+            jumpAudioSource.PlayOneShot(landingAudioClips[UnityEngine.Random.Range(0, landingAudioClips.Length)], 0.6f);
+        }
+
+        private void HandleWalkSfx()
         {
             if (movementControl.IsMoving && !walkAudioSource.isPlaying)
             {
@@ -37,11 +60,12 @@ namespace Player
             }
             else if (!movementControl.IsMoving)
             {
-                walkAudioSource.Stop();
+                walkAudioSource.Pause();
             }
-            if (isInAir)
+        
+            if (IsInAir)
             {
-                walkAudioSource.Stop();
+                walkAudioSource.Pause();
             }
         }
 
@@ -52,33 +76,18 @@ namespace Player
                 if (wasInAir)
                 {
                     wasInAir = false;
-                    landingAudioSource.Play();
+                    PlayLandingSfx();
                 }
-                AirTime = 0.0f;
+            
+                airTime = 0.0f;
             }
             else
             {
-                AirTime += Time.deltaTime;
-                if (AirTime > landingAirTimeThreshold) wasInAir = true;
+                airTime += Time.deltaTime;
+                if (airTime > landingAirTimeThreshold) wasInAir = true;
             }
-
-            HandleWalkSFX();
-        }
-
-        private void OnEnable()
-        {
-            movementControl.OnJumped += HandleJumpSFX;
-        }
-
-        private void OnDisable()
-        {
-            movementControl.OnJumped -= HandleJumpSFX;
-        }
-
-        private void HandleJumpSFX()
-        {
-            jumpAudioSource.Play();
+            
+            HandleWalkSfx();
         }
     }
-
 }

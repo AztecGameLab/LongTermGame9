@@ -859,7 +859,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Snake_Slither_Col_Compact_SpS_0: 7067948813595729352
+      Snake_Slither_Col_Compact_SpS_1: 4719368761703359413
+      Snake_Slither_Col_Compact_SpS_10: -7442019640105563353
+      Snake_Slither_Col_Compact_SpS_11: -1436286161160780842
+      Snake_Slither_Col_Compact_SpS_12: -7460978067205642885
+      Snake_Slither_Col_Compact_SpS_13: -6263008663876724140
+      Snake_Slither_Col_Compact_SpS_14: -4769308939144258952
+      Snake_Slither_Col_Compact_SpS_15: -7086621337764614648
+      Snake_Slither_Col_Compact_SpS_16: 8735991079054451659
+      Snake_Slither_Col_Compact_SpS_17: -2959765598603360137
+      Snake_Slither_Col_Compact_SpS_18: 4798793980611526503
+      Snake_Slither_Col_Compact_SpS_19: -8896183485093712605
+      Snake_Slither_Col_Compact_SpS_2: -3637104101851636454
+      Snake_Slither_Col_Compact_SpS_20: 6187041068329608791
+      Snake_Slither_Col_Compact_SpS_21: 2537771518786275759
+      Snake_Slither_Col_Compact_SpS_22: 8469237711422987440
+      Snake_Slither_Col_Compact_SpS_23: 6498269295322904215
+      Snake_Slither_Col_Compact_SpS_24: -6016652742241768654
+      Snake_Slither_Col_Compact_SpS_25: 8663198286090854572
+      Snake_Slither_Col_Compact_SpS_26: 4917810888080932908
+      Snake_Slither_Col_Compact_SpS_27: 6459558312969757113
+      Snake_Slither_Col_Compact_SpS_28: 7774051982960533724
+      Snake_Slither_Col_Compact_SpS_29: 5647950190370782957
+      Snake_Slither_Col_Compact_SpS_3: -1590994216277283333
+      Snake_Slither_Col_Compact_SpS_4: 8591904123836581726
+      Snake_Slither_Col_Compact_SpS_5: -8130759106616658032
+      Snake_Slither_Col_Compact_SpS_6: -4731281091112857883
+      Snake_Slither_Col_Compact_SpS_7: 720702168980579775
+      Snake_Slither_Col_Compact_SpS_8: -508238406847599957
+      Snake_Slither_Col_Compact_SpS_9: 7114842108620541099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
