@@ -15,10 +15,11 @@ public class PauseScript : MonoBehaviour
 
     public void restart()
     {
-        var currentScene = SceneManager.GetSceneByPath(MasterScript.MainGame);
+        // var currentScene = SceneManager.GetSceneByPath(MasterScript.MainGame);
+        var currentScene = SceneManager.GetActiveScene();
         saguaro.SetActive(false);
         panel.SetActive(!panel.activeSelf);
-        SceneManager.LoadScene(MasterScript.MainGame);
+        SceneManager.LoadScene(currentScene.buildIndex);
         Time.timeScale = 1;
         //SceneManager.UnloadSceneAsync(currentScene);
     }

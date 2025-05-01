@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
-using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 
 public class PlayerMoveTest : MonoBehaviour
