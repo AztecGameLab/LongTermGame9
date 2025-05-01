@@ -17,7 +17,7 @@ public class PauseScript : MonoBehaviour
     {
         // var currentScene = SceneManager.GetSceneByPath(MasterScript.MainGame);
         var currentScene = SceneManager.GetActiveScene();
-        saguaro.SetActive(false);
+        // saguaro.SetActive(false);
         panel.SetActive(!panel.activeSelf);
         SceneManager.LoadScene(currentScene.buildIndex);
         Time.timeScale = 1;

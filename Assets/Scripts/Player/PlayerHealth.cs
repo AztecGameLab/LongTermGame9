@@ -18,6 +18,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void onDeath(GameObject attacker)
     {
-        SceneManager.LoadScene(deathScene);
+        // SceneManager.LoadScene(deathScene);
     }
 }
