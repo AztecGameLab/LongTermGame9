@@ -444,6 +444,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 8958b4e62bed44d4185315f365f2e798, type: 3}
   - {fileID: 32900000, guid: a93a5afdd5ae54612a7b1fd24f6e37ac, type: 3}
   - {fileID: 32900000, guid: cd5af37f4d2e04dc199025c72f06382b, type: 3}
+  renderer: {fileID: 7177954448425843136}
   button: {fileID: 3637699358772935996}
   fadeOut: {fileID: 8665083368978826482}
   fadeOutTime: 3
@@ -534,7 +535,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &6569309755095018995
 MonoBehaviour:
   m_ObjectHideFlags: 0

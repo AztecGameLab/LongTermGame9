@@ -16,6 +16,7 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] private List<VideoClip> videos = new List<VideoClip>();
     private CutsceneIndex _videoIndex;
     private VideoPlayer player;
+    [SerializeField] private RawImage renderer;
     [SerializeField] private GameObject button;
     [SerializeField] private Image fadeOut;
     [SerializeField] private int fadeOutTime;
@@ -47,19 +48,22 @@ public class CutscenePlayer : MonoBehaviour
         await UniTask.Delay(TimeSpan.FromSeconds(fadeOutTime), true);
         // Set up Player
         player.clip = videos[(int)index];
-        player.enabled = true; 
+        ToggleVideo();
         player.Play(); await UniTask.WaitUntil(() => player.isPlaying);
         fadeOut.enabled = false;
         button.SetActive(true);
         await UniTask.WaitUntil(() => !player.isPlaying);
-        player.enabled = false; button.SetActive(false);
+        ToggleVideo(); button.SetActive(false);
         // Resume Everything
         Time.timeScale = 1;
     }
 
-    public void SkipScene()
+    public void SkipScene() { player.Stop(); }
+
+    private void ToggleVideo()
     {
-        player.Stop();
+        player.enabled = !player.enabled;
+        renderer.enabled = !renderer.enabled;
     }
     
     // Update is called once per frame
