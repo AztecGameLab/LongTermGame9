@@ -48,7 +48,7 @@ public class PlayerMovementControl : MonoBehaviour
 
     private bool hasDoubleJump;
     private bool HasInput => AllowMovement && !Mathf.Approximately(walkInput, 0.0f);
-    public bool IsMoving => body.linearVelocityX > 0.1f;
+    public bool IsMoving => Mathf.Abs(body.linearVelocityX) > 0.1f;
     public event Action OnJumped;
     private bool allowMovement = true;
 
