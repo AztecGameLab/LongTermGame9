@@ -4920,7 +4920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &497810937
 Transform:
   m_ObjectHideFlags: 0
@@ -18324,11 +18324,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1624857976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6236349799477335487, guid: d9a60b886e90f49008db1495efff7e2f, type: 3}
-  m_PrefabInstance: {fileID: 1857240817}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1635805717
 GameObject:
   m_ObjectHideFlags: 0
@@ -20314,7 +20309,7 @@ PrefabInstance:
     - target: {fileID: 3409625506317239383, guid: d9a60b886e90f49008db1495efff7e2f, type: 3}
       propertyPath: panel
       value: 
-      objectReference: {fileID: 1624857976}
+      objectReference: {fileID: 0}
     - target: {fileID: 4780686463339743518, guid: d9a60b886e90f49008db1495efff7e2f, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -28120,7 +28115,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spineImage: {fileID: 0}
   spineText: {fileID: 0}
+  maxText: {fileID: 0}
   playerUICanvas: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!114 &2110925316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33464,6 +33461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoManager: {fileID: 0}
   health: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!1 &4926530234440363421
 GameObject:
   m_ObjectHideFlags: 0
