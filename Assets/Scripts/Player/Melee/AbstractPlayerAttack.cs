@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -100,7 +101,7 @@ namespace Player.Melee
             animator.SetTrigger(AnimatorHash);
             PlayAudio();
 
-            foreach (var health in Enemies)
+            foreach (var health in Enemies.ToList())
             {
                 health.ApplyDamage(enemyDamage, DamageType, gameObject);
             }

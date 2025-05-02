@@ -309,7 +309,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7280598712059402275}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -318,7 +318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000010172538}
   m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3558843837566266642
@@ -444,10 +444,12 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 8958b4e62bed44d4185315f365f2e798, type: 3}
   - {fileID: 32900000, guid: a93a5afdd5ae54612a7b1fd24f6e37ac, type: 3}
   - {fileID: 32900000, guid: cd5af37f4d2e04dc199025c72f06382b, type: 3}
-  renderer: {fileID: 7177954448425843136}
+  videoRenderer: {fileID: 0}
   button: {fileID: 3637699358772935996}
   fadeOut: {fileID: 8665083368978826482}
   fadeOutTime: 3
+  audioManager: {fileID: 0}
+  SaguaroSounds: {fileID: 0}
 --- !u!1 &8073766544758364333
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,10 +481,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3864180111348411876}
   - {fileID: 7570137283291090822}
   - {fileID: 7767421577853120737}
   - {fileID: 645603724010445121}
+  - {fileID: 3864180111348411876}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

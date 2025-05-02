@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using Cysharp.Threading.Tasks;
+using Unity.VisualScripting;
 
 public class Attack3 : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class Attack3 : MonoBehaviour
     public async void Attack(SnakeBoss sb)
     {
         snakeHead.SetActive(true);
-        while (snakeHead.transform.localScale.x < headAttackMaxStretch)
+        while (!snakeHead.IsUnityNull() && snakeHead.transform.localScale.x < headAttackMaxStretch)
         {
 
             snakeHead.transform.localScale += new Vector3(headAttackStretchSpeed * Time.deltaTime, 0);

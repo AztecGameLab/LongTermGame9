@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using TriInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -13,7 +14,7 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] private List<VideoClip> videos = new List<VideoClip>();
     private CutsceneIndex _videoIndex;
     private VideoPlayer player;
-    [SerializeField] private RawImage renderer;
+    [SerializeField] private RawImage videoRenderer;
     [SerializeField] private GameObject button;
     [SerializeField] private Image fadeOut;
     [SerializeField] private int fadeOutTime;
@@ -66,14 +67,22 @@ public class CutscenePlayer : MonoBehaviour
     private void ToggleVideo()
     {
         player.enabled = !player.enabled;
-        renderer.enabled = !renderer.enabled;
+        videoRenderer.enabled = !videoRenderer.enabled;
     }
 
     public async void BossScene()
     {
-        audioManager.deactivateDesert();
+        audioManager.triggerDesert(false);
         await PlayScene(CutsceneIndex.PreBoss);
-        audioManager.triggerBoss();
+        audioManager.triggerBoss(true);
+    }
+
+    public async void BossDefeatScene()
+    {
+        audioManager.triggerBoss(false);
+        await UniTask.Delay(TimeSpan.FromSeconds(5));
+        await PlayScene(CutsceneIndex.PostBoss);
+        SceneManager.LoadScene("WinScene");
     }
     
     // Update is called once per frame

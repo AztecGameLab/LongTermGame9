@@ -14,14 +14,14 @@ public class AudioSwitcher : MonoBehaviour
         //levelMusic.gameObject.SetActive(true);
     }
 
-    public void triggerBoss()
+    public void triggerBoss(bool val)
     {
-        bossMusic.gameObject.SetActive(true);
+        bossMusic.gameObject.SetActive(val);
     }
 
-    public void deactivateDesert()
+    public void triggerDesert(bool val)
     {
-        levelMusic.gameObject.SetActive(false);
+        levelMusic.gameObject.SetActive(val);
     }
 
     public void triggerBackgroundAudio()

@@ -31,12 +31,12 @@ public static class PersistentSceneLoader
 
 #endif
         // If the persistent scene is not the current scene
-        if (SceneManager.GetActiveScene().path != GameSettings.PersistentScenePath)
+        /*if (SceneManager.GetActiveScene().path != GameSettings.PersistentScenePath)
         {
             // Load it in on top (Additive) of the current scene
             await SceneManager.LoadSceneAsync(GameSettings.PersistentScenePath, LoadSceneMode.Additive);
         }
         await UniTask.Yield();
-        SceneManager.SetActiveScene(SceneManager.GetSceneByPath("Assets/Scenes/PersistentScene.unity"));
+        SceneManager.SetActiveScene(SceneManager.GetSceneByPath("Assets/Scenes/PersistentScene.unity"));*/
     }
 }

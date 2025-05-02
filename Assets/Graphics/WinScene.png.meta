@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1f8dbb5855f6a2b4c8b9225b77ed0a1c
+guid: a87ce7847d3fc4fb283bf70e314eb87b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6650523446240617168
-    second: png-transparent-halo-4-halo-5-guardians-gun-barrel-halo-combat-evolved-firearm-assault-rifle-3737017416_0
+      213: 1142363493725838696
+    second: WinScene_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: png-transparent-halo-4-halo-5-guardians-gun-barrel-halo-combat-evolved-firearm-assault-rifle-3737017416_0
+      name: WinScene_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 920
-        height: 274
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03ddb60692894b3a0800000000000000
-      internalID: -6650523446240617168
+      spriteID: 86d17e78b8d7adf00800000000000000
+      internalID: 1142363493725838696
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      png-transparent-halo-4-halo-5-guardians-gun-barrel-halo-combat-evolved-firearm-assault-rifle-3737017416_0: -6650523446240617168
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
