@@ -37,6 +37,10 @@ public class PauseScript : MonoBehaviour
             return;
         }
         panel.SetActive(!panel.activeSelf);
+        if (saguaro.TryGetComponent<PlayerMovementControl>(out var player))
+        {
+            player.AllowMovement = !panel.activeSelf;
+        }
         Time.timeScale = (int)Time.timeScale == 1 ? 0 : 1;
     }
     

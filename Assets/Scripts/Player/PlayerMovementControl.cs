@@ -207,7 +207,7 @@ public class PlayerMovementControl : MonoBehaviour
 
         float desiredWalkSpeed = walkInput * walkSpeed;
 
-        if (!AllowMovement) desiredWalkSpeed = 0.0f;
+        if (!AllowMovement || Mathf.Approximately(Time.timeScale, 0.0f)) desiredWalkSpeed = 0.0f;
 
         Vector2 currentVel = body.linearVelocity;
         float
@@ -263,7 +263,7 @@ public class PlayerMovementControl : MonoBehaviour
     {
         float desiredWalkSpeed = walkInput * walkSpeed;
 
-        if (!AllowMovement) desiredWalkSpeed = 0.0f;
+        if (!AllowMovement || Mathf.Approximately(Time.timeScale, 0.0f)) desiredWalkSpeed = 0.0f;
 
         Vector2 currentVel = body.linearVelocity;
         float currentWalkSpeed = currentVel.x;
@@ -321,7 +321,7 @@ public class PlayerMovementControl : MonoBehaviour
 
     public void jump(InputAction.CallbackContext context)
     {
-        if (!AllowMovement) return;
+        if (!AllowMovement || Mathf.Approximately(Time.timeScale, 0.0f)) return;
 
         if (context.performed)
         {

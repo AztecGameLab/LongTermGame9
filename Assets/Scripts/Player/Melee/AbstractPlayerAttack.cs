@@ -92,7 +92,7 @@ namespace Player.Melee
          */
         public virtual void DealDamage(InputAction.CallbackContext context)
         {
-            if (!context.performed || !CanAttack) return;
+            if (!context.performed || !CanAttack || Mathf.Approximately(Time.timeScale, 0.0f)) return;
 
             CanAttack = false;
             CurrentCooldownTime = cooldownTime;

@@ -39,6 +39,8 @@ namespace Player.Melee
 
         public override void DealDamage(InputAction.CallbackContext context)
         {
+            if (Mathf.Approximately(Time.timeScale, 0.0f)) return;
+            
             if (CanAttack || !context.performed || !controller.IsGrounded())
             {
                 doStomp = false;

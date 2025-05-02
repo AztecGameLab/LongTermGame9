@@ -73,62 +73,63 @@ namespace Player.Throwables
 
         public void Shoot(InputAction.CallbackContext context)
         {
-            if (context.performed)
+            if (Mathf.Approximately(Time.timeScale, 0.0f)) return;
+
+            if (!context.performed) return;
+            
+            int currentAmmo = ammoManager.GetAmmo();
+
+            if (currentAmmo > 0 && (timeOfLastShot == 0.0 || Time.time - timeOfLastShot >= timeBtwShots))
             {
-                int currentAmmo = ammoManager.GetAmmo();
+                ammoManager.TryUseAmmo(1);
 
-                if (currentAmmo > 0 && (timeOfLastShot == 0.0 || Time.time - timeOfLastShot >= timeBtwShots))
-                {
-                    ammoManager.TryUseAmmo(1);
-
-                    GameObject spine = Instantiate(spinePrefab, throwPoint.position, throwPoint.rotation);
+                GameObject spine = Instantiate(spinePrefab, throwPoint.position, throwPoint.rotation);
                 
-                    if (anim != null)
-                    {
-                        anim.SetTrigger(ThrowSpine);
-                    }
-
-                    PlayAudio();
-
-                    int direction = playerFlip != null && playerFlip.ForwardVector2.x < 0 ? -1 : 1;
-
-                    // Debug.Log("Throw direction: " + direction);
-
-                    // Optionally flip the projectile visually (sprite-wise)
-                    if (direction == -1)
-                    {
-                        spine.transform.localScale = new Vector3(
-                            -spine.transform.localScale.x,
-                            spine.transform.localScale.y,
-                            spine.transform.localScale.z
-                        );
-                    }
-
-                    // Set direction on spine
-                    Spine spineScript = spine.GetComponent<Spine>();
-                    if (spineScript != null)
-                    {
-                        spineScript.SetDirection(direction);
-                    }
-
-                    // Stop player movement if grounded
-                    if (movementControl != null)
-                    {
-                        // Debug.Log("IsGrounded: " + movementControl.IsGrounded());
-
-                        if (movementControl.IsGrounded())
-                        {
-                            movementControl.AllowMovement = false;
-                            Invoke(nameof(EnableMovement), 0.3f);
-                        }
-                    }
-
-                    timeOfLastShot = Time.time;
-                }
-                else
+                if (anim != null)
                 {
-                    Debug.Log("Not enough ammo to throw.");
+                    anim.SetTrigger(ThrowSpine);
                 }
+
+                PlayAudio();
+
+                int direction = playerFlip != null && playerFlip.ForwardVector2.x < 0 ? -1 : 1;
+
+                // Debug.Log("Throw direction: " + direction);
+
+                // Optionally flip the projectile visually (sprite-wise)
+                if (direction == -1)
+                {
+                    spine.transform.localScale = new Vector3(
+                        -spine.transform.localScale.x,
+                        spine.transform.localScale.y,
+                        spine.transform.localScale.z
+                    );
+                }
+
+                // Set direction on spine
+                Spine spineScript = spine.GetComponent<Spine>();
+                if (spineScript != null)
+                {
+                    spineScript.SetDirection(direction);
+                }
+
+                // Stop player movement if grounded
+                if (movementControl != null)
+                {
+                    // Debug.Log("IsGrounded: " + movementControl.IsGrounded());
+
+                    if (movementControl.IsGrounded())
+                    {
+                        movementControl.AllowMovement = false;
+                        Invoke(nameof(EnableMovement), 0.3f);
+                    }
+                }
+
+                timeOfLastShot = Time.time;
+            }
+            else
+            {
+                Debug.Log("Not enough ammo to throw.");
             }
         }
 

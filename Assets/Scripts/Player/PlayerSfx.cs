@@ -62,11 +62,11 @@ namespace Player
 
         private void HandleWalkSfx()
         {
-            if (movementControl.IsMoving && !walkAudioSource.isPlaying)
+            if (movementControl.IsMoving && !walkAudioSource.isPlaying && movementControl.AllowMovement && !Mathf.Approximately(Time.timeScale, 0.0f))
             {
                 walkAudioSource.Play();
             }
-            else if (!movementControl.IsMoving)
+            else if (!movementControl.IsMoving || !movementControl.AllowMovement || Mathf.Approximately(Time.timeScale, 0.0f))
             {
                 walkAudioSource.Pause();
             }
