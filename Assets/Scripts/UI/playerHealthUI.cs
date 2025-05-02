@@ -37,9 +37,9 @@ public class playerHealth : MonoBehaviour
         GameObject heart;
         if (index == -1)
         {
-            heart = Instantiate(heartImage, new Vector3(-865,450), Quaternion.identity, playerUICanvas.transform);
+            heart = Instantiate(heartImage, heartImage.transform.position, Quaternion.identity, playerUICanvas.transform);
             heart.SetActive(true);
-            heart.transform.localPosition = new Vector2(-865, 450);
+            //heart.transform.localPosition = new Vector2(-865, 450);
             index++;
             hearts[index] = heart;
         }else if (index >= hearts.Length - 1)
@@ -86,7 +86,7 @@ public class playerHealth : MonoBehaviour
         if (!heartTextObject)
         {
             heartTextObject = Instantiate(heartText, playerUICanvas.transform);
-            heartTextObject.transform.localPosition = new Vector2(hearts[1].transform.localPosition.x, 450);
+            heartTextObject.transform.localPosition = new Vector2(hearts[1].transform.localPosition.x, hearts[1].transform.localPosition.y);
             heartTextObject.alignment = TextAlignmentOptions.Center;
         }
         heartTextObject.enabled = true;
