@@ -15,10 +15,11 @@ public class PauseScript : MonoBehaviour
 
     public void restart()
     {
-        var currentScene = SceneManager.GetSceneByPath(MasterScript.MainGame);
-        saguaro.SetActive(false);
+        // var currentScene = SceneManager.GetSceneByPath(MasterScript.MainGame);
+        var currentScene = SceneManager.GetActiveScene();
+        // saguaro.SetActive(false);
         panel.SetActive(!panel.activeSelf);
-        SceneManager.LoadScene(MasterScript.MainGame);
+        SceneManager.LoadScene(currentScene.buildIndex);
         Time.timeScale = 1;
         //SceneManager.UnloadSceneAsync(currentScene);
     }
@@ -31,6 +32,10 @@ public class PauseScript : MonoBehaviour
     
     public void pause()
     {
+        if (Mathf.Approximately(Time.timeScale, 0.0f) && !panel.activeSelf)
+        {
+            return;
+        }
         panel.SetActive(!panel.activeSelf);
         Time.timeScale = (int)Time.timeScale == 1 ? 0 : 1;
     }

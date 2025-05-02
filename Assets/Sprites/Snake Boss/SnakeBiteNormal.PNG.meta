@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: b979bb17f5f01014a9ff54a0e2e99300
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3071729321148647755
+    second: SnakeBiteNormal_0
+  - first:
+      213: 8048181149553062409
+    second: SnakeBiteNormal_1
+  - first:
+      213: 3256522569667343834
+    second: SnakeBiteNormal_2
+  - first:
+      213: 3602317610805508006
+    second: SnakeBiteNormal_3
+  - first:
+      213: -9194076290804180655
+    second: SnakeBiteNormal_4
+  - first:
+      213: 5273040956790369406
+    second: SnakeBiteNormal_5
+  - first:
+      213: 5593755202308992581
+    second: SnakeBiteNormal_6
+  - first:
+      213: -1972246526539290004
+    second: SnakeBiteNormal_7
+  - first:
+      213: -6206760444550637838
+    second: SnakeBiteNormal_8
+  - first:
+      213: 4340889607418532592
+    second: SnakeBiteNormal_9
+  - first:
+      213: -5478637352608040573
+    second: SnakeBiteNormal_10
+  - first:
+      213: 5078683362146426332
+    second: SnakeBiteNormal_11
+  - first:
+      213: -5955560234729028790
+    second: SnakeBiteNormal_12
+  - first:
+      213: -7032095311097035061
+    second: SnakeBiteNormal_13
+  - first:
+      213: -2719757782931081918
+    second: SnakeBiteNormal_14
+  - first:
+      213: 621027674142192211
+    second: SnakeBiteNormal_15
+  - first:
+      213: -8953997543484451870
+    second: SnakeBiteNormal_16
+  - first:
+      213: -4471915104236168977
+    second: SnakeBiteNormal_17
+  - first:
+      213: 660092910387125809
+    second: SnakeBiteNormal_18
+  - first:
+      213: 7645825689279570094
+    second: SnakeBiteNormal_19
+  - first:
+      213: -5119404886329563727
+    second: SnakeBiteNormal_20
+  - first:
+      213: -2221964365030316250
+    second: SnakeBiteNormal_21
+  - first:
+      213: -5341189597326955142
+    second: SnakeBiteNormal_22
+  - first:
+      213: 1276425367978318387
+    second: SnakeBiteNormal_23
+  - first:
+      213: 2498950731794136012
+    second: SnakeBiteNormal_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SnakeBiteNormal_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 112
+        width: 254
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b498739fa89f0aa20800000000000000
+      internalID: 3071729321148647755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_1
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 112
+        width: 255
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902fa1b4d12e0bf60800000000000000
+      internalID: 8048181149553062409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_2
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 112
+        width: 255
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad57018f50e713d20800000000000000
+      internalID: 3256522569667343834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_3
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 112
+        width: 254
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a73238f7c00ef130800000000000000
+      internalID: 3602317610805508006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_4
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 102
+        width: 432
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15996c86354186080800000000000000
+      internalID: -9194076290804180655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_5
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 112
+        width: 255
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c639bffca9d2940800000000000000
+      internalID: 5273040956790369406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_6
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 112
+        width: 254
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54eee1238b201ad40800000000000000
+      internalID: 5593755202308992581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_7
+      rect:
+        serializedVersion: 2
+        x: 4687
+        y: 112
+        width: 255
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6aa028cb3c21a4e0800000000000000
+      internalID: -1972246526539290004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_8
+      rect:
+        serializedVersion: 2
+        x: 5167
+        y: 103
+        width: 430
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f61d90b2482dd9a0800000000000000
+      internalID: -6206760444550637838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_9
+      rect:
+        serializedVersion: 2
+        x: 5998
+        y: 112
+        width: 254
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2dd535910fd3c30800000000000000
+      internalID: 4340889607418532592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_10
+      rect:
+        serializedVersion: 2
+        x: 6477
+        y: 103
+        width: 431
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3897c98da58f7f3b0800000000000000
+      internalID: -5478637352608040573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_11
+      rect:
+        serializedVersion: 2
+        x: 7308
+        y: 112
+        width: 255
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd9c6f1c9b1b7640800000000000000
+      internalID: 5078683362146426332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_12
+      rect:
+        serializedVersion: 2
+        x: 7964
+        y: 112
+        width: 254
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43c88a3589995da0800000000000000
+      internalID: -5955560234729028790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_13
+      rect:
+        serializedVersion: 2
+        x: 8565
+        y: 112
+        width: 309
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc60f5b729af86e90800000000000000
+      internalID: -7032095311097035061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_14
+      rect:
+        serializedVersion: 2
+        x: 8954
+        y: 112
+        width: 566
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245f941d4ba714ad0800000000000000
+      internalID: -2719757782931081918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_15
+      rect:
+        serializedVersion: 2
+        x: 9581
+        y: 118
+        width: 599
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 352bee811655e9800800000000000000
+      internalID: 621027674142192211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_16
+      rect:
+        serializedVersion: 2
+        x: 10236
+        y: 118
+        width: 599
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e393ecaca20db380800000000000000
+      internalID: -8953997543484451870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_17
+      rect:
+        serializedVersion: 2
+        x: 10907
+        y: 121
+        width: 581
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe89c4ae7e090f1c0800000000000000
+      internalID: -4471915104236168977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_18
+      rect:
+        serializedVersion: 2
+        x: 11896
+        y: 112
+        width: 254
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ed062310f192900800000000000000
+      internalID: 660092910387125809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_19
+      rect:
+        serializedVersion: 2
+        x: 12551
+        y: 112
+        width: 255
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0a01084fd6b1a60800000000000000
+      internalID: 7645825689279570094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_20
+      rect:
+        serializedVersion: 2
+        x: 13206
+        y: 112
+        width: 255
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b56de0316834f8b0800000000000000
+      internalID: -5119404886329563727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_21
+      rect:
+        serializedVersion: 2
+        x: 13862
+        y: 112
+        width: 254
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627aac6be2ff921e0800000000000000
+      internalID: -2221964365030316250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_22
+      rect:
+        serializedVersion: 2
+        x: 14517
+        y: 112
+        width: 255
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7da05d2c5840e5b0800000000000000
+      internalID: -5341189597326955142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_23
+      rect:
+        serializedVersion: 2
+        x: 15172
+        y: 112
+        width: 255
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a15a00c16c6b110800000000000000
+      internalID: 1276425367978318387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeBiteNormal_24
+      rect:
+        serializedVersion: 2
+        x: 15828
+        y: 112
+        width: 254
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccbbac7537e0ea220800000000000000
+      internalID: 2498950731794136012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SnakeBiteNormal_0: 3071729321148647755
+      SnakeBiteNormal_1: 8048181149553062409
+      SnakeBiteNormal_10: -5478637352608040573
+      SnakeBiteNormal_11: 5078683362146426332
+      SnakeBiteNormal_12: -5955560234729028790
+      SnakeBiteNormal_13: -7032095311097035061
+      SnakeBiteNormal_14: -2719757782931081918
+      SnakeBiteNormal_15: 621027674142192211
+      SnakeBiteNormal_16: -8953997543484451870
+      SnakeBiteNormal_17: -4471915104236168977
+      SnakeBiteNormal_18: 660092910387125809
+      SnakeBiteNormal_19: 7645825689279570094
+      SnakeBiteNormal_2: 3256522569667343834
+      SnakeBiteNormal_20: -5119404886329563727
+      SnakeBiteNormal_21: -2221964365030316250
+      SnakeBiteNormal_22: -5341189597326955142
+      SnakeBiteNormal_23: 1276425367978318387
+      SnakeBiteNormal_24: 2498950731794136012
+      SnakeBiteNormal_3: 3602317610805508006
+      SnakeBiteNormal_4: -9194076290804180655
+      SnakeBiteNormal_5: 5273040956790369406
+      SnakeBiteNormal_6: 5593755202308992581
+      SnakeBiteNormal_7: -1972246526539290004
+      SnakeBiteNormal_8: -6206760444550637838
+      SnakeBiteNormal_9: 4340889607418532592
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

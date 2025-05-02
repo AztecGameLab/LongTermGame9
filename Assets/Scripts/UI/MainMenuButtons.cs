@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 
 public class MainMenuButtons: MonoBehaviour
 {
-    [Scene] private string _loadGame;
+    [Scene] public string _loadGame;
     [SerializeField] private Image _sceneFade = null;
     [SerializeField] private float _fadeSpeed = 1f;
     [SerializeField] private AudioSource _menuMusic = null;
@@ -16,7 +16,7 @@ public class MainMenuButtons: MonoBehaviour
     protected void Start()
     {
         _sceneFade.enabled = false;
-        _loadGame = MasterScript.MainGame;
+        // _loadGame = MasterScript.MainGame;
     }
 
     public void LoadGame()

@@ -19,6 +19,8 @@ namespace Player.Melee
         [SerializeField] protected AudioSource audioSource;
         [Tooltip("The sound effect associated with this attack.")]
         [SerializeField] protected AudioClip audioClip;
+        [Tooltip("The volume of the sound effect associated with this attack.")]
+        [SerializeField] [Range(0, 1)] protected float audioVolume = 1f;
 
         // Override this variable with the return of an Animator.StringToHash().
         protected virtual int AnimatorHash => -1;
@@ -35,8 +37,9 @@ namespace Player.Melee
          */
         protected void PlayAudio()
         {
-            audioSource.clip = audioClip;
-            audioSource.Play();
+            audioSource.PlayOneShot(audioClip, audioVolume);
+            // audioSource.clip = audioClip;
+            // audioSource.Play();
         }
 
         /**

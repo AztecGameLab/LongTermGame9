@@ -17,7 +17,7 @@ namespace SeedSnatcher
 
         public void PlayDestroy()
         {
-            audioSource.PlayOneShot(snatcherDestroySfx);
+            audioSource.PlayOneShot(snatcherDestroySfx, 1);
         }
     }
 }

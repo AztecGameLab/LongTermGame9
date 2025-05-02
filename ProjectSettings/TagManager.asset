@@ -4,6 +4,13 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Undefined
+  - Boss
+  - Ground
+  - Wall
+  - Roof
+  - SnakeHitUp
+  - SnakeHitUpAndLeft
   - ExpiredSeed
   layers:
   - Default

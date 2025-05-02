@@ -1,0 +1,294 @@
+fileFormatVersion: 2
+guid: 85902c028318c8a4e8be7e7124b40085
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8862005252575184807
+    second: spritesheet_rattle_compact_0
+  - first:
+      213: -4494266994554037436
+    second: spritesheet_rattle_compact_1
+  - first:
+      213: 5757429979868421612
+    second: spritesheet_rattle_compact_2
+  - first:
+      213: 2057508372946486662
+    second: spritesheet_rattle_compact_3
+  - first:
+      213: -7553247046865284107
+    second: spritesheet_rattle_compact_4
+  - first:
+      213: 3530533818511395379
+    second: spritesheet_rattle_compact_5
+  - first:
+      213: 592790555339159417
+    second: spritesheet_rattle_compact_6
+  - first:
+      213: 381166680648827403
+    second: spritesheet_rattle_compact_7
+  - first:
+      213: 8725930153801623332
+    second: spritesheet_rattle_compact_8
+  - first:
+      213: 3141508867312391863
+    second: spritesheet_rattle_compact_9
+  - first:
+      213: 3311158067161133138
+    second: spritesheet_rattle_compact_10
+  - first:
+      213: 7776261358747495179
+    second: spritesheet_rattle_compact_11
+  - first:
+      213: -2670630485151327744
+    second: spritesheet_rattle_compact_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_rattle_compact_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2296
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b18d7eaf721a1c0800000000000000
+      internalID: -4494266994554037436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_rattle_compact_3
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 2296
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6850edbc6fcbd8c10800000000000000
+      internalID: 2057508372946486662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_rattle_compact_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1214
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a00e76dc9fef030800000000000000
+      internalID: 3530533818511395379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_rattle_compact_7
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 1214
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02c948931d2a4500800000000000000
+      internalID: 381166680648827403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_rattle_compact_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 132
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250fe4408b893fd20800000000000000
+      internalID: 3311158067161133138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_rattle_compact_12
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 132
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ad93e29b300fad0800000000000000
+      internalID: -2670630485151327744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 97495cb567972284a9bf27540e9e7df6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheet_rattle_compact_1: -4494266994554037436
+      spritesheet_rattle_compact_10: 3311158067161133138
+      spritesheet_rattle_compact_12: -2670630485151327744
+      spritesheet_rattle_compact_3: 2057508372946486662
+      spritesheet_rattle_compact_5: 3530533818511395379
+      spritesheet_rattle_compact_7: 381166680648827403
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

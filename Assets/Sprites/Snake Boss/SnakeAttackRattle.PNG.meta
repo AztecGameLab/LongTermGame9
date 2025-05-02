@@ -1,0 +1,301 @@
+fileFormatVersion: 2
+guid: 01ce6ee11126d4d45929974809bdd66c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 527554545296232959
+    second: SnakeAttackRattle_0
+  - first:
+      213: -1657358413349296268
+    second: SnakeAttackRattle_1
+  - first:
+      213: 4102894051383816291
+    second: SnakeAttackRattle_2
+  - first:
+      213: -8777757054207883987
+    second: SnakeAttackRattle_3
+  - first:
+      213: 7041117721052203039
+    second: SnakeAttackRattle_4
+  - first:
+      213: -1090700445900380087
+    second: SnakeAttackRattle_5
+  - first:
+      213: 3058470127812034765
+    second: SnakeAttackRattle_6
+  - first:
+      213: 5593386841866232206
+    second: SnakeAttackRattle_7
+  - first:
+      213: -6520151351156378530
+    second: SnakeAttackRattle_8
+  - first:
+      213: -4738821144629220482
+    second: SnakeAttackRattle_9
+  - first:
+      213: 2795533928033140828
+    second: SnakeAttackRattle_10
+  - first:
+      213: 8400656297008033854
+    second: SnakeAttackRattle_11
+  - first:
+      213: 677218997745207227
+    second: SnakeAttackRattle_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SnakeAttackRattle_1
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 131
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4776fcadd41eff8e0800000000000000
+      internalID: -1657358413349296268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackRattle_3
+      rect:
+        serializedVersion: 2
+        x: 3199
+        y: 131
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25824b37742f2680800000000000000
+      internalID: -8777757054207883987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackRattle_5
+      rect:
+        serializedVersion: 2
+        x: 5119
+        y: 131
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9486fb529bd0dd0f0800000000000000
+      internalID: -1090700445900380087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackRattle_7
+      rect:
+        serializedVersion: 2
+        x: 7039
+        y: 131
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81e7c892b3bf9d40800000000000000
+      internalID: 5593386841866232206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackRattle_9
+      rect:
+        serializedVersion: 2
+        x: 8959
+        y: 131
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7be34cb6435c3eb0800000000000000
+      internalID: -4738821144629220482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackRattle_11
+      rect:
+        serializedVersion: 2
+        x: 10879
+        y: 131
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30ff4fb460259470800000000000000
+      internalID: 8400656297008033854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a5c8a739f91fe1d46b1eaddec7cb0a7c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SnakeAttackRattle_0: 527554545296232959
+      SnakeAttackRattle_1: -1657358413349296268
+      SnakeAttackRattle_10: 2795533928033140828
+      SnakeAttackRattle_11: 8400656297008033854
+      SnakeAttackRattle_12: 677218997745207227
+      SnakeAttackRattle_2: 4102894051383816291
+      SnakeAttackRattle_3: -8777757054207883987
+      SnakeAttackRattle_4: 7041117721052203039
+      SnakeAttackRattle_5: -1090700445900380087
+      SnakeAttackRattle_6: 3058470127812034765
+      SnakeAttackRattle_7: 5593386841866232206
+      SnakeAttackRattle_8: -6520151351156378530
+      SnakeAttackRattle_9: -4738821144629220482
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

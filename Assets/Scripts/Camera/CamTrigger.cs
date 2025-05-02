@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CamTrigger : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class CamTrigger : MonoBehaviour
 
     public float cameraSpeed = 5.0f;
 
+    public UnityEvent onEnter;
+    public UnityEvent onExit;
+    
     private CamParameters passableParams;
 
     private CameraControl mainCam;
@@ -33,6 +37,7 @@ public class CamTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) //(A)
         {
             mainCam.SetCamParameters(passableParams);
+            onEnter.Invoke();
         }
     }
 
@@ -41,6 +46,7 @@ public class CamTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) //(A)
         {
             mainCam.ResetCamParameters();
+            onExit.Invoke();
         }
     }
 
