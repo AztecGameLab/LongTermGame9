@@ -369,9 +369,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videos:
-  - {fileID: 32900000, guid: 22bad7de60bd347c0b4ebc04450c7b30, type: 3}
-  - {fileID: 32900000, guid: 6d5524642e1ad4d1c8ce6837ed1bfdd5, type: 3}
-  - {fileID: 32900000, guid: bea5552a4a7c94737a1232d1662a9150, type: 3}
+  - {fileID: 32900000, guid: 8958b4e62bed44d4185315f365f2e798, type: 3}
+  - {fileID: 32900000, guid: a93a5afdd5ae54612a7b1fd24f6e37ac, type: 3}
+  - {fileID: 32900000, guid: cd5af37f4d2e04dc199025c72f06382b, type: 3}
   button: {fileID: 3637699358772935996}
   fadeOut: {fileID: 8665083368978826482}
   fadeOutTime: 3
