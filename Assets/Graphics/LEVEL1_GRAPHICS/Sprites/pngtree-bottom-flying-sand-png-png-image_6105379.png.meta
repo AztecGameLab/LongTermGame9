@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pngtree-bottom-flying-sand-png-png-image_6105379_0: -90392124478314517
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
