@@ -32,6 +32,10 @@ public class PauseScript : MonoBehaviour
     
     public void pause()
     {
+        if (Mathf.Approximately(Time.timeScale, 0.0f) && !panel.activeSelf)
+        {
+            return;
+        }
         panel.SetActive(!panel.activeSelf);
         Time.timeScale = (int)Time.timeScale == 1 ? 0 : 1;
     }
