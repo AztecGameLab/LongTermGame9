@@ -169,26 +169,26 @@ private void OnCollisionEnter2D(Collision2D collision)
         {
             spriteRenderer.color = Color.red;
             await UniTask.Delay(TimeSpan.FromSeconds(0.5));
-            spriteRenderer.color = health.IsDead ? Color.black: Color.white;
+            spriteRenderer.color = Color.white;
         });
 
-        if (health.IsDead)
-        {
-            spriteRenderer.color = Color.black;
-        }
+        // if (health.IsDead)
+        // {
+        //     spriteRenderer.color = Color.black;
+        // }
     }
 
 
     public void OnDeath(GameObject attacker)
     {
-        Debug.Log("Snake Boss Defeated!");
-        Debug.Log("Killed by " + attacker.name);
-        Debug.Log("spriteRenderer: " + spriteRenderer == null);
+        // Debug.Log("Snake Boss Defeated!");
+        // Debug.Log("Killed by " + attacker.name);
+        // Debug.Log("spriteRenderer: " + spriteRenderer == null);
         
         animator.Play("Snake Death");
         //if (spriteRenderer == null) return;
         
-        spriteRenderer.color = Color.black;
+        // spriteRenderer.color = Color.black;
         // Replace with scene transition logic
         //UnityEngine.SceneManagement.SceneManager.LoadScene("NextScene"); 
     }
@@ -204,7 +204,7 @@ private void OnCollisionEnter2D(Collision2D collision)
             if (playerPositionX < 0) return 2;
             return 1;
         }
-        Debug.Log("no player found");
+        // Debug.Log("no player found");
         return 0;
         
     }
@@ -240,7 +240,7 @@ private void OnCollisionEnter2D(Collision2D collision)
 
     private void Attack1()
     {
-        Debug.Log("Snake Boss uses Attack 1!");
+        // Debug.Log("Snake Boss uses Attack 1!");
         attackInProgress = true;
         animator.Play("Snake Tail Whip");
         // Implement attack logic here
@@ -261,7 +261,7 @@ private void OnCollisionEnter2D(Collision2D collision)
 
     private void Attack2()
     {
-        Debug.Log("Snake Boss uses Attack 2!");
+        // Debug.Log("Snake Boss uses Attack 2!");
         attackInProgress = true;
         bossBackup2nd = true;
         // Implement attack logic here
@@ -283,7 +283,7 @@ private void OnCollisionEnter2D(Collision2D collision)
 
     private void Attack3()
     {
-        Debug.Log("Snake Boss uses Attack 3!");
+        // Debug.Log("Snake Boss uses Attack 3!");
         attackInProgress = true;
         animator.Play("Snake Bite Far");
     }
@@ -295,7 +295,7 @@ private void OnCollisionEnter2D(Collision2D collision)
 
     private void Attack4()
     {
-        Debug.Log("Snake Boss uses its powerful Attack 4!");
+        // Debug.Log("Snake Boss uses its powerful Attack 4!");
         attackInProgress = true;
         bossBackup4th = true;
         // Implement attack logic here
