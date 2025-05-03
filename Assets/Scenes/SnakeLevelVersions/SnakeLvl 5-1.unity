@@ -26894,15 +26894,15 @@ PrefabInstance:
       objectReference: {fileID: 801057228}
     - target: {fileID: 2187999747171887631, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
       propertyPath: 'videos.Array.data[0]'
-      value: https://github.com/AztecGameLab/LongTermGame9/raw/refs/heads/main/Assets/Graphics/Videos/Saguaro%20Introductory%20Cutscene%20VP8.webm
+      value: https://aztecgamelab.github.io/LTG9_Saguaro/Saguaro%20Introductory%20Cutscene%20VP8.webm
       objectReference: {fileID: 0}
     - target: {fileID: 2187999747171887631, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
       propertyPath: 'videos.Array.data[1]'
-      value: https://github.com/AztecGameLab/LongTermGame9/raw/refs/heads/main/Assets/Graphics/Videos/Saguaro%20Pre-Boss%20Cutscene%20VP8-2.webm
+      value: https://aztecgamelab.github.io/LTG9_Saguaro/Saguaro%20Pre-Boss%20Cutscene%20VP8-2.webm
       objectReference: {fileID: 0}
     - target: {fileID: 2187999747171887631, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
       propertyPath: 'videos.Array.data[2]'
-      value: https://github.com/AztecGameLab/LongTermGame9/raw/refs/heads/main/Assets/Graphics/Videos/Saguaro%20Post-Boss%20Cutscene%20VP8-2.webm
+      value: https://aztecgamelab.github.io/LTG9_Saguaro/Saguaro%20Post-Boss%20Cutscene%20VP8-2.webm
       objectReference: {fileID: 0}
     - target: {fileID: 2187999747171887631, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
       propertyPath: onCutsceneFinished.m_PersistentCalls.m_Calls.Array.size
