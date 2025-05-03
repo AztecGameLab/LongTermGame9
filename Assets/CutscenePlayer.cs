@@ -12,7 +12,7 @@ using UnityEngine.Video;
 public class CutscenePlayer : MonoBehaviour
 {
     
-    [SerializeField] private List<VideoClip> videos = new List<VideoClip>();
+    [SerializeField] private List<String> videos = new List<String>();
     private CutsceneIndex _videoIndex;
     private VideoPlayer player;
     [SerializeField] private RawImage videoRenderer;
@@ -52,7 +52,7 @@ public class CutscenePlayer : MonoBehaviour
         fadeOut.CrossFadeAlpha(1, fadeOutTime, true);
         await UniTask.Delay(TimeSpan.FromSeconds(fadeOutTime), true);
         // Set up Player
-        player.clip = videos[(int)index];
+        player.url = videos[(int)index];
         ToggleVideo();
         player.Play(); await UniTask.WaitUntil(() => player.isPlaying);
         fadeOut.enabled = false;

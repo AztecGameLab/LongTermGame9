@@ -26893,6 +26893,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 801057228}
     - target: {fileID: 2187999747171887631, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
+      propertyPath: 'videos.Array.data[0]'
+      value: https://github.com/AztecGameLab/LongTermGame9/raw/refs/heads/main/Assets/Graphics/Videos/Saguaro%20Introductory%20Cutscene%20VP8.webm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187999747171887631, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
+      propertyPath: 'videos.Array.data[1]'
+      value: https://github.com/AztecGameLab/LongTermGame9/raw/refs/heads/main/Assets/Graphics/Videos/Saguaro%20Pre-Boss%20Cutscene%20VP8-2.webm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187999747171887631, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
+      propertyPath: 'videos.Array.data[2]'
+      value: https://github.com/AztecGameLab/LongTermGame9/raw/refs/heads/main/Assets/Graphics/Videos/Saguaro%20Post-Boss%20Cutscene%20VP8-2.webm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187999747171887631, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
       propertyPath: onCutsceneFinished.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -26929,6 +26941,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4481021045126498978, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
+      propertyPath: m_Url
+      value: https://github.com/AztecGameLab/LongTermGame9/raw/refs/heads/main/Assets/Graphics/Videos/Saguaro%20Introductory%20Cutscene%20VP8.webm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481021045126498978, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -26936,6 +26952,10 @@ PrefabInstance:
       propertyPath: m_VideoClip
       value: 
       objectReference: {fileID: 32900000, guid: 8958b4e62bed44d4185315f365f2e798, type: 3}
+    - target: {fileID: 4481021045126498978, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
+      propertyPath: m_DataSource
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7177954448425843136, guid: 4a2476e686c8c46a185a7920dab48acf, type: 3}
       propertyPath: m_Enabled
       value: 0
