@@ -1,0 +1,60 @@
+using System;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class CamTrigger : MonoBehaviour
+{
+
+    
+    public CamBehaviorType CameraXBehavior = CamBehaviorType.FollowSaguaro;
+    public CamBehaviorType CameraYBehavior = CamBehaviorType.FollowSaguaro;
+
+    public float CameraXCoord = 0.0f;
+    public float CameraYCoord = 0.0f;
+
+    public float CameraSize = 5.0f;
+
+    public float cameraSpeed = 5.0f;
+
+    public UnityEvent onEnter;
+    public UnityEvent onExit;
+    
+    private CamParameters passableParams;
+
+    private CameraControl mainCam;
+
+    void Start()
+    {
+        passableParams = new CamParameters(CameraXBehavior, CameraYBehavior, CameraXCoord, CameraYCoord, CameraSize, cameraSpeed);
+        mainCam = Camera.main.gameObject.GetComponent<CameraControl>();
+    }
+
+                                        //NOTE TO THOSE WHOSE JOB IT IS TO PUT ALL THIS TOGETHER
+    //apologies, I'm not sure how we're identifying Saguaro. It's the same in CameraControl, if (A) is wrong, replace it with the correct identification method.
+    //same with the Camera.
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player")) //(A)
+        {
+            mainCam.SetCamParameters(passableParams);
+            onEnter.Invoke();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player")) //(A)
+        {
+            mainCam.ResetCamParameters();
+            onExit.Invoke();
+        }
+    }
+
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(new Vector3(CameraXCoord, CameraYCoord), new Vector3(CameraSize * 2 * (16f / 9f), CameraSize * 2));        
+    }
+    
+}

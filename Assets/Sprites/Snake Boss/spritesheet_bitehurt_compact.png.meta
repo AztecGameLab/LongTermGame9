@@ -1,0 +1,831 @@
+fileFormatVersion: 2
+guid: c025991a5520e0c4983b67f32a276f64
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1154808707201363324
+    second: spritesheet_bitehurt_compact_0
+  - first:
+      213: -582059225874973999
+    second: spritesheet_bitehurt_compact_1
+  - first:
+      213: 2492764483345913172
+    second: spritesheet_bitehurt_compact_2
+  - first:
+      213: 904804032637784266
+    second: spritesheet_bitehurt_compact_3
+  - first:
+      213: -3513282774613906294
+    second: spritesheet_bitehurt_compact_4
+  - first:
+      213: 3130343493504748131
+    second: spritesheet_bitehurt_compact_5
+  - first:
+      213: -3906758236850830843
+    second: spritesheet_bitehurt_compact_6
+  - first:
+      213: -5272648648451096256
+    second: spritesheet_bitehurt_compact_7
+  - first:
+      213: 4999067832873545206
+    second: spritesheet_bitehurt_compact_8
+  - first:
+      213: 2874538535195828210
+    second: spritesheet_bitehurt_compact_9
+  - first:
+      213: 6958313988613184927
+    second: spritesheet_bitehurt_compact_10
+  - first:
+      213: -2564616823584469896
+    second: spritesheet_bitehurt_compact_11
+  - first:
+      213: -1586680826886860675
+    second: spritesheet_bitehurt_compact_12
+  - first:
+      213: -4874337695231756275
+    second: spritesheet_bitehurt_compact_13
+  - first:
+      213: 6519251351480975330
+    second: spritesheet_bitehurt_compact_14
+  - first:
+      213: 5707952399234803780
+    second: spritesheet_bitehurt_compact_15
+  - first:
+      213: 914447792792347178
+    second: spritesheet_bitehurt_compact_16
+  - first:
+      213: -3350473786686263937
+    second: spritesheet_bitehurt_compact_17
+  - first:
+      213: 944933173188781837
+    second: spritesheet_bitehurt_compact_18
+  - first:
+      213: 7970513780853749727
+    second: spritesheet_bitehurt_compact_19
+  - first:
+      213: -8156790847483350884
+    second: spritesheet_bitehurt_compact_20
+  - first:
+      213: -9178735002135281706
+    second: spritesheet_bitehurt_compact_21
+  - first:
+      213: -1168778679840626023
+    second: spritesheet_bitehurt_compact_22
+  - first:
+      213: 5048470567989567235
+    second: spritesheet_bitehurt_compact_23
+  - first:
+      213: 111445932180985347
+    second: spritesheet_bitehurt_compact_24
+  - first:
+      213: -3908949079270256735
+    second: spritesheet_bitehurt_compact_25
+  - first:
+      213: 3021547296302065605
+    second: spritesheet_bitehurt_compact_26
+  - first:
+      213: 3792504698561802828
+    second: spritesheet_bitehurt_compact_27
+  - first:
+      213: 6917087426702207926
+    second: spritesheet_bitehurt_compact_28
+  - first:
+      213: 8529440696791689214
+    second: spritesheet_bitehurt_compact_29
+  - first:
+      213: -8701168904382020273
+    second: spritesheet_bitehurt_compact_30
+  - first:
+      213: -6369455833045190468
+    second: spritesheet_bitehurt_compact_31
+  - first:
+      213: 3563297098015983257
+    second: spritesheet_bitehurt_compact_32
+  - first:
+      213: 7230044828916113547
+    second: spritesheet_bitehurt_compact_33
+  - first:
+      213: 570784158247578458
+    second: spritesheet_bitehurt_compact_34
+  - first:
+      213: 5135177428070842444
+    second: spritesheet_bitehurt_compact_35
+  - first:
+      213: 4212104421615833436
+    second: spritesheet_bitehurt_compact_36
+  - first:
+      213: 944822673477196837
+    second: spritesheet_bitehurt_compact_37
+  - first:
+      213: -5338884625794230524
+    second: spritesheet_bitehurt_compact_38
+  - first:
+      213: -7620130446993291205
+    second: spritesheet_bitehurt_compact_39
+  - first:
+      213: 3016348043225650520
+    second: spritesheet_bitehurt_compact_40
+  - first:
+      213: -3422368456343357173
+    second: spritesheet_bitehurt_compact_41
+  - first:
+      213: 1931034108844895645
+    second: spritesheet_bitehurt_compact_42
+  - first:
+      213: 1490465124811028902
+    second: spritesheet_bitehurt_compact_43
+  - first:
+      213: -5879824150559412921
+    second: spritesheet_bitehurt_compact_44
+  - first:
+      213: 7014041411845515260
+    second: spritesheet_bitehurt_compact_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 6624
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dabb7bc73c1ce7f0800000000000000
+      internalID: -582059225874973999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_3
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 6624
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac057bc49728e8c00800000000000000
+      internalID: 904804032637784266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_5
+      rect:
+        serializedVersion: 2
+        x: 5124
+        y: 6624
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a4e4372d6317b20800000000000000
+      internalID: 3130343493504748131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_7
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 6624
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04101ab6df9c3d6b0800000000000000
+      internalID: -5272648648451096256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_9
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 5542
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffd48b519964e720800000000000000
+      internalID: 2874538535195828210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_11
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 5542
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87cc14d3696a86cd0800000000000000
+      internalID: -2564616823584469896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_13
+      rect:
+        serializedVersion: 2
+        x: 5124
+        y: 5542
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d083a6801bfda5cb0800000000000000
+      internalID: -4874337695231756275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_15
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 5542
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448aa3f0778b63f40800000000000000
+      internalID: 5707952399234803780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_18
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 4460
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07666ce6b31d1d00800000000000000
+      internalID: 944933173188781837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_20
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 4446
+        width: 594
+        height: 650
+      alignment: 9
+      pivot: {x: 1, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90f894d0f14dce80800000000000000
+      internalID: -8156790847483350884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_22
+      rect:
+        serializedVersion: 2
+        x: 5157
+        y: 4459
+        width: 593
+        height: 605
+      alignment: 9
+      pivot: {x: 1, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99aac0fabf9a7cfe0800000000000000
+      internalID: -1168778679840626023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_24
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 4460
+        width: 626
+        height: 654
+      alignment: 9
+      pivot: {x: 1, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3065f4f1c7feb8100800000000000000
+      internalID: 111445932180985347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_26
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 3379
+        width: 593
+        height: 596
+      alignment: 9
+      pivot: {x: 1, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c76024d141bee920800000000000000
+      internalID: 3021547296302065605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_28
+      rect:
+        serializedVersion: 2
+        x: 3227
+        y: 3379
+        width: 601
+        height: 558
+      alignment: 9
+      pivot: {x: 1, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbe7e4cd5e6eff50800000000000000
+      internalID: 6917087426702207926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_30
+      rect:
+        serializedVersion: 2
+        x: 5085
+        y: 3379
+        width: 665
+        height: 539
+      alignment: 9
+      pivot: {x: 1, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4582a37bfc3f3780800000000000000
+      internalID: -8701168904382020273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_32
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 3378
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9964c6cd4df537130800000000000000
+      internalID: 3563297098015983257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_34
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 2297
+        width: 665
+        height: 540
+      alignment: 9
+      pivot: {x: 1, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b64c3fa25dbe700800000000000000
+      internalID: 570784158247578458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_35
+      rect:
+        serializedVersion: 2
+        x: 2929
+        y: 2297
+        width: 899
+        height: 621
+      alignment: 9
+      pivot: {x: 1, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4044cad9a0d34740800000000000000
+      internalID: 5135177428070842444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_36
+      rect:
+        serializedVersion: 2
+        x: 4071
+        y: 2295
+        width: 1653
+        height: 614
+      alignment: 9
+      pivot: {x: 1, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51934f97a6647a30800000000000000
+      internalID: 4212104421615833436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_38
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 2296
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4079dbe28b878e5b0800000000000000
+      internalID: -5338884625794230524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_39
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1232
+        width: 1751
+        height: 595
+      alignment: 9
+      pivot: {x: 1, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3883dc4bbbdf3690800000000000000
+      internalID: -7620130446993291205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_40
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 1232
+        width: 1751
+        height: 595
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855d86360983cd920800000000000000
+      internalID: 3016348043225650520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_41
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 1239
+        width: 1698
+        height: 588
+      alignment: 9
+      pivot: {x: 1, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09f62d750e4180d0800000000000000
+      internalID: -3422368456343357173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_43
+      rect:
+        serializedVersion: 2
+        x: 7046
+        y: 1214
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a9387a52223fa410800000000000000
+      internalID: 1490465124811028902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_bitehurt_compact_45
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 132
+        width: 626
+        height: 654
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf76ee88081e65160800000000000000
+      internalID: 7014041411845515260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 72d6dedc8c3406447b91daaf5cbd3542
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheet_bitehurt_compact_1: -582059225874973999
+      spritesheet_bitehurt_compact_11: -2564616823584469896
+      spritesheet_bitehurt_compact_13: -4874337695231756275
+      spritesheet_bitehurt_compact_15: 5707952399234803780
+      spritesheet_bitehurt_compact_17: -3350473786686263937
+      spritesheet_bitehurt_compact_18: 944933173188781837
+      spritesheet_bitehurt_compact_20: -8156790847483350884
+      spritesheet_bitehurt_compact_22: -1168778679840626023
+      spritesheet_bitehurt_compact_24: 111445932180985347
+      spritesheet_bitehurt_compact_26: 3021547296302065605
+      spritesheet_bitehurt_compact_28: 6917087426702207926
+      spritesheet_bitehurt_compact_3: 904804032637784266
+      spritesheet_bitehurt_compact_30: -8701168904382020273
+      spritesheet_bitehurt_compact_32: 3563297098015983257
+      spritesheet_bitehurt_compact_34: 570784158247578458
+      spritesheet_bitehurt_compact_35: 5135177428070842444
+      spritesheet_bitehurt_compact_36: 4212104421615833436
+      spritesheet_bitehurt_compact_38: -5338884625794230524
+      spritesheet_bitehurt_compact_39: -7620130446993291205
+      spritesheet_bitehurt_compact_40: 3016348043225650520
+      spritesheet_bitehurt_compact_41: -3422368456343357173
+      spritesheet_bitehurt_compact_43: 1490465124811028902
+      spritesheet_bitehurt_compact_45: 7014041411845515260
+      spritesheet_bitehurt_compact_5: 3130343493504748131
+      spritesheet_bitehurt_compact_7: -5272648648451096256
+      spritesheet_bitehurt_compact_9: 2874538535195828210
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
