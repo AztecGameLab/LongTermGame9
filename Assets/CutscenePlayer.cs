@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using TriInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -20,6 +21,8 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] private int fadeOutTime;
     [SerializeField] private AudioSwitcher audioManager;
     [SerializeField] private GameObject SaguaroSounds;
+    
+    public UnityEvent<CutsceneIndex> onCutsceneFinished;
 
     public enum CutsceneIndex
     {
@@ -60,6 +63,7 @@ public class CutscenePlayer : MonoBehaviour
         // Resume Everything
         SaguaroSounds.SetActive(true);
         Time.timeScale = 1;
+        onCutsceneFinished?.Invoke(index);
     }
 
     public void SkipScene() { player.Stop(); }
