@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 15a850a39e0423446824f05dd16204c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1404232597670660794
+    second: Snake_Idle_COL_0
+  - first:
+      213: -2983493569914747026
+    second: Snake_Idle_COL_1
+  - first:
+      213: -4143146686190197961
+    second: Snake_Idle_COL_2
+  - first:
+      213: -7964102664101511999
+    second: Snake_Idle_COL_3
+  - first:
+      213: 2903497077602899710
+    second: Snake_Idle_COL_4
+  - first:
+      213: -4749737677202530614
+    second: Snake_Idle_COL_5
+  - first:
+      213: -2243594593336827812
+    second: Snake_Idle_COL_6
+  - first:
+      213: 5460211561640049951
+    second: Snake_Idle_COL_7
+  - first:
+      213: -8116398016889268508
+    second: Snake_Idle_COL_8
+  - first:
+      213: 516297681231490447
+    second: Snake_Idle_COL_9
+  - first:
+      213: 2110634067090755708
+    second: Snake_Idle_COL_10
+  - first:
+      213: 7675324311883300610
+    second: Snake_Idle_COL_11
+  - first:
+      213: 9046492923106815912
+    second: Snake_Idle_COL_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Snake_Idle_COL_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573812b7c90ce884eadbae0d0c9acbcc
+      internalID: -2082290757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_1
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7cff2b6450f6c4590660f4f4438edd
+      internalID: 194916845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_2
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23d5793e8138ee46a4d65fb79e96bfe
+      internalID: 1637110414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_3
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c02bf1a333b794d99ae30c562a20ac
+      internalID: 1647369978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_4
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4806519ed8da154aafd1c8fc448b837
+      internalID: 736860347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_5
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788ffb8aa7c439d4da49afa87660380a
+      internalID: -1300905753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_6
+      rect:
+        serializedVersion: 2
+        x: 4068
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4cf90218722e544b3f28c592518567
+      internalID: 352293810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_7
+      rect:
+        serializedVersion: 2
+        x: 4746
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6bcb07d3b87504dab4ac107bc291ab
+      internalID: 506181753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_8
+      rect:
+        serializedVersion: 2
+        x: 5424
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f94d55df7004e4c83bd58ac6a0ce8f
+      internalID: 708141426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_9
+      rect:
+        serializedVersion: 2
+        x: 6102
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478f8d269766416469f2defeda2a16b9
+      internalID: 92195598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_10
+      rect:
+        serializedVersion: 2
+        x: 6780
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ef0c8bfaaca87489e95a01fabc0400
+      internalID: -992921116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_11
+      rect:
+        serializedVersion: 2
+        x: 7458
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7bbb838ae1f62049a7ab85e62ee56c6
+      internalID: 1281129344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Idle_COL_12
+      rect:
+        serializedVersion: 2
+        x: 8136
+        y: 0
+        width: 678
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efce4dd9cf40ad3499154b72cddd36b4
+      internalID: -1529703661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6b18bfb35a0690b438db4adc0fd465b0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Snake_Idle_COL_0: -2082290757
+      Snake_Idle_COL_1: 194916845
+      Snake_Idle_COL_10: -992921116
+      Snake_Idle_COL_11: 1281129344
+      Snake_Idle_COL_12: -1529703661
+      Snake_Idle_COL_2: 1637110414
+      Snake_Idle_COL_3: 1647369978
+      Snake_Idle_COL_4: 736860347
+      Snake_Idle_COL_5: -1300905753
+      Snake_Idle_COL_6: 352293810
+      Snake_Idle_COL_7: 506181753
+      Snake_Idle_COL_8: 708141426
+      Snake_Idle_COL_9: 92195598
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
